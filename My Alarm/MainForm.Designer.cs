@@ -42,6 +42,7 @@
             this.FPanel_ToolBox.Controls.Add(this.Btn_DeleteAlarm);
             this.FPanel_ToolBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.FPanel_ToolBox.Location = new System.Drawing.Point(0, 0);
+            this.FPanel_ToolBox.Margin = new System.Windows.Forms.Padding(0);
             this.FPanel_ToolBox.Name = "FPanel_ToolBox";
             this.FPanel_ToolBox.Size = new System.Drawing.Size(911, 55);
             this.FPanel_ToolBox.TabIndex = 0;
@@ -52,7 +53,8 @@
             this.Btn_AddAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_AddAlarm.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Btn_AddAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_AddAlarm.Location = new System.Drawing.Point(3, 3);
+            this.Btn_AddAlarm.Location = new System.Drawing.Point(0, 0);
+            this.Btn_AddAlarm.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_AddAlarm.Name = "Btn_AddAlarm";
             this.Btn_AddAlarm.Size = new System.Drawing.Size(123, 50);
             this.Btn_AddAlarm.TabIndex = 0;
@@ -64,7 +66,8 @@
             this.Btn_EditAlarm.FlatAppearance.BorderSize = 0;
             this.Btn_EditAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_EditAlarm.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_EditAlarm.Location = new System.Drawing.Point(132, 3);
+            this.Btn_EditAlarm.Location = new System.Drawing.Point(123, 0);
+            this.Btn_EditAlarm.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_EditAlarm.Name = "Btn_EditAlarm";
             this.Btn_EditAlarm.Size = new System.Drawing.Size(123, 50);
             this.Btn_EditAlarm.TabIndex = 0;
@@ -76,7 +79,8 @@
             this.Btn_DeleteAlarm.FlatAppearance.BorderSize = 0;
             this.Btn_DeleteAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_DeleteAlarm.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_DeleteAlarm.Location = new System.Drawing.Point(261, 3);
+            this.Btn_DeleteAlarm.Location = new System.Drawing.Point(246, 0);
+            this.Btn_DeleteAlarm.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_DeleteAlarm.Name = "Btn_DeleteAlarm";
             this.Btn_DeleteAlarm.Size = new System.Drawing.Size(123, 50);
             this.Btn_DeleteAlarm.TabIndex = 0;
