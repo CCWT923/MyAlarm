@@ -79,6 +79,25 @@ namespace My_Alarm
                 _Command.ExecuteNonQuery();
             }
         }
+        /// <summary>
+        /// 向数据库中插入数据
+        /// </summary>
+        /// <param name="TableName">表名</param>
+        /// <param name="data">字符串数组，数据</param>
+        public void InsertData(string TableName, string[] data)
+        {
+            _Command.CommandText = "INSERT INTO " + TableName + " VALUES(@CreateTime, @AlarmDate, @IsExpired, @Recurrence" +
+                ", @Title, @Contents, @Sound, @DelayTime)";
+            _Command.Parameters.Add("CreateTime", System.Data.DbType.DateTime);
+            _Command.Parameters.Add("AlarmDate", System.Data.DbType.DateTime);
+            _Command.Parameters.Add("IsExpired", System.Data.DbType.Boolean);
+            _Command.Parameters.Add("Recurrence", System.Data.DbType.Int32);
+            _Command.Parameters.Add("Title", System.Data.DbType.String);
+            _Command.Parameters.Add("Contents", System.Data.DbType.String);
+            _Command.Parameters.Add("Sound", System.Data.DbType.String);
+            _Command.Parameters.Add("DelayTime", System.Data.DbType.Int32);
+            _Command.ExecuteNonQuery();
+        }
 
     }
 }
