@@ -15,5 +15,11 @@ namespace My_Alarm
         {
             InitializeComponent();
         }
+
+        private void Btn_AddAlarm_Click(object sender, EventArgs e)
+        {
+            Wnd_AddAlarm wnd_AddAlarm = new Wnd_AddAlarm();
+            wnd_AddAlarm.ShowDialog();
+        }
     }
 }

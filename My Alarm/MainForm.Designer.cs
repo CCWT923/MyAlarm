@@ -60,6 +60,7 @@
             this.Btn_AddAlarm.TabIndex = 0;
             this.Btn_AddAlarm.Text = "添加";
             this.Btn_AddAlarm.UseVisualStyleBackColor = true;
+            this.Btn_AddAlarm.Click += new System.EventHandler(this.Btn_AddAlarm_Click);
             // 
             // Btn_EditAlarm
             // 
