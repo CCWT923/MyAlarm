@@ -38,20 +38,24 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.RadBtn_Once = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ChkBox_Daily = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Monday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Tuesday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Wednesday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Thursday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Friday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Saturday = new System.Windows.Forms.CheckBox();
+            this.RadBtn_RepeatOnce = new System.Windows.Forms.RadioButton();
+            this.RadBtn_RepeatWeekday = new System.Windows.Forms.RadioButton();
+            this.Panel_RepeatWeekday = new System.Windows.Forms.Panel();
             this.ChkBox_Sunday = new System.Windows.Forms.CheckBox();
-            this.RadBtn_Monthly = new System.Windows.Forms.RadioButton();
-            this.Combox_DayOfMonth = new System.Windows.Forms.ComboBox();
-            this.panel1.SuspendLayout();
+            this.ChkBox_Saturday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Friday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Thursday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Wednesday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Tuesday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Monday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Daily = new System.Windows.Forms.CheckBox();
+            this.RadBtn_RepeatMonthly = new System.Windows.Forms.RadioButton();
+            this.Combox_RepeatDayOfMonth = new System.Windows.Forms.ComboBox();
+            this.Btn_SaveAlarm = new System.Windows.Forms.Button();
+            this.Btn_Cancel = new System.Windows.Forms.Button();
+            this.FlowPanel_Buttons = new System.Windows.Forms.FlowLayoutPanel();
+            this.Panel_RepeatWeekday.SuspendLayout();
+            this.FlowPanel_Buttons.SuspendLayout();
             this.SuspendLayout();
             // 
             // DateTimePicker_AlarmDate
@@ -140,139 +144,141 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "重复周期：";
             // 
-            // RadBtn_Once
+            // RadBtn_RepeatOnce
             // 
-            this.RadBtn_Once.AutoSize = true;
-            this.RadBtn_Once.Location = new System.Drawing.Point(227, 322);
-            this.RadBtn_Once.Name = "RadBtn_Once";
-            this.RadBtn_Once.Size = new System.Drawing.Size(58, 19);
-            this.RadBtn_Once.TabIndex = 10;
-            this.RadBtn_Once.TabStop = true;
-            this.RadBtn_Once.Text = "一次";
-            this.RadBtn_Once.UseVisualStyleBackColor = true;
+            this.RadBtn_RepeatOnce.AutoSize = true;
+            this.RadBtn_RepeatOnce.Location = new System.Drawing.Point(227, 322);
+            this.RadBtn_RepeatOnce.Name = "RadBtn_RepeatOnce";
+            this.RadBtn_RepeatOnce.Size = new System.Drawing.Size(58, 19);
+            this.RadBtn_RepeatOnce.TabIndex = 10;
+            this.RadBtn_RepeatOnce.TabStop = true;
+            this.RadBtn_RepeatOnce.Text = "一次";
+            this.RadBtn_RepeatOnce.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // RadBtn_RepeatWeekday
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(103, 322);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 19);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "重复";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RadBtn_RepeatWeekday.AutoSize = true;
+            this.RadBtn_RepeatWeekday.Location = new System.Drawing.Point(103, 322);
+            this.RadBtn_RepeatWeekday.Name = "RadBtn_RepeatWeekday";
+            this.RadBtn_RepeatWeekday.Size = new System.Drawing.Size(58, 19);
+            this.RadBtn_RepeatWeekday.TabIndex = 11;
+            this.RadBtn_RepeatWeekday.TabStop = true;
+            this.RadBtn_RepeatWeekday.Text = "重复";
+            this.RadBtn_RepeatWeekday.UseVisualStyleBackColor = true;
+            this.RadBtn_RepeatWeekday.CheckedChanged += new System.EventHandler(this.RadBtn_RepeatWeekday_CheckedChanged);
             // 
-            // panel1
+            // Panel_RepeatWeekday
             // 
-            this.panel1.Controls.Add(this.ChkBox_Sunday);
-            this.panel1.Controls.Add(this.ChkBox_Saturday);
-            this.panel1.Controls.Add(this.ChkBox_Friday);
-            this.panel1.Controls.Add(this.ChkBox_Thursday);
-            this.panel1.Controls.Add(this.ChkBox_Wednesday);
-            this.panel1.Controls.Add(this.ChkBox_Tuesday);
-            this.panel1.Controls.Add(this.ChkBox_Monday);
-            this.panel1.Controls.Add(this.ChkBox_Daily);
-            this.panel1.Location = new System.Drawing.Point(103, 346);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(108, 215);
-            this.panel1.TabIndex = 12;
-            // 
-            // ChkBox_Daily
-            // 
-            this.ChkBox_Daily.AutoSize = true;
-            this.ChkBox_Daily.Location = new System.Drawing.Point(13, 10);
-            this.ChkBox_Daily.Name = "ChkBox_Daily";
-            this.ChkBox_Daily.Size = new System.Drawing.Size(59, 19);
-            this.ChkBox_Daily.TabIndex = 0;
-            this.ChkBox_Daily.Text = "每天";
-            this.ChkBox_Daily.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Monday
-            // 
-            this.ChkBox_Monday.AutoSize = true;
-            this.ChkBox_Monday.Location = new System.Drawing.Point(13, 35);
-            this.ChkBox_Monday.Name = "ChkBox_Monday";
-            this.ChkBox_Monday.Size = new System.Drawing.Size(74, 19);
-            this.ChkBox_Monday.TabIndex = 0;
-            this.ChkBox_Monday.Text = "星期一";
-            this.ChkBox_Monday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Tuesday
-            // 
-            this.ChkBox_Tuesday.AutoSize = true;
-            this.ChkBox_Tuesday.Location = new System.Drawing.Point(13, 60);
-            this.ChkBox_Tuesday.Name = "ChkBox_Tuesday";
-            this.ChkBox_Tuesday.Size = new System.Drawing.Size(74, 19);
-            this.ChkBox_Tuesday.TabIndex = 0;
-            this.ChkBox_Tuesday.Text = "星期二";
-            this.ChkBox_Tuesday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Wednesday
-            // 
-            this.ChkBox_Wednesday.AutoSize = true;
-            this.ChkBox_Wednesday.Location = new System.Drawing.Point(13, 85);
-            this.ChkBox_Wednesday.Name = "ChkBox_Wednesday";
-            this.ChkBox_Wednesday.Size = new System.Drawing.Size(74, 19);
-            this.ChkBox_Wednesday.TabIndex = 0;
-            this.ChkBox_Wednesday.Text = "星期三";
-            this.ChkBox_Wednesday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Thursday
-            // 
-            this.ChkBox_Thursday.AutoSize = true;
-            this.ChkBox_Thursday.Location = new System.Drawing.Point(13, 110);
-            this.ChkBox_Thursday.Name = "ChkBox_Thursday";
-            this.ChkBox_Thursday.Size = new System.Drawing.Size(74, 19);
-            this.ChkBox_Thursday.TabIndex = 0;
-            this.ChkBox_Thursday.Text = "星期四";
-            this.ChkBox_Thursday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Friday
-            // 
-            this.ChkBox_Friday.AutoSize = true;
-            this.ChkBox_Friday.Location = new System.Drawing.Point(13, 135);
-            this.ChkBox_Friday.Name = "ChkBox_Friday";
-            this.ChkBox_Friday.Size = new System.Drawing.Size(74, 19);
-            this.ChkBox_Friday.TabIndex = 0;
-            this.ChkBox_Friday.Text = "星期五";
-            this.ChkBox_Friday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Saturday
-            // 
-            this.ChkBox_Saturday.AutoSize = true;
-            this.ChkBox_Saturday.Location = new System.Drawing.Point(13, 160);
-            this.ChkBox_Saturday.Name = "ChkBox_Saturday";
-            this.ChkBox_Saturday.Size = new System.Drawing.Size(74, 19);
-            this.ChkBox_Saturday.TabIndex = 0;
-            this.ChkBox_Saturday.Text = "星期六";
-            this.ChkBox_Saturday.UseVisualStyleBackColor = true;
+            this.Panel_RepeatWeekday.Controls.Add(this.ChkBox_Sunday);
+            this.Panel_RepeatWeekday.Controls.Add(this.ChkBox_Saturday);
+            this.Panel_RepeatWeekday.Controls.Add(this.ChkBox_Friday);
+            this.Panel_RepeatWeekday.Controls.Add(this.ChkBox_Thursday);
+            this.Panel_RepeatWeekday.Controls.Add(this.ChkBox_Wednesday);
+            this.Panel_RepeatWeekday.Controls.Add(this.ChkBox_Tuesday);
+            this.Panel_RepeatWeekday.Controls.Add(this.ChkBox_Monday);
+            this.Panel_RepeatWeekday.Controls.Add(this.ChkBox_Daily);
+            this.Panel_RepeatWeekday.Location = new System.Drawing.Point(90, 347);
+            this.Panel_RepeatWeekday.Name = "Panel_RepeatWeekday";
+            this.Panel_RepeatWeekday.Size = new System.Drawing.Size(108, 200);
+            this.Panel_RepeatWeekday.TabIndex = 12;
             // 
             // ChkBox_Sunday
             // 
             this.ChkBox_Sunday.AutoSize = true;
-            this.ChkBox_Sunday.Location = new System.Drawing.Point(13, 185);
+            this.ChkBox_Sunday.Location = new System.Drawing.Point(12, 178);
             this.ChkBox_Sunday.Name = "ChkBox_Sunday";
             this.ChkBox_Sunday.Size = new System.Drawing.Size(74, 19);
             this.ChkBox_Sunday.TabIndex = 0;
             this.ChkBox_Sunday.Text = "星期天";
             this.ChkBox_Sunday.UseVisualStyleBackColor = true;
             // 
-            // RadBtn_Monthly
+            // ChkBox_Saturday
             // 
-            this.RadBtn_Monthly.AutoSize = true;
-            this.RadBtn_Monthly.Location = new System.Drawing.Point(335, 322);
-            this.RadBtn_Monthly.Name = "RadBtn_Monthly";
-            this.RadBtn_Monthly.Size = new System.Drawing.Size(58, 19);
-            this.RadBtn_Monthly.TabIndex = 13;
-            this.RadBtn_Monthly.TabStop = true;
-            this.RadBtn_Monthly.Text = "每月";
-            this.RadBtn_Monthly.UseVisualStyleBackColor = true;
+            this.ChkBox_Saturday.AutoSize = true;
+            this.ChkBox_Saturday.Location = new System.Drawing.Point(12, 153);
+            this.ChkBox_Saturday.Name = "ChkBox_Saturday";
+            this.ChkBox_Saturday.Size = new System.Drawing.Size(74, 19);
+            this.ChkBox_Saturday.TabIndex = 0;
+            this.ChkBox_Saturday.Text = "星期六";
+            this.ChkBox_Saturday.UseVisualStyleBackColor = true;
             // 
-            // Combox_DayOfMonth
+            // ChkBox_Friday
             // 
-            this.Combox_DayOfMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Combox_DayOfMonth.FormattingEnabled = true;
-            this.Combox_DayOfMonth.Items.AddRange(new object[] {
+            this.ChkBox_Friday.AutoSize = true;
+            this.ChkBox_Friday.Location = new System.Drawing.Point(12, 128);
+            this.ChkBox_Friday.Name = "ChkBox_Friday";
+            this.ChkBox_Friday.Size = new System.Drawing.Size(74, 19);
+            this.ChkBox_Friday.TabIndex = 0;
+            this.ChkBox_Friday.Text = "星期五";
+            this.ChkBox_Friday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Thursday
+            // 
+            this.ChkBox_Thursday.AutoSize = true;
+            this.ChkBox_Thursday.Location = new System.Drawing.Point(12, 103);
+            this.ChkBox_Thursday.Name = "ChkBox_Thursday";
+            this.ChkBox_Thursday.Size = new System.Drawing.Size(74, 19);
+            this.ChkBox_Thursday.TabIndex = 0;
+            this.ChkBox_Thursday.Text = "星期四";
+            this.ChkBox_Thursday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Wednesday
+            // 
+            this.ChkBox_Wednesday.AutoSize = true;
+            this.ChkBox_Wednesday.Location = new System.Drawing.Point(12, 78);
+            this.ChkBox_Wednesday.Name = "ChkBox_Wednesday";
+            this.ChkBox_Wednesday.Size = new System.Drawing.Size(74, 19);
+            this.ChkBox_Wednesday.TabIndex = 0;
+            this.ChkBox_Wednesday.Text = "星期三";
+            this.ChkBox_Wednesday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Tuesday
+            // 
+            this.ChkBox_Tuesday.AutoSize = true;
+            this.ChkBox_Tuesday.Location = new System.Drawing.Point(12, 53);
+            this.ChkBox_Tuesday.Name = "ChkBox_Tuesday";
+            this.ChkBox_Tuesday.Size = new System.Drawing.Size(74, 19);
+            this.ChkBox_Tuesday.TabIndex = 0;
+            this.ChkBox_Tuesday.Text = "星期二";
+            this.ChkBox_Tuesday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Monday
+            // 
+            this.ChkBox_Monday.AutoSize = true;
+            this.ChkBox_Monday.Location = new System.Drawing.Point(12, 28);
+            this.ChkBox_Monday.Name = "ChkBox_Monday";
+            this.ChkBox_Monday.Size = new System.Drawing.Size(74, 19);
+            this.ChkBox_Monday.TabIndex = 0;
+            this.ChkBox_Monday.Text = "星期一";
+            this.ChkBox_Monday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Daily
+            // 
+            this.ChkBox_Daily.AutoSize = true;
+            this.ChkBox_Daily.Location = new System.Drawing.Point(12, 3);
+            this.ChkBox_Daily.Name = "ChkBox_Daily";
+            this.ChkBox_Daily.Size = new System.Drawing.Size(59, 19);
+            this.ChkBox_Daily.TabIndex = 0;
+            this.ChkBox_Daily.Text = "每天";
+            this.ChkBox_Daily.UseVisualStyleBackColor = true;
+            // 
+            // RadBtn_RepeatMonthly
+            // 
+            this.RadBtn_RepeatMonthly.AutoSize = true;
+            this.RadBtn_RepeatMonthly.Location = new System.Drawing.Point(335, 322);
+            this.RadBtn_RepeatMonthly.Name = "RadBtn_RepeatMonthly";
+            this.RadBtn_RepeatMonthly.Size = new System.Drawing.Size(58, 19);
+            this.RadBtn_RepeatMonthly.TabIndex = 13;
+            this.RadBtn_RepeatMonthly.TabStop = true;
+            this.RadBtn_RepeatMonthly.Text = "每月";
+            this.RadBtn_RepeatMonthly.UseVisualStyleBackColor = true;
+            this.RadBtn_RepeatMonthly.CheckedChanged += new System.EventHandler(this.RadBtn_RepeatMonthly_CheckedChanged);
+            // 
+            // Combox_RepeatDayOfMonth
+            // 
+            this.Combox_RepeatDayOfMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Combox_RepeatDayOfMonth.FormattingEnabled = true;
+            this.Combox_RepeatDayOfMonth.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -304,21 +310,49 @@
             "29",
             "30",
             "31"});
-            this.Combox_DayOfMonth.Location = new System.Drawing.Point(409, 321);
-            this.Combox_DayOfMonth.Name = "Combox_DayOfMonth";
-            this.Combox_DayOfMonth.Size = new System.Drawing.Size(121, 23);
-            this.Combox_DayOfMonth.TabIndex = 14;
+            this.Combox_RepeatDayOfMonth.Location = new System.Drawing.Point(409, 321);
+            this.Combox_RepeatDayOfMonth.Name = "Combox_RepeatDayOfMonth";
+            this.Combox_RepeatDayOfMonth.Size = new System.Drawing.Size(121, 23);
+            this.Combox_RepeatDayOfMonth.TabIndex = 14;
+            // 
+            // Btn_SaveAlarm
+            // 
+            this.Btn_SaveAlarm.Location = new System.Drawing.Point(3, 3);
+            this.Btn_SaveAlarm.Name = "Btn_SaveAlarm";
+            this.Btn_SaveAlarm.Size = new System.Drawing.Size(104, 40);
+            this.Btn_SaveAlarm.TabIndex = 15;
+            this.Btn_SaveAlarm.Text = "保存";
+            this.Btn_SaveAlarm.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Cancel
+            // 
+            this.Btn_Cancel.Location = new System.Drawing.Point(113, 3);
+            this.Btn_Cancel.Name = "Btn_Cancel";
+            this.Btn_Cancel.Size = new System.Drawing.Size(104, 40);
+            this.Btn_Cancel.TabIndex = 15;
+            this.Btn_Cancel.Text = "取消";
+            this.Btn_Cancel.UseVisualStyleBackColor = true;
+            // 
+            // FlowPanel_Buttons
+            // 
+            this.FlowPanel_Buttons.Controls.Add(this.Btn_SaveAlarm);
+            this.FlowPanel_Buttons.Controls.Add(this.Btn_Cancel);
+            this.FlowPanel_Buttons.Location = new System.Drawing.Point(335, 550);
+            this.FlowPanel_Buttons.Name = "FlowPanel_Buttons";
+            this.FlowPanel_Buttons.Size = new System.Drawing.Size(224, 49);
+            this.FlowPanel_Buttons.TabIndex = 16;
             // 
             // Wnd_AddAlarm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 596);
-            this.Controls.Add(this.Combox_DayOfMonth);
-            this.Controls.Add(this.RadBtn_Monthly);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.RadBtn_Once);
+            this.ClientSize = new System.Drawing.Size(570, 601);
+            this.Controls.Add(this.FlowPanel_Buttons);
+            this.Controls.Add(this.Combox_RepeatDayOfMonth);
+            this.Controls.Add(this.RadBtn_RepeatMonthly);
+            this.Controls.Add(this.Panel_RepeatWeekday);
+            this.Controls.Add(this.RadBtn_RepeatWeekday);
+            this.Controls.Add(this.RadBtn_RepeatOnce);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -333,8 +367,9 @@
             this.ShowInTaskbar = false;
             this.Text = "添加闹钟";
             this.Load += new System.EventHandler(this.Wnd_AddAlarm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Panel_RepeatWeekday.ResumeLayout(false);
+            this.Panel_RepeatWeekday.PerformLayout();
+            this.FlowPanel_Buttons.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,9 +387,9 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton RadBtn_Once;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton RadBtn_RepeatOnce;
+        private System.Windows.Forms.RadioButton RadBtn_RepeatWeekday;
+        private System.Windows.Forms.Panel Panel_RepeatWeekday;
         private System.Windows.Forms.CheckBox ChkBox_Sunday;
         private System.Windows.Forms.CheckBox ChkBox_Saturday;
         private System.Windows.Forms.CheckBox ChkBox_Friday;
@@ -363,7 +398,10 @@
         private System.Windows.Forms.CheckBox ChkBox_Tuesday;
         private System.Windows.Forms.CheckBox ChkBox_Monday;
         private System.Windows.Forms.CheckBox ChkBox_Daily;
-        private System.Windows.Forms.RadioButton RadBtn_Monthly;
-        private System.Windows.Forms.ComboBox Combox_DayOfMonth;
+        private System.Windows.Forms.RadioButton RadBtn_RepeatMonthly;
+        private System.Windows.Forms.ComboBox Combox_RepeatDayOfMonth;
+        private System.Windows.Forms.Button Btn_SaveAlarm;
+        private System.Windows.Forms.Button Btn_Cancel;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanel_Buttons;
     }
 }
