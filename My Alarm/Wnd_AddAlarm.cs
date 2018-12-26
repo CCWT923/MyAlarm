@@ -48,5 +48,10 @@ namespace My_Alarm
                 Combox_RepeatDayOfMonth.Enabled = false;
             }
         }
+
+        private void Btn_Cancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
