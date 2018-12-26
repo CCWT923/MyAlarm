@@ -18,7 +18,7 @@ namespace My_Alarm
             public string AlarmName;
             public string AlarmContents;
             public string AlarmSound;
-            public 
+            //重复周期 TODO
         }
         /// <summary>
         /// TODO: 重复周期，怎么用结构体表示？
