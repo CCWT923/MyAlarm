@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace My_Alarm
@@ -52,6 +45,43 @@ namespace My_Alarm
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Btn_SaveAlarm_Click(object sender, EventArgs e)
+        {
+            Util.ALARMINFO alarmInfo = new Util.ALARMINFO();
+            Util.REPEATINTERVAL repeatInterval = new Util.REPEATINTERVAL();
+            alarmInfo.AlarmDate = DateTimePicker_AlarmDate.Value;
+            alarmInfo.CreateDate = DateTime.Now;
+            alarmInfo.AlarmSound = TextBox_AlarmSound.Text;
+            alarmInfo.AlarmName = TextBox_AlarmName.Text;
+            alarmInfo.AlarmContents = TextBox_AlarmContents.Text;
+            if(RadBtn_RepeatOnce.Checked)
+            {
+                repeatInterval.Once = true;
+                repeatInterval.Weekly = false;
+                repeatInterval.Monthly = false;
+            }
+            else if(RadBtn_RepeatMonthly.Checked)
+            {
+                repeatInterval.Monthly = true;
+                repeatInterval.DayOfMonth = int.Parse(Combox_RepeatDayOfMonth.SelectedItem.ToString());
+                repeatInterval.Once = false;
+                repeatInterval.Weekly = false;
+            }
+            else if(RadBtn_RepeatWeekday.Checked)
+            {
+                repeatInterval.Weekly = true;
+                repeatInterval.Once = false;
+                repeatInterval.Monthly = false;
+                repeatInterval.Monday = ChkBox_Monday.Checked;
+                repeatInterval.Tuesday = ChkBox_Tuesday.Checked;
+                repeatInterval.Wednesday = ChkBox_Wednesday.Checked;
+                repeatInterval.Thursday = ChkBox_Thursday.Checked;
+                repeatInterval.Friday = ChkBox_Friday.Checked;
+                repeatInterval.Saturday = ChkBox_Saturday.Checked;
+                repeatInterval.Sunday = ChkBox_Sunday.Checked;
+            }
         }
     }
 }

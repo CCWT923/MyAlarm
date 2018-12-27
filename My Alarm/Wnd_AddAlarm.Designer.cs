@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TextBox_AlarmName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextBox_AlarmContents = new System.Windows.Forms.TextBox();
             this.Lbl_AlarmContents = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TextBox_AlarmSound = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.RadBtn_RepeatOnce = new System.Windows.Forms.RadioButton();
@@ -93,13 +93,13 @@
             this.TextBox_AlarmName.Size = new System.Drawing.Size(413, 25);
             this.TextBox_AlarmName.TabIndex = 3;
             // 
-            // textBox1
+            // TextBox_AlarmContents
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 120);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(413, 100);
-            this.textBox1.TabIndex = 4;
+            this.TextBox_AlarmContents.Location = new System.Drawing.Point(117, 120);
+            this.TextBox_AlarmContents.Multiline = true;
+            this.TextBox_AlarmContents.Name = "TextBox_AlarmContents";
+            this.TextBox_AlarmContents.Size = new System.Drawing.Size(413, 100);
+            this.TextBox_AlarmContents.TabIndex = 4;
             // 
             // Lbl_AlarmContents
             // 
@@ -119,12 +119,12 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "提示音：";
             // 
-            // textBox2
+            // TextBox_AlarmSound
             // 
-            this.textBox2.Location = new System.Drawing.Point(117, 242);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(297, 25);
-            this.textBox2.TabIndex = 7;
+            this.TextBox_AlarmSound.Location = new System.Drawing.Point(117, 242);
+            this.TextBox_AlarmSound.Name = "TextBox_AlarmSound";
+            this.TextBox_AlarmSound.Size = new System.Drawing.Size(297, 25);
+            this.TextBox_AlarmSound.TabIndex = 7;
             // 
             // button1
             // 
@@ -323,6 +323,7 @@
             this.Btn_SaveAlarm.TabIndex = 15;
             this.Btn_SaveAlarm.Text = "保存";
             this.Btn_SaveAlarm.UseVisualStyleBackColor = true;
+            this.Btn_SaveAlarm.Click += new System.EventHandler(this.Btn_SaveAlarm_Click);
             // 
             // Btn_Cancel
             // 
@@ -356,10 +357,10 @@
             this.Controls.Add(this.RadBtn_RepeatOnce);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TextBox_AlarmSound);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Lbl_AlarmContents);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TextBox_AlarmContents);
             this.Controls.Add(this.TextBox_AlarmName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -382,10 +383,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TextBox_AlarmName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TextBox_AlarmContents;
         private System.Windows.Forms.Label Lbl_AlarmContents;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TextBox_AlarmSound;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton RadBtn_RepeatOnce;
