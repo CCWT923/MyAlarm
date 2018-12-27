@@ -18,14 +18,24 @@ namespace My_Alarm
             public string AlarmName;
             public string AlarmContents;
             public string AlarmSound;
-            //重复周期 TODO
+            public REPEATINTERVAL RepeatInterval;
         }
         /// <summary>
-        /// TODO: 重复周期，怎么用结构体表示？
+        /// 重复周期
         /// </summary>
         public struct REPEATINTERVAL
         {
-
+            public bool Once;
+            public bool Weekly;
+            public bool Monday;
+            public bool Tuesday;
+            public bool Wednesday;
+            public bool Thursday;
+            public bool Friday;
+            public bool Saturday;
+            public bool Sunday;
+            public bool Monthly;
+            public int DayOfMonth;
         }
     }
 }
