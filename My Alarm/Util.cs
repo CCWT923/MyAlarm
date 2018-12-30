@@ -19,6 +19,7 @@ namespace My_Alarm
             public string AlarmContents;
             public string AlarmSound;
             public REPEATINTERVAL RepeatInterval;
+            public bool Enable;
         }
         /// <summary>
         /// 重复周期

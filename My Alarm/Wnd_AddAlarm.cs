@@ -49,6 +49,14 @@ namespace My_Alarm
 
         private void Btn_SaveAlarm_Click(object sender, EventArgs e)
         {
+            Pub.AlarmInfo = GetAlarmDetail();
+        }
+        /// <summary>
+        /// 根据用户的选择，获取该闹钟的详细信息
+        /// </summary>
+        /// <returns></returns>
+        private Util.ALARMINFO GetAlarmDetail()
+        {
             Util.ALARMINFO alarmInfo = new Util.ALARMINFO();
             Util.REPEATINTERVAL repeatInterval = new Util.REPEATINTERVAL();
             alarmInfo.AlarmDate = DateTimePicker_AlarmDate.Value;
@@ -56,20 +64,20 @@ namespace My_Alarm
             alarmInfo.AlarmSound = TextBox_AlarmSound.Text;
             alarmInfo.AlarmName = TextBox_AlarmName.Text;
             alarmInfo.AlarmContents = TextBox_AlarmContents.Text;
-            if(RadBtn_RepeatOnce.Checked)
+            if (RadBtn_RepeatOnce.Checked)
             {
                 repeatInterval.Once = true;
                 repeatInterval.Weekly = false;
                 repeatInterval.Monthly = false;
             }
-            else if(RadBtn_RepeatMonthly.Checked)
+            else if (RadBtn_RepeatMonthly.Checked)
             {
                 repeatInterval.Monthly = true;
                 repeatInterval.DayOfMonth = int.Parse(Combox_RepeatDayOfMonth.SelectedItem.ToString());
                 repeatInterval.Once = false;
                 repeatInterval.Weekly = false;
             }
-            else if(RadBtn_RepeatWeekday.Checked)
+            else if (RadBtn_RepeatWeekday.Checked)
             {
                 repeatInterval.Weekly = true;
                 repeatInterval.Once = false;
@@ -82,6 +90,9 @@ namespace My_Alarm
                 repeatInterval.Saturday = ChkBox_Saturday.Checked;
                 repeatInterval.Sunday = ChkBox_Sunday.Checked;
             }
+            alarmInfo.RepeatInterval = repeatInterval;
+            alarmInfo.Enable = true;
+            return alarmInfo;
         }
     }
 }

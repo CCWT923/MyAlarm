@@ -317,6 +317,7 @@
             // 
             // Btn_SaveAlarm
             // 
+            this.Btn_SaveAlarm.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.Btn_SaveAlarm.Location = new System.Drawing.Point(3, 3);
             this.Btn_SaveAlarm.Name = "Btn_SaveAlarm";
             this.Btn_SaveAlarm.Size = new System.Drawing.Size(104, 40);
@@ -327,6 +328,7 @@
             // 
             // Btn_Cancel
             // 
+            this.Btn_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Btn_Cancel.Location = new System.Drawing.Point(113, 3);
             this.Btn_Cancel.Name = "Btn_Cancel";
             this.Btn_Cancel.Size = new System.Drawing.Size(104, 40);
