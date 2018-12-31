@@ -15,15 +15,18 @@ namespace My_Alarm
         {
             InitializeComponent();
         }
-
+        DBAssistant dbHelper;
         private void Btn_AddAlarm_Click(object sender, EventArgs e)
         {
             Wnd_AddAlarm wnd_AddAlarm = new Wnd_AddAlarm();
             if(wnd_AddAlarm.ShowDialog() == DialogResult.OK)
             {
                 //TODO：在数据库中添加闹钟
-                MessageBox.Show(Pub.AlarmInfo.AlarmContents + ";" + Pub.AlarmInfo.AlarmDate + "" + Pub.AlarmInfo.AlarmName);
+                dbHelper = new DBAssistant();
+                dbHelper.InsertData(dbHelper.MainTableName, Util.GetStringArrayFromAlarmInfo(Pub.AlarmInfo));
             }
         }
+
+        
     }
 }

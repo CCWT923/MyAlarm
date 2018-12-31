@@ -11,8 +11,9 @@ namespace My_Alarm
     {
         SQLiteConnection _Connection = null;
         SQLiteCommand _Command = null;
-        string _AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\WTstudio\MyAlarm";
-        string _DBFile = "";
+        private string _AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\WTstudio\MyAlarm";
+        private string _DBFile;
+        private string _MainTableName = "AlarmList";
 
         /// <summary>
         /// 构造函数
@@ -24,7 +25,41 @@ namespace My_Alarm
 #else
             _DBFile = _AppDataPath + @"\MyAlarm.db";
 #endif
+            //如果文件不存在，则创建
+            if(!File.Exists(_DBFile))
+            {
+                CreateDatabase(_DBFile);
+                Open();
+                //初始化表
+                InitTables();
+            }
+            else //文件存在，试图打开
+            {
+                try
+                {
+                    Open();
+                }
+                catch(Exception ex)
+                {
+                    throw new Exception("打开数据库时发生错误！" + ex.Message);
+                }
+            }
         }
+        /// <summary>
+        /// 获取数据库文件路径
+        /// </summary>
+        public string DBFile
+        {
+            get { return _DBFile; }
+        }
+        /// <summary>
+        /// 主表名称
+        /// </summary>
+        public string MainTableName
+        {
+            get => _MainTableName;
+        }
+
 
         /// <summary>
         /// 创建指定路径的数据库
@@ -37,17 +72,12 @@ namespace My_Alarm
             {
                 Directory.CreateDirectory(_AppDataPath);
             }
-            //备份数据库
+            //数据库已存在，则备份数据库
             if(File.Exists(dbName))
             {
-                if (!Directory.Exists(_AppDataPath + @"\Backup"))
-                {
-                    Directory.CreateDirectory(_AppDataPath + @"\Backup");
-                }
-                File.Copy(dbName, _AppDataPath + @"Backup\" + Path.GetFileNameWithoutExtension(dbName) + "_bak_" +
-                    DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(dbName));
+                BackupDatabase(dbName);
             }
-            //创建数据库
+            //创建数据库并初始化
             try
             {
                 SQLiteConnection.CreateFile(dbName);
@@ -58,9 +88,23 @@ namespace My_Alarm
             }
         }
         /// <summary>
+        /// 备份数据库
+        /// </summary>
+        /// <param name="fileName"></param>
+        private void BackupDatabase(string fileName)
+        {
+            if (!Directory.Exists(_AppDataPath + @"\Backup"))
+            {
+                Directory.CreateDirectory(_AppDataPath + @"\Backup");
+            }
+            File.Copy(fileName, _AppDataPath + @"Backup\" + Path.GetFileNameWithoutExtension(fileName) + "_bak_" +
+                DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(fileName));
+        }
+
+        /// <summary>
         /// 打开数据库的连接
         /// </summary>
-        public void Open()
+        private void Open()
         {
             _Connection = new SQLiteConnection("data source = " + _DBFile);
             _Connection.Open();
@@ -73,8 +117,8 @@ namespace My_Alarm
         {
             if(_Connection.State == System.Data.ConnectionState.Open)
             {
-                string table_AlarmList = "CREATE TABLE IF NOT EXISTS AlarmList(CreateTime TEXT, AlarmDate TEXT," +
-                    "IsExpired INTEGER, Recurrence INTEGER, Title TEXT, Contents TEXT, Sound TEXT, DelayTime INTEGER)";
+                string table_AlarmList = "CREATE TABLE IF NOT EXISTS " + MainTableName + " (CreateTime TEXT, AlarmDate TEXT," +
+                    "IsExpired INTEGER, Recurrence INTEGER, Title TEXT, Contents TEXT, Sound TEXT, DelayTime INTEGER, Enable INTEGER)";
                 _Command.CommandText = table_AlarmList;
                 _Command.ExecuteNonQuery();
             }
@@ -86,17 +130,36 @@ namespace My_Alarm
         /// <param name="data">字符串数组，数据</param>
         public void InsertData(string TableName, string[] data)
         {
-            _Command.CommandText = "INSERT INTO " + TableName + " VALUES(@CreateTime, @AlarmDate, @IsExpired, @Recurrence" +
-                ", @Title, @Contents, @Sound, @DelayTime)";
-            _Command.Parameters.Add("CreateTime", System.Data.DbType.DateTime);
-            _Command.Parameters.Add("AlarmDate", System.Data.DbType.DateTime);
-            _Command.Parameters.Add("IsExpired", System.Data.DbType.Boolean);
-            _Command.Parameters.Add("Recurrence", System.Data.DbType.Int32);
-            _Command.Parameters.Add("Title", System.Data.DbType.String);
-            _Command.Parameters.Add("Contents", System.Data.DbType.String);
-            _Command.Parameters.Add("Sound", System.Data.DbType.String);
-            _Command.Parameters.Add("DelayTime", System.Data.DbType.Int32);
-            _Command.ExecuteNonQuery();
+            //try
+            //{
+                _Command.CommandText = "INSERT INTO " + TableName + " VALUES(@CreateTime, @AlarmDate, @IsExpired, @Recurrence" +
+                    ", @Title, @Contents, @Sound, @DelayTime, @Enable)";
+                _Command.Parameters.Add("CreateTime", System.Data.DbType.DateTime);
+                _Command.Parameters.Add("AlarmDate", System.Data.DbType.DateTime);
+                _Command.Parameters.Add("IsExpired", System.Data.DbType.Boolean);
+                _Command.Parameters.Add("Recurrence", System.Data.DbType.String);
+                _Command.Parameters.Add("Title", System.Data.DbType.String);
+                _Command.Parameters.Add("Contents", System.Data.DbType.String);
+                _Command.Parameters.Add("Sound", System.Data.DbType.String);
+                _Command.Parameters.Add("DelayTime", System.Data.DbType.Int32);
+                _Command.Parameters.Add("Enable", System.Data.DbType.Boolean);
+
+                _Command.Parameters["CreateTime"].Value = data[0];
+                _Command.Parameters["AlarmDate"].Value = data[1];
+                _Command.Parameters["IsExpired"].Value = bool.Parse(data[2]);
+                _Command.Parameters["Recurrence"].Value = data[3]; //TODO: 如何解决循环周期问题？
+                _Command.Parameters["Title"].Value = data[4];
+                _Command.Parameters["Contents"].Value = data[5];
+                _Command.Parameters["Sound"].Value = data[6];
+                _Command.Parameters["DelayTime"].Value = int.Parse(data[7]);
+                _Command.Parameters["Enable"].Value = bool.Parse(data[8]);
+
+                _Command.ExecuteNonQuery();
+            //}
+            //catch(Exception ex)
+            //{
+            //    throw new Exception("插入数据时发生错误：" + ex.Message);
+            //}
         }
 
     }

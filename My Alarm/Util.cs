@@ -38,5 +38,22 @@ namespace My_Alarm
             public bool Monthly;
             public int DayOfMonth;
         }
+        public static string[] GetStringArrayFromAlarmInfo(ALARMINFO info)
+        {
+            string[] arr = new string[]
+            {
+                info.CreateDate.ToString("yyyy-MM-dd HH:mm:ss"),
+                info.AlarmDate.ToString("yyyy-MM-dd HH:mm:ss"),
+                "false",
+                info.RepeatInterval.ToString(),
+                info.AlarmName,
+                info.AlarmContents,
+                info.AlarmSound,
+                "0",
+                "true"
+            };
+
+            return arr;
+        }
     }
 }
