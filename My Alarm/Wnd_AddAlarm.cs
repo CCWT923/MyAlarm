@@ -12,41 +12,66 @@ namespace My_Alarm
 
         private void Wnd_AddAlarm_Load(object sender, EventArgs e)
         {
-            DateTimePicker_AlarmDate.MinDate = DateTime.Now;
+            //DateTimePicker_AlarmDate.MinDate = DateTime.Now;
             DateTimePicker_AlarmDate.CustomFormat = "yyyy/MM/dd HH:mm:ss";
-            
+            RadBtn_RepeatOnce.Checked = true;
+            RadBtn_RepeatMonthly.Checked = false;
+            Combox_RepeatDayOfMonth.Enabled = false;
+            RadBtn_Repeat.Checked = false;
+            Panel_RepeatWeekday.Enabled = false;
+            Panel_Weekday.Enabled = false;
+            Combox_RepeatDayOfMonth.SelectedIndex = 0;
         }
-
-        private void RadBtn_RepeatWeekday_CheckedChanged(object sender, EventArgs e)
+        /// <summary>
+        /// 是否重复
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RadBtn_Repeat_CheckedChanged(object sender, EventArgs e)
         {
-            if(RadBtn_RepeatWeekday.Checked)
+            if(RadBtn_Repeat.Checked)
             {
                 Panel_RepeatWeekday.Enabled = true;
-
+                ChkBox_Daily.Checked = true;
             }
             else
             {
                 Panel_RepeatWeekday.Enabled = false;
+                Panel_Weekday.Enabled = false;
             }
         }
-
+        /// <summary>
+        /// 按月重复
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RadBtn_RepeatMonthly_CheckedChanged(object sender, EventArgs e)
         {
             if(RadBtn_RepeatMonthly.Checked)
             {
                 Combox_RepeatDayOfMonth.Enabled = true;
+                ChkBox_Daily.Checked = false;
+                Panel_Weekday.Enabled = false;
             }
             else
             {
                 Combox_RepeatDayOfMonth.Enabled = false;
             }
         }
-
+        /// <summary>
+        /// 取消新建
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
             Close();
         }
-
+        /// <summary>
+        /// 保存
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_SaveAlarm_Click(object sender, EventArgs e)
         {
             Pub.AlarmInfo = GetAlarmDetail();
@@ -77,7 +102,7 @@ namespace My_Alarm
                 repeatInterval.Once = false;
                 repeatInterval.Weekly = false;
             }
-            else if (RadBtn_RepeatWeekday.Checked)
+            else if (RadBtn_Repeat.Checked)
             {
                 repeatInterval.Weekly = true;
                 repeatInterval.Once = false;
@@ -93,6 +118,20 @@ namespace My_Alarm
             alarmInfo.RepeatInterval = repeatInterval;
             alarmInfo.Enable = true;
             return alarmInfo;
+        }
+
+        private void ChkBox_Daily_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ChkBox_Daily.Checked)
+            {
+                Panel_Weekday.Enabled = false;
+                Combox_RepeatDayOfMonth.Enabled = false;
+                RadBtn_RepeatMonthly.Checked = false;
+            }
+            else
+            {
+                Panel_Weekday.Enabled = true;
+            }
         }
     }
 }

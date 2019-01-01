@@ -117,8 +117,9 @@ namespace My_Alarm
         {
             if(_Connection.State == System.Data.ConnectionState.Open)
             {
-                string table_AlarmList = "CREATE TABLE IF NOT EXISTS " + MainTableName + " (CreateTime TEXT, AlarmDate TEXT," +
-                    "IsExpired INTEGER, Recurrence INTEGER, Title TEXT, Contents TEXT, Sound TEXT, DelayTime INTEGER, Enable INTEGER)";
+                string table_AlarmList = "CREATE TABLE IF NOT EXISTS " + MainTableName + " (AlarmID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "CreateTime TEXT, AlarmDate TEXT, IsExpired INTEGER, Recurrence INTEGER, Title TEXT, Contents TEXT, Sound TEXT, " +
+                    "DelayTime INTEGER, Enable INTEGER)";
                 _Command.CommandText = table_AlarmList;
                 _Command.ExecuteNonQuery();
             }
@@ -132,29 +133,32 @@ namespace My_Alarm
         {
             //try
             //{
-                _Command.CommandText = "INSERT INTO " + TableName + " VALUES(@CreateTime, @AlarmDate, @IsExpired, @Recurrence" +
-                    ", @Title, @Contents, @Sound, @DelayTime, @Enable)";
-                _Command.Parameters.Add("CreateTime", System.Data.DbType.DateTime);
-                _Command.Parameters.Add("AlarmDate", System.Data.DbType.DateTime);
-                _Command.Parameters.Add("IsExpired", System.Data.DbType.Boolean);
-                _Command.Parameters.Add("Recurrence", System.Data.DbType.String);
-                _Command.Parameters.Add("Title", System.Data.DbType.String);
-                _Command.Parameters.Add("Contents", System.Data.DbType.String);
-                _Command.Parameters.Add("Sound", System.Data.DbType.String);
-                _Command.Parameters.Add("DelayTime", System.Data.DbType.Int32);
-                _Command.Parameters.Add("Enable", System.Data.DbType.Boolean);
+            _Command.CommandText = "INSERT INTO " + TableName + " VALUES(@AlarmID, @CreateTime, @AlarmDate, @IsExpired, @Recurrence" +
+                ", @Title, @Contents, @Sound, @DelayTime, @Enable)";
+            _Command.Parameters.Add("AlarmID", System.Data.DbType.Int32);
+            _Command.Parameters.Add("CreateTime", System.Data.DbType.DateTime);
+            _Command.Parameters.Add("AlarmDate", System.Data.DbType.DateTime);
+            _Command.Parameters.Add("IsExpired", System.Data.DbType.Boolean);
+            _Command.Parameters.Add("Recurrence", System.Data.DbType.String);
+            _Command.Parameters.Add("Title", System.Data.DbType.String);
+            _Command.Parameters.Add("Contents", System.Data.DbType.String);
+            _Command.Parameters.Add("Sound", System.Data.DbType.String);
+            _Command.Parameters.Add("DelayTime", System.Data.DbType.Int32);
+            _Command.Parameters.Add("Enable", System.Data.DbType.Boolean);
 
-                _Command.Parameters["CreateTime"].Value = data[0];
-                _Command.Parameters["AlarmDate"].Value = data[1];
-                _Command.Parameters["IsExpired"].Value = bool.Parse(data[2]);
-                _Command.Parameters["Recurrence"].Value = data[3]; //TODO: 如何解决循环周期问题？
-                _Command.Parameters["Title"].Value = data[4];
-                _Command.Parameters["Contents"].Value = data[5];
-                _Command.Parameters["Sound"].Value = data[6];
-                _Command.Parameters["DelayTime"].Value = int.Parse(data[7]);
-                _Command.Parameters["Enable"].Value = bool.Parse(data[8]);
+            _Command.Parameters["AlarmID"].Value = DBNull.Value; //自增列插入NULL值即可
+            _Command.Parameters["CreateTime"].Value = data[0];
+            _Command.Parameters["AlarmDate"].Value = data[1];
+            _Command.Parameters["IsExpired"].Value = bool.Parse(data[2]);
+            _Command.Parameters["Recurrence"].Value = data[3]; //TODO: 如何解决循环周期问题？
+            _Command.Parameters["Title"].Value = data[4];
+            _Command.Parameters["Contents"].Value = data[5];
+            _Command.Parameters["Sound"].Value = data[6];
+            _Command.Parameters["DelayTime"].Value = int.Parse(data[7]);
+            _Command.Parameters["Enable"].Value = bool.Parse(data[8]);
 
-                _Command.ExecuteNonQuery();
+            //System.Diagnostics.Debug.WriteLine(_Command.CommandText);
+            _Command.ExecuteNonQuery();
             //}
             //catch(Exception ex)
             //{

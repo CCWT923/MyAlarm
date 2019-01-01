@@ -44,7 +44,7 @@
             this.FPanel_ToolBox.Location = new System.Drawing.Point(0, 0);
             this.FPanel_ToolBox.Margin = new System.Windows.Forms.Padding(0);
             this.FPanel_ToolBox.Name = "FPanel_ToolBox";
-            this.FPanel_ToolBox.Size = new System.Drawing.Size(911, 55);
+            this.FPanel_ToolBox.Size = new System.Drawing.Size(684, 55);
             this.FPanel_ToolBox.TabIndex = 0;
             // 
             // Btn_AddAlarm
@@ -93,10 +93,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(911, 498);
+            this.ClientSize = new System.Drawing.Size(684, 372);
             this.Controls.Add(this.FPanel_ToolBox);
             this.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Alarm";
             this.FPanel_ToolBox.ResumeLayout(false);
             this.ResumeLayout(false);
