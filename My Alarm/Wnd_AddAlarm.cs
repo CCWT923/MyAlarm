@@ -89,24 +89,31 @@ namespace My_Alarm
             alarmInfo.AlarmSound = TextBox_AlarmSound.Text;
             alarmInfo.AlarmName = TextBox_AlarmName.Text;
             alarmInfo.AlarmContents = TextBox_AlarmContents.Text;
-            if (RadBtn_RepeatOnce.Checked)
+            if (RadBtn_RepeatOnce.Checked) //一次性，不重复
             {
                 repeatInterval.Once = true;
                 repeatInterval.Weekly = false;
                 repeatInterval.Monthly = false;
+                repeatInterval.Daily = false;
             }
-            else if (RadBtn_RepeatMonthly.Checked)
+            else if(ChkBox_Daily.Checked) //每日重复
+            {
+                repeatInterval.Daily = true;
+                repeatInterval.Once = false;
+                repeatInterval.Monthly = false;
+                repeatInterval.Weekly = false;
+            }
+            else if (RadBtn_RepeatMonthly.Checked) //按月重复
             {
                 repeatInterval.Monthly = true;
                 repeatInterval.DayOfMonth = int.Parse(Combox_RepeatDayOfMonth.SelectedItem.ToString());
                 repeatInterval.Once = false;
                 repeatInterval.Weekly = false;
+                repeatInterval.Daily = false;
             }
-            else if (RadBtn_Repeat.Checked)
+            else if(!RadBtn_RepeatOnce.Checked && !ChkBox_Daily.Checked && !RadBtn_RepeatMonthly.Checked) //每周几重复
             {
                 repeatInterval.Weekly = true;
-                repeatInterval.Once = false;
-                repeatInterval.Monthly = false;
                 repeatInterval.Monday = ChkBox_Monday.Checked;
                 repeatInterval.Tuesday = ChkBox_Tuesday.Checked;
                 repeatInterval.Wednesday = ChkBox_Wednesday.Checked;
@@ -114,12 +121,23 @@ namespace My_Alarm
                 repeatInterval.Friday = ChkBox_Friday.Checked;
                 repeatInterval.Saturday = ChkBox_Saturday.Checked;
                 repeatInterval.Sunday = ChkBox_Sunday.Checked;
+                repeatInterval.Monthly = false;
+                repeatInterval.Once = false;
+                repeatInterval.Daily = false;
+            }
+            else
+            {
+                throw new Exception("选择错误？");
             }
             alarmInfo.RepeatInterval = repeatInterval;
             alarmInfo.Enable = true;
             return alarmInfo;
         }
-
+        /// <summary>
+        /// 每日重复
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ChkBox_Daily_CheckedChanged(object sender, EventArgs e)
         {
             if(ChkBox_Daily.Checked)

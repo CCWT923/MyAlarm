@@ -26,7 +26,5 @@ namespace My_Alarm
                 dbHelper.InsertData(dbHelper.MainTableName, Util.GetStringArrayFromAlarmInfo(Pub.AlarmInfo));
             }
         }
-
-        
     }
 }

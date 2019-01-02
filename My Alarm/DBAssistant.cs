@@ -150,7 +150,7 @@ namespace My_Alarm
             _Command.Parameters["CreateTime"].Value = data[0];
             _Command.Parameters["AlarmDate"].Value = data[1];
             _Command.Parameters["IsExpired"].Value = bool.Parse(data[2]);
-            _Command.Parameters["Recurrence"].Value = data[3]; //TODO: 如何解决循环周期问题？
+            _Command.Parameters["Recurrence"].Value = data[3];
             _Command.Parameters["Title"].Value = data[4];
             _Command.Parameters["Contents"].Value = data[5];
             _Command.Parameters["Sound"].Value = data[6];

@@ -33,6 +33,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Panel_Background = new System.Windows.Forms.Panel();
+            this.Panel_Weekday = new System.Windows.Forms.Panel();
+            this.ChkBox_Sunday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Saturday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Friday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Thursday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Wednesday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Tuesday = new System.Windows.Forms.CheckBox();
+            this.ChkBox_Monday = new System.Windows.Forms.CheckBox();
             this.Panel_RepeatWeekday = new System.Windows.Forms.Panel();
             this.Combox_RepeatDayOfMonth = new System.Windows.Forms.ComboBox();
             this.RadBtn_RepeatMonthly = new System.Windows.Forms.RadioButton();
@@ -49,19 +57,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.DateTimePicker_AlarmDate = new System.Windows.Forms.DateTimePicker();
-            this.Panel_Weekday = new System.Windows.Forms.Panel();
-            this.ChkBox_Sunday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Saturday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Friday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Thursday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Wednesday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Tuesday = new System.Windows.Forms.CheckBox();
-            this.ChkBox_Monday = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.Panel_Background.SuspendLayout();
-            this.Panel_RepeatWeekday.SuspendLayout();
             this.Panel_Weekday.SuspendLayout();
+            this.Panel_RepeatWeekday.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_SaveAlarm
@@ -121,7 +121,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(723, 46);
             this.tableLayoutPanel2.TabIndex = 57;
             // 
@@ -147,6 +147,97 @@
             this.Panel_Background.Name = "Panel_Background";
             this.Panel_Background.Size = new System.Drawing.Size(723, 454);
             this.Panel_Background.TabIndex = 56;
+            // 
+            // Panel_Weekday
+            // 
+            this.Panel_Weekday.Controls.Add(this.ChkBox_Sunday);
+            this.Panel_Weekday.Controls.Add(this.ChkBox_Saturday);
+            this.Panel_Weekday.Controls.Add(this.ChkBox_Friday);
+            this.Panel_Weekday.Controls.Add(this.ChkBox_Thursday);
+            this.Panel_Weekday.Controls.Add(this.ChkBox_Wednesday);
+            this.Panel_Weekday.Controls.Add(this.ChkBox_Tuesday);
+            this.Panel_Weekday.Controls.Add(this.ChkBox_Monday);
+            this.Panel_Weekday.Location = new System.Drawing.Point(12, 555);
+            this.Panel_Weekday.Name = "Panel_Weekday";
+            this.Panel_Weekday.Size = new System.Drawing.Size(619, 236);
+            this.Panel_Weekday.TabIndex = 65;
+            // 
+            // ChkBox_Sunday
+            // 
+            this.ChkBox_Sunday.AutoSize = true;
+            this.ChkBox_Sunday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ChkBox_Sunday.Location = new System.Drawing.Point(14, 205);
+            this.ChkBox_Sunday.Name = "ChkBox_Sunday";
+            this.ChkBox_Sunday.Size = new System.Drawing.Size(91, 29);
+            this.ChkBox_Sunday.TabIndex = 1;
+            this.ChkBox_Sunday.Text = "星期日";
+            this.ChkBox_Sunday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Saturday
+            // 
+            this.ChkBox_Saturday.AutoSize = true;
+            this.ChkBox_Saturday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ChkBox_Saturday.Location = new System.Drawing.Point(14, 172);
+            this.ChkBox_Saturday.Name = "ChkBox_Saturday";
+            this.ChkBox_Saturday.Size = new System.Drawing.Size(91, 29);
+            this.ChkBox_Saturday.TabIndex = 2;
+            this.ChkBox_Saturday.Text = "星期六";
+            this.ChkBox_Saturday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Friday
+            // 
+            this.ChkBox_Friday.AutoSize = true;
+            this.ChkBox_Friday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ChkBox_Friday.Location = new System.Drawing.Point(14, 139);
+            this.ChkBox_Friday.Name = "ChkBox_Friday";
+            this.ChkBox_Friday.Size = new System.Drawing.Size(91, 29);
+            this.ChkBox_Friday.TabIndex = 3;
+            this.ChkBox_Friday.Text = "星期五";
+            this.ChkBox_Friday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Thursday
+            // 
+            this.ChkBox_Thursday.AutoSize = true;
+            this.ChkBox_Thursday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ChkBox_Thursday.Location = new System.Drawing.Point(14, 106);
+            this.ChkBox_Thursday.Name = "ChkBox_Thursday";
+            this.ChkBox_Thursday.Size = new System.Drawing.Size(91, 29);
+            this.ChkBox_Thursday.TabIndex = 4;
+            this.ChkBox_Thursday.Text = "星期四";
+            this.ChkBox_Thursday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Wednesday
+            // 
+            this.ChkBox_Wednesday.AutoSize = true;
+            this.ChkBox_Wednesday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ChkBox_Wednesday.Location = new System.Drawing.Point(14, 73);
+            this.ChkBox_Wednesday.Name = "ChkBox_Wednesday";
+            this.ChkBox_Wednesday.Size = new System.Drawing.Size(91, 29);
+            this.ChkBox_Wednesday.TabIndex = 5;
+            this.ChkBox_Wednesday.Text = "星期三";
+            this.ChkBox_Wednesday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Tuesday
+            // 
+            this.ChkBox_Tuesday.AutoSize = true;
+            this.ChkBox_Tuesday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ChkBox_Tuesday.Location = new System.Drawing.Point(14, 40);
+            this.ChkBox_Tuesday.Name = "ChkBox_Tuesday";
+            this.ChkBox_Tuesday.Size = new System.Drawing.Size(91, 29);
+            this.ChkBox_Tuesday.TabIndex = 6;
+            this.ChkBox_Tuesday.Text = "星期二";
+            this.ChkBox_Tuesday.UseVisualStyleBackColor = true;
+            // 
+            // ChkBox_Monday
+            // 
+            this.ChkBox_Monday.AutoSize = true;
+            this.ChkBox_Monday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ChkBox_Monday.Location = new System.Drawing.Point(14, 7);
+            this.ChkBox_Monday.Name = "ChkBox_Monday";
+            this.ChkBox_Monday.Size = new System.Drawing.Size(91, 29);
+            this.ChkBox_Monday.TabIndex = 7;
+            this.ChkBox_Monday.Text = "星期一";
+            this.ChkBox_Monday.UseVisualStyleBackColor = true;
             // 
             // Panel_RepeatWeekday
             // 
@@ -262,7 +353,8 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.button1.Location = new System.Drawing.Point(560, 342);
+            this.button1.Location = new System.Drawing.Point(560, 343);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 34);
             this.button1.TabIndex = 60;
@@ -350,97 +442,6 @@
             this.DateTimePicker_AlarmDate.Size = new System.Drawing.Size(619, 32);
             this.DateTimePicker_AlarmDate.TabIndex = 52;
             // 
-            // Panel_Weekday
-            // 
-            this.Panel_Weekday.Controls.Add(this.ChkBox_Sunday);
-            this.Panel_Weekday.Controls.Add(this.ChkBox_Saturday);
-            this.Panel_Weekday.Controls.Add(this.ChkBox_Friday);
-            this.Panel_Weekday.Controls.Add(this.ChkBox_Thursday);
-            this.Panel_Weekday.Controls.Add(this.ChkBox_Wednesday);
-            this.Panel_Weekday.Controls.Add(this.ChkBox_Tuesday);
-            this.Panel_Weekday.Controls.Add(this.ChkBox_Monday);
-            this.Panel_Weekday.Location = new System.Drawing.Point(12, 555);
-            this.Panel_Weekday.Name = "Panel_Weekday";
-            this.Panel_Weekday.Size = new System.Drawing.Size(619, 236);
-            this.Panel_Weekday.TabIndex = 65;
-            // 
-            // ChkBox_Sunday
-            // 
-            this.ChkBox_Sunday.AutoSize = true;
-            this.ChkBox_Sunday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ChkBox_Sunday.Location = new System.Drawing.Point(14, 205);
-            this.ChkBox_Sunday.Name = "ChkBox_Sunday";
-            this.ChkBox_Sunday.Size = new System.Drawing.Size(91, 29);
-            this.ChkBox_Sunday.TabIndex = 1;
-            this.ChkBox_Sunday.Text = "星期日";
-            this.ChkBox_Sunday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Saturday
-            // 
-            this.ChkBox_Saturday.AutoSize = true;
-            this.ChkBox_Saturday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ChkBox_Saturday.Location = new System.Drawing.Point(14, 172);
-            this.ChkBox_Saturday.Name = "ChkBox_Saturday";
-            this.ChkBox_Saturday.Size = new System.Drawing.Size(91, 29);
-            this.ChkBox_Saturday.TabIndex = 2;
-            this.ChkBox_Saturday.Text = "星期六";
-            this.ChkBox_Saturday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Friday
-            // 
-            this.ChkBox_Friday.AutoSize = true;
-            this.ChkBox_Friday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ChkBox_Friday.Location = new System.Drawing.Point(14, 139);
-            this.ChkBox_Friday.Name = "ChkBox_Friday";
-            this.ChkBox_Friday.Size = new System.Drawing.Size(91, 29);
-            this.ChkBox_Friday.TabIndex = 3;
-            this.ChkBox_Friday.Text = "星期五";
-            this.ChkBox_Friday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Thursday
-            // 
-            this.ChkBox_Thursday.AutoSize = true;
-            this.ChkBox_Thursday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ChkBox_Thursday.Location = new System.Drawing.Point(14, 106);
-            this.ChkBox_Thursday.Name = "ChkBox_Thursday";
-            this.ChkBox_Thursday.Size = new System.Drawing.Size(91, 29);
-            this.ChkBox_Thursday.TabIndex = 4;
-            this.ChkBox_Thursday.Text = "星期四";
-            this.ChkBox_Thursday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Wednesday
-            // 
-            this.ChkBox_Wednesday.AutoSize = true;
-            this.ChkBox_Wednesday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ChkBox_Wednesday.Location = new System.Drawing.Point(14, 73);
-            this.ChkBox_Wednesday.Name = "ChkBox_Wednesday";
-            this.ChkBox_Wednesday.Size = new System.Drawing.Size(91, 29);
-            this.ChkBox_Wednesday.TabIndex = 5;
-            this.ChkBox_Wednesday.Text = "星期三";
-            this.ChkBox_Wednesday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Tuesday
-            // 
-            this.ChkBox_Tuesday.AutoSize = true;
-            this.ChkBox_Tuesday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ChkBox_Tuesday.Location = new System.Drawing.Point(14, 40);
-            this.ChkBox_Tuesday.Name = "ChkBox_Tuesday";
-            this.ChkBox_Tuesday.Size = new System.Drawing.Size(91, 29);
-            this.ChkBox_Tuesday.TabIndex = 6;
-            this.ChkBox_Tuesday.Text = "星期二";
-            this.ChkBox_Tuesday.UseVisualStyleBackColor = true;
-            // 
-            // ChkBox_Monday
-            // 
-            this.ChkBox_Monday.AutoSize = true;
-            this.ChkBox_Monday.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ChkBox_Monday.Location = new System.Drawing.Point(14, 7);
-            this.ChkBox_Monday.Name = "ChkBox_Monday";
-            this.ChkBox_Monday.Size = new System.Drawing.Size(91, 29);
-            this.ChkBox_Monday.TabIndex = 7;
-            this.ChkBox_Monday.Text = "星期一";
-            this.ChkBox_Monday.UseVisualStyleBackColor = true;
-            // 
             // Wnd_AddAlarm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -456,10 +457,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.Panel_Background.ResumeLayout(false);
             this.Panel_Background.PerformLayout();
-            this.Panel_RepeatWeekday.ResumeLayout(false);
-            this.Panel_RepeatWeekday.PerformLayout();
             this.Panel_Weekday.ResumeLayout(false);
             this.Panel_Weekday.PerformLayout();
+            this.Panel_RepeatWeekday.ResumeLayout(false);
+            this.Panel_RepeatWeekday.PerformLayout();
             this.ResumeLayout(false);
 
         }
