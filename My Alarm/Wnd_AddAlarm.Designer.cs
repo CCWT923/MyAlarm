@@ -48,7 +48,7 @@
             this.RadBtn_Repeat = new System.Windows.Forms.RadioButton();
             this.RadBtn_RepeatOnce = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_SelectSound = new System.Windows.Forms.Button();
             this.TextBox_AlarmSound = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Lbl_AlarmContents = new System.Windows.Forms.Label();
@@ -133,7 +133,7 @@
             this.Panel_Background.Controls.Add(this.RadBtn_Repeat);
             this.Panel_Background.Controls.Add(this.RadBtn_RepeatOnce);
             this.Panel_Background.Controls.Add(this.label4);
-            this.Panel_Background.Controls.Add(this.button1);
+            this.Panel_Background.Controls.Add(this.Btn_SelectSound);
             this.Panel_Background.Controls.Add(this.TextBox_AlarmSound);
             this.Panel_Background.Controls.Add(this.label3);
             this.Panel_Background.Controls.Add(this.Lbl_AlarmContents);
@@ -343,23 +343,24 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4.ForeColor = System.Drawing.Color.Crimson;
             this.label4.Location = new System.Drawing.Point(12, 389);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 26);
             this.label4.TabIndex = 61;
             this.label4.Text = "重复周期";
             // 
-            // button1
+            // Btn_SelectSound
             // 
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.button1.Location = new System.Drawing.Point(560, 343);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 34);
-            this.button1.TabIndex = 60;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_SelectSound.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.Btn_SelectSound.Location = new System.Drawing.Point(560, 343);
+            this.Btn_SelectSound.Margin = new System.Windows.Forms.Padding(0);
+            this.Btn_SelectSound.Name = "Btn_SelectSound";
+            this.Btn_SelectSound.Size = new System.Drawing.Size(71, 34);
+            this.Btn_SelectSound.TabIndex = 60;
+            this.Btn_SelectSound.Text = "...";
+            this.Btn_SelectSound.UseVisualStyleBackColor = true;
+            this.Btn_SelectSound.Click += new System.EventHandler(this.Btn_SelectSound_Click);
             // 
             // TextBox_AlarmSound
             // 
@@ -373,7 +374,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label3.ForeColor = System.Drawing.Color.Crimson;
             this.label3.Location = new System.Drawing.Point(12, 304);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 26);
@@ -384,7 +385,7 @@
             // 
             this.Lbl_AlarmContents.AutoSize = true;
             this.Lbl_AlarmContents.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
-            this.Lbl_AlarmContents.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Lbl_AlarmContents.ForeColor = System.Drawing.Color.Crimson;
             this.Lbl_AlarmContents.Location = new System.Drawing.Point(12, 173);
             this.Lbl_AlarmContents.Name = "Lbl_AlarmContents";
             this.Lbl_AlarmContents.Size = new System.Drawing.Size(50, 26);
@@ -403,16 +404,20 @@
             // TextBox_AlarmName
             // 
             this.TextBox_AlarmName.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.TextBox_AlarmName.ForeColor = System.Drawing.Color.Gray;
             this.TextBox_AlarmName.Location = new System.Drawing.Point(12, 127);
             this.TextBox_AlarmName.Name = "TextBox_AlarmName";
             this.TextBox_AlarmName.Size = new System.Drawing.Size(619, 32);
             this.TextBox_AlarmName.TabIndex = 55;
+            this.TextBox_AlarmName.Text = "My Alarm";
+            this.TextBox_AlarmName.Enter += new System.EventHandler(this.TextBox_AlarmName_Enter);
+            this.TextBox_AlarmName.Leave += new System.EventHandler(this.TextBox_AlarmName_Leave);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label2.ForeColor = System.Drawing.Color.Crimson;
             this.label2.Location = new System.Drawing.Point(12, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 26);
@@ -423,7 +428,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
             this.label1.Location = new System.Drawing.Point(12, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 26);
@@ -479,7 +484,7 @@
         private System.Windows.Forms.RadioButton RadBtn_Repeat;
         private System.Windows.Forms.RadioButton RadBtn_RepeatOnce;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_SelectSound;
         private System.Windows.Forms.TextBox TextBox_AlarmSound;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Lbl_AlarmContents;

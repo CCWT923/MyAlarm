@@ -9,11 +9,15 @@ namespace My_Alarm
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// 默认闹钟名字
+        /// </summary>
+        private string _DefaultAlarmName = "My Alarm";
         private void Wnd_AddAlarm_Load(object sender, EventArgs e)
         {
             //DateTimePicker_AlarmDate.MinDate = DateTime.Now;
             DateTimePicker_AlarmDate.CustomFormat = "yyyy/MM/dd HH:mm:ss";
+            DateTimePicker_AlarmDate.Value = DateTime.Now.AddMinutes(5.0); //当前时间增加5分钟
             RadBtn_RepeatOnce.Checked = true;
             RadBtn_RepeatMonthly.Checked = false;
             Combox_RepeatDayOfMonth.Enabled = false;
@@ -151,5 +155,43 @@ namespace My_Alarm
                 Panel_Weekday.Enabled = true;
             }
         }
+
+        private void Btn_SelectSound_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog selectSoundDialog = new OpenFileDialog();
+            selectSoundDialog.Filter = "声音文件|*.mp3;*.wav;*.amr";
+            if(selectSoundDialog.ShowDialog() == DialogResult.OK)
+            {
+                TextBox_AlarmSound.Text = selectSoundDialog.FileName;
+            }
+        }
+        #region 闹钟名称设置
+        private void TextBox_AlarmName_Enter(object sender, EventArgs e)
+        {
+            if(TextBox_AlarmName.Text == _DefaultAlarmName)
+            {
+                TextBox_AlarmName.Text = "";
+                TextBox_AlarmName.ForeColor = System.Drawing.Color.Black;
+            }
+            else
+            {
+                TextBox_AlarmName.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void TextBox_AlarmName_Leave(object sender, EventArgs e)
+        {
+            if(TextBox_AlarmName.Text.Trim() == string.Empty)
+            {
+                TextBox_AlarmName.Text = _DefaultAlarmName;
+                TextBox_AlarmName.ForeColor = System.Drawing.Color.Gray;
+            }
+            else
+            {
+                TextBox_AlarmName.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+        #endregion
+
     }
 }

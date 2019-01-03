@@ -14,7 +14,7 @@ namespace UnitTestProject1
             Util.REPEATINTERVAL interval = new Util.REPEATINTERVAL();
             interval.Daily = false;
             interval.Monthly = true;
-            interval.DayOfMonth = 22;
+            interval.DayOfMonth = 12;
             Util.ALARMINFO info = new Util.ALARMINFO();
             info.AlarmContents = "无备注";
             info.AlarmDate = DateTime.Now;
@@ -25,7 +25,9 @@ namespace UnitTestProject1
             string xmlStr = Util.GetRepeatIntervalString(info.RepeatInterval);
             //Debug.WriteLine(xmlStr);
             var x = Util.GetRepeatInfo(xmlStr);
-            Assert.AreEqual(22,x.DayOfMonth);
+            Assert.AreEqual(12,x.DayOfMonth);
+            Assert.AreEqual(true, x.Monthly);
+            Assert.AreEqual(false, interval.Once);
         }
     }
 }

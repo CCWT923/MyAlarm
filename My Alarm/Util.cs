@@ -75,9 +75,9 @@ namespace My_Alarm
         public static string GetRepeatIntervalString(REPEATINTERVAL interval)
         {
             string result = "<?xml version=\"1.0\" encoding=\"utf-8\"?><RepeatInterval><Once>" +
-                interval.Once + "</Once>" + "<Monthly value=\"" + interval.Monthly + "\"><DayOfMonth>" +
+                interval.Once + "</Once>" + "<Monthly Status=\"" + interval.Monthly + "\"><DayOfMonth>" +
                 (interval.Monthly == true ? interval.DayOfMonth : 0) + "</DayOfMonth></Monthly>" +
-                "<Daily>" + interval.Daily + "</Daily><Weekly value=\"" + interval.Weekly + "\"><Monday>" +
+                "<Daily>" + interval.Daily + "</Daily><Weekly Status=\"" + interval.Weekly + "\"><Monday>" +
                 interval.Monday + "</Monday><Tuesday>" + interval.Tuesday + "</Tuesday><Wednesday>" +
                 interval.Wednesday + "</Wednesday><Thursday>" + interval.Thursday + "</Thursday><Friday>" +
                 interval.Friday + "</Friday><Saturday>" + interval.Saturday + "</Saturday><Sunday>" +
@@ -95,18 +95,25 @@ namespace My_Alarm
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(str);
             XmlNode node;
+            XmlElement element;
+            XmlAttribute attr;
+            //选择指定的节点
             node = doc.SelectSingleNode("/RepeatInterval/Daily");
             interval.Daily = bool.Parse(node.InnerText);
-
+            
             node = doc.SelectSingleNode("/RepeatInterval/Once");
             interval.Once = bool.Parse(node.InnerText);
-            //todo:查找属性
-            node = doc.SelectSingleNode("/RepeatInterval/Weekly");
-            interval.Weekly = bool.Parse(node.InnerText);
 
-            node = doc.Attributes["value"];
+            //选择属性，Weekly包含一个名为value的属性
+            node = doc.SelectSingleNode("/RepeatInterval/Weekly");
+            element = (XmlElement)node;
+            attr = element.GetAttributeNode("Status");
+            interval.Weekly = bool.Parse(attr.InnerText);
+            
             node = doc.SelectSingleNode("/RepeatInterval/Monthly");
-            interval.Monthly = bool.Parse(node.InnerText);
+            element = (XmlElement)node;
+            attr = element.GetAttributeNode("Status");
+            interval.Monthly = bool.Parse(attr.InnerText);
             
             node = doc.SelectSingleNode("/RepeatInterval/Monthly/DayOfMonth");
             interval.DayOfMonth = int.Parse(node.InnerText);
