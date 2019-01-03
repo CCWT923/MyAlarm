@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlarmItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlarmItem.Designer.cs">
+      <DependentUpon>AlarmItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBAssistant.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -73,6 +79,9 @@
     <Compile Include="Wnd_AddAlarm.Designer.cs">
       <DependentUpon>Wnd_AddAlarm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AlarmItem.resx">
+      <DependentUpon>AlarmItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
