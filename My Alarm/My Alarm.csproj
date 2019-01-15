@@ -73,6 +73,13 @@
       <DependentUpon>RemindForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Util.cs" />
+    <Compile Include="WinAPI.cs" />
+    <Compile Include="WndQuickAddAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WndQuickAddAlarm.Designer.cs">
+      <DependentUpon>WndQuickAddAlarm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wnd_AddAlarm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="RemindForm.resx">
       <DependentUpon>RemindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WndQuickAddAlarm.resx">
+      <DependentUpon>WndQuickAddAlarm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wnd_AddAlarm.resx">
       <DependentUpon>Wnd_AddAlarm.cs</DependentUpon>

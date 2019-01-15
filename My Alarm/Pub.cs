@@ -9,5 +9,6 @@ namespace My_Alarm
     class Pub
     {
         public static Util.ALARMINFO AlarmInfo;
+        public static string QuickAlarmInfo;
     }
 }

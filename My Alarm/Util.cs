@@ -104,7 +104,7 @@ namespace My_Alarm
             node = doc.SelectSingleNode("/RepeatInterval/Once");
             interval.Once = bool.Parse(node.InnerText);
 
-            //选择属性，Weekly包含一个名为value的属性
+            //选择属性，Weekly包含一个名为Status的属性
             node = doc.SelectSingleNode("/RepeatInterval/Weekly");
             element = (XmlElement)node;
             attr = element.GetAttributeNode("Status");
