@@ -94,12 +94,14 @@
             // 
             // LayoutPanel_AlarmItems
             // 
+            this.LayoutPanel_AlarmItems.AutoScroll = true;
             this.LayoutPanel_AlarmItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LayoutPanel_AlarmItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.LayoutPanel_AlarmItems.Location = new System.Drawing.Point(0, 49);
             this.LayoutPanel_AlarmItems.Name = "LayoutPanel_AlarmItems";
             this.LayoutPanel_AlarmItems.Size = new System.Drawing.Size(684, 323);
             this.LayoutPanel_AlarmItems.TabIndex = 1;
+            this.LayoutPanel_AlarmItems.WrapContents = false;
             // 
             // MainForm
             // 
