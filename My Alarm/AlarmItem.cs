@@ -28,6 +28,13 @@ namespace My_Alarm
         private string _AlarmSoundPath;
         private int _ItemNumber;
         private static int _Counter;
+        private Color _BackgroundColor;
+        private Font _AlarmTitleFont;
+        private Color _AlarmTitleColor;
+        private Font _AlarmContentsFont;
+        private Color _AlarmContentsColor;
+        private Font _IndexFont;
+        private Color _IndexColor;
         #endregion
 
         #region 公共属性
@@ -71,8 +78,11 @@ namespace My_Alarm
         /// </summary>
         public string AlarmSoundPath
         {
-            get;
-            set;
+            get { return _AlarmSoundPath; }
+            set
+            {
+                _AlarmSoundPath = value;
+            }
         }
         /// <summary>
         /// 设置序号
@@ -86,6 +96,48 @@ namespace My_Alarm
                 Lbl_Number.Text = _ItemNumber.ToString();
             }
         }
+        /// <summary>
+        /// 备注字体
+        /// </summary>
+        public Font AlarmContentsFont
+        {
+            get => _AlarmContentsFont;
+            set => _AlarmContentsFont = value;
+        }
+        /// <summary>
+        /// 背景颜色
+        /// </summary>
+        public Color BackgroundColor
+        {
+            get => _BackgroundColor;
+            set => _BackgroundColor = value;
+        }
+        /// <summary>
+        /// 标题字体
+        /// </summary>
+        public Font AlarmTitleFont
+        {
+            get => _AlarmTitleFont;
+            set => _AlarmTitleFont = value;
+        }
+        /// <summary>
+        /// 序号字体
+        /// </summary>
+        public Font IndexFont
+        {
+            get => _IndexFont;
+            set => _IndexFont = value;
+        }
+        /// <summary>
+        /// 序号颜色
+        /// </summary>
+        public Color IndexColor
+        {
+            get => _IndexColor;
+            set => _IndexColor = value;
+        }
+
+
         #endregion
 
         private void AlarmItem_Load(object sender, EventArgs e)
