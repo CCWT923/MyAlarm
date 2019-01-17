@@ -143,7 +143,12 @@ namespace My_Alarm
         private void AlarmItem_Load(object sender, EventArgs e)
         {
             //设置为父控件大小
-            this.Width = Parent.ClientRectangle.Width ;
+            ResizeWidth();
+        }
+
+        public void ResizeWidth()
+        {
+            this.Width = Parent.ClientRectangle.Width;
         }
     }
 }

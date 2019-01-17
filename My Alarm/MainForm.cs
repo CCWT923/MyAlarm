@@ -79,6 +79,16 @@ namespace My_Alarm
             {
                 MessageBox.Show("注册全局热键失败！");
             }
+
+
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            foreach(var a in LayoutPanel_AlarmItems.Controls)
+            {
+                ((AlarmItem)a).ResizeWidth();
+            }
         }
     }
 }
