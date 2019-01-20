@@ -140,5 +140,25 @@ namespace My_Alarm
             interval.Sunday = bool.Parse(node.InnerText);
             return interval;
         }
+
+        public static ALARMINFO ParseAlarmInfo(string str)
+        {
+            ALARMINFO info = new ALARMINFO();
+
+            ///TODO: 如何解析。
+            ///例如： add 10 min, add 10 hour, add 10 day
+            ///at 1/20 20:35， 每年的1月20日重复
+            ///at 20:35，每天的20:35分重复
+            info.CreateDate = DateTime.Now;
+            info.AlarmDate = DateTime.Now.AddMinutes(5);
+            info.AlarmContents = "";
+            info.Enable = true;
+            info.AlarmName = "Quick Add Alarm";
+            info.RepeatInterval.Once = true;
+            info.RepeatInterval.Daily = false;
+            info.RepeatInterval.Monthly = false;
+            info.RepeatInterval.Weekly = false;
+            return info;
+        }
     }
 }

@@ -56,6 +56,7 @@
             this.Name = "WndQuickAddAlarm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WndQuickAddAlarm";
+            this.Load += new System.EventHandler(this.WndQuickAddAlarm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

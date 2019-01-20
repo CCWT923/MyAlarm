@@ -35,5 +35,10 @@ namespace My_Alarm
         {
             this.Close();
         }
+
+        private void WndQuickAddAlarm_Load(object sender, EventArgs e)
+        {
+            TextBox_QuickAlarmInfo.Focus();
+        }
     }
 }

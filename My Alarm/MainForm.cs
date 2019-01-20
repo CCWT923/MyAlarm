@@ -40,17 +40,19 @@ namespace My_Alarm
             Wnd_AddAlarm wnd_AddAlarm = new Wnd_AddAlarm();
             if(wnd_AddAlarm.ShowDialog() == DialogResult.OK)
             {
-                //TODO：在数据库中添加闹钟
-                dbHelper = new DBAssistant();
-                dbHelper.InsertData(dbHelper.MainTableName, Util.GetStringArrayFromAlarmInfo(Pub.AlarmInfo));
+                CreateAlarmItem(Pub.AlarmInfo);
             }
-            CreateAlarmItem(Pub.AlarmInfo);
+            
         }
-
+        /// <summary>
+        /// 创建闹钟对象，并添加到数据库
+        /// </summary>
+        /// <param name="alarmInfo"></param>
         private void CreateAlarmItem(Util.ALARMINFO alarmInfo)
         {
             AlarmItem item = new AlarmItem(alarmInfo.AlarmName,alarmInfo.AlarmDate);
             LayoutPanel_AlarmItems.Controls.Add(item);
+            dbHelper.InsertData(dbHelper.MainTableName, Util.GetStringArrayFromAlarmInfo(alarmInfo));
         }
 
         #region 响应全局热键
@@ -63,7 +65,8 @@ namespace My_Alarm
                 WndQuickAddAlarm quickAddAlarm = new WndQuickAddAlarm();
                 if(quickAddAlarm.ShowDialog() == DialogResult.OK)
                 {
-                    MessageBox.Show(Pub.QuickAlarmInfo);
+                    //TODO: 快速添加闹钟
+                    CreateAlarmItem(Util.ParseAlarmInfo(Pub.QuickAlarmInfo));
                 }
             }
             base.WndProc(ref keyPressed);
@@ -79,8 +82,13 @@ namespace My_Alarm
             {
                 MessageBox.Show("注册全局热键失败！");
             }
-
-
+            else
+            {
+#if DEBUG
+                Lbl_Debug.Text = "全局热键：" + "Alt+Ctrl+" + (char)vitualKey;
+#endif
+            }
+            dbHelper = new DBAssistant();
         }
 
         private void MainForm_Resize(object sender, EventArgs e)
