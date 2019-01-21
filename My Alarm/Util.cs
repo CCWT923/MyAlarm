@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Diagnostics;
+using System.Data;
 
 namespace My_Alarm
 {
@@ -25,6 +26,7 @@ namespace My_Alarm
             public string AlarmSound;
             public REPEATINTERVAL RepeatInterval;
             public bool Enable;
+            public int AlarmID;
         }
         /// <summary>
         /// 重复周期
@@ -159,6 +161,29 @@ namespace My_Alarm
             info.RepeatInterval.Monthly = false;
             info.RepeatInterval.Weekly = false;
             return info;
+        }
+        /// <summary>
+        /// 从数据表中解析Alarm信息
+        /// </summary>
+        /// <param name="table">一个数据表，ref引用</param>
+        /// <returns>返回一个List的AlarmInfo</returns>
+        public List<ALARMINFO> GetAlarmInfoFromTable(ref DataTable table)
+        {
+            List<ALARMINFO> Alarms = new List<ALARMINFO>();
+            ALARMINFO info = new ALARMINFO();
+            for(int i = 0; i < table.Rows.Count; i++)
+            {
+                info.AlarmID = int.Parse(table.Rows[i]["AlarmID"].ToString()); //ID
+                info.CreateDate = DateTime.Parse(table.Rows[i]["CreateTime"].ToString()); //创建日期
+                info.AlarmDate = DateTime.Parse(table.Rows[i]["AlarmDate"].ToString()); //提醒日期
+                info.RepeatInterval = GetRepeatInfo(table.Rows[i]["Recurrence"].ToString()); //重复周期
+                info.AlarmName = table.Rows[i]["Title"].ToString(); //标题
+                info.AlarmContents = table.Rows[i]["Contents"].ToString(); //备注
+                info.AlarmSound = table.Rows[i]["Sound"].ToString(); //声音路径
+                info.Enable = int.Parse(table.Rows[i]["Enable"].ToString()) == 1 ? true : false; //是否启用
+                Alarms.Add(info);
+            }
+            return Alarms;
         }
     }
 }

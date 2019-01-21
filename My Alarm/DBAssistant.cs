@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data.SQLite;
 using System.IO;
+using System.Data;
 
 namespace My_Alarm
 {
@@ -11,6 +12,9 @@ namespace My_Alarm
     {
         SQLiteConnection _Connection = null;
         SQLiteCommand _Command = null;
+        SQLiteDataAdapter _Adapter;
+        DataSet _Dataset;
+
         private string _AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\WTstudio\MyAlarm";
         private string _DBFile;
         private string _MainTableName = "AlarmList";
@@ -109,6 +113,8 @@ namespace My_Alarm
             _Connection = new SQLiteConnection("data source = " + _DBFile);
             _Connection.Open();
             _Command = new SQLiteCommand(_Connection);
+            _Adapter = new SQLiteDataAdapter();
+            _Dataset = new DataSet();
         }
         /// <summary>
         /// 初始化表
@@ -118,7 +124,7 @@ namespace My_Alarm
             if(_Connection.State == System.Data.ConnectionState.Open)
             {
                 string table_AlarmList = "CREATE TABLE IF NOT EXISTS " + MainTableName + " (AlarmID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    "CreateTime TEXT, AlarmDate TEXT, IsExpired INTEGER, Recurrence INTEGER, Title TEXT, Contents TEXT, Sound TEXT, " +
+                    "CreateTime TEXT, AlarmDate TEXT, IsExpired INTEGER, Recurrence TEXT, Title TEXT, Contents TEXT, Sound TEXT, " +
                     "DelayTime INTEGER, Enable INTEGER)";
                 _Command.CommandText = table_AlarmList;
                 _Command.ExecuteNonQuery();
@@ -165,8 +171,17 @@ namespace My_Alarm
                 throw new Exception("插入数据时发生错误：" + ex.Message);
             }
         }
-
-
-
+        /// <summary>
+        /// 从数据库中选择有效的Alarm记录
+        /// </summary>
+        /// <returns>返回一个数据表</returns>
+        public DataTable GetValidAlarmList()
+        {
+            string validList = "SELECT * FROM AlarmList where IsExpired = 0";
+            _Command.CommandText = validList;
+            _Adapter.SelectCommand = _Command;
+            _Adapter.Fill(_Dataset, "ValidAlarm");
+            return _Dataset.Tables["ValidAlarm"];
+        }
     }
 }

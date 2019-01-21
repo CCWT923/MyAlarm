@@ -33,6 +33,7 @@ namespace My_Alarm
         /// 全局热键的虚拟键
         /// </summary>
         uint vitualKey = (uint)Keys.I;
+        Util util;
         #endregion
 
         private void Btn_AddAlarm_Click(object sender, EventArgs e)
@@ -40,7 +41,7 @@ namespace My_Alarm
             Wnd_AddAlarm wnd_AddAlarm = new Wnd_AddAlarm();
             if(wnd_AddAlarm.ShowDialog() == DialogResult.OK)
             {
-                CreateAlarmItem(Pub.AlarmInfo);
+                CreateAlarmItem(Pub.AlarmInfo,false);
             }
             
         }
@@ -48,11 +49,14 @@ namespace My_Alarm
         /// 创建闹钟对象，并添加到数据库
         /// </summary>
         /// <param name="alarmInfo"></param>
-        private void CreateAlarmItem(Util.ALARMINFO alarmInfo)
+        private void CreateAlarmItem(Util.ALARMINFO alarmInfo, bool readFlag)
         {
             AlarmItem item = new AlarmItem(alarmInfo.AlarmName,alarmInfo.AlarmDate);
             LayoutPanel_AlarmItems.Controls.Add(item);
-            dbHelper.InsertData(dbHelper.MainTableName, Util.GetStringArrayFromAlarmInfo(alarmInfo));
+            if(!readFlag)
+            {
+                dbHelper.InsertData(dbHelper.MainTableName, Util.GetStringArrayFromAlarmInfo(alarmInfo));
+            }
         }
 
         #region 响应全局热键
@@ -66,7 +70,7 @@ namespace My_Alarm
                 if(quickAddAlarm.ShowDialog() == DialogResult.OK)
                 {
                     //TODO: 快速添加闹钟
-                    CreateAlarmItem(Util.ParseAlarmInfo(Pub.QuickAlarmInfo));
+                    CreateAlarmItem(Util.ParseAlarmInfo(Pub.QuickAlarmInfo),false);
                 }
             }
             base.WndProc(ref keyPressed);
@@ -89,6 +93,14 @@ namespace My_Alarm
 #endif
             }
             dbHelper = new DBAssistant();
+            //读取数据库中有效的闹钟
+            util = new Util();
+            var table = dbHelper.GetValidAlarmList();
+            var alarms = util.GetAlarmInfoFromTable(ref table);
+            foreach(var alarm in alarms)
+            {
+                CreateAlarmItem(alarm,true);
+            }
         }
 
         private void MainForm_Resize(object sender, EventArgs e)
