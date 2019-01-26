@@ -39,6 +39,7 @@
             // 
             // Panel_Background
             // 
+            this.Panel_Background.BackColor = System.Drawing.Color.Transparent;
             this.Panel_Background.Controls.Add(this.tableLayoutPanel1);
             this.Panel_Background.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_Background.Location = new System.Drawing.Point(0, 0);
@@ -49,7 +50,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -89,6 +90,9 @@
             this.Lbl_AlarmTitle.TabIndex = 0;
             this.Lbl_AlarmTitle.Text = "AlarmTitle";
             this.Lbl_AlarmTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Lbl_AlarmTitle.Click += new System.EventHandler(this.AlarmItem_Click);
+            this.Lbl_AlarmTitle.MouseEnter += new System.EventHandler(this.AlarmItem_MouseEnter);
+            this.Lbl_AlarmTitle.MouseLeave += new System.EventHandler(this.AlarmItem_MouseLeave);
             // 
             // Lbl_Number
             // 

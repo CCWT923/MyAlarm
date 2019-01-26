@@ -52,6 +52,7 @@ namespace My_Alarm
         private void CreateAlarmItem(Util.ALARMINFO alarmInfo, bool readFlag)
         {
             AlarmItem item = new AlarmItem(alarmInfo.AlarmName,alarmInfo.AlarmDate);
+            item.AlarmID = alarmInfo.AlarmID;
             LayoutPanel_AlarmItems.Controls.Add(item);
             if(!readFlag)
             {

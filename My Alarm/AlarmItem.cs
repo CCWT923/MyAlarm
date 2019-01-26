@@ -19,25 +19,126 @@ namespace My_Alarm
             this.AlarmDate = AlarmDate;
             this.AlarmTitle = AlarmTitle;
             this.ItemNumber = _Counter;
+            this.BackColor = _DefaultBackgroundColor;
+            this.Checked = false;
         }
 
         #region 私有字段
+        /// <summary>
+        /// 闹钟日期
+        /// </summary>
         private DateTime _AlarmDate;
+        /// <summary>
+        /// 闹钟标题
+        /// </summary>
         private string _AlarmTitle;
+        /// <summary>
+        /// 闹钟备注
+        /// </summary>
         private string _AlarmContents;
+        /// <summary>
+        /// 闹钟提示音路径
+        /// </summary>
         private string _AlarmSoundPath;
+        /// <summary>
+        /// 闹钟序号
+        /// </summary>
         private int _ItemNumber;
+        /// <summary>
+        /// 计数器
+        /// </summary>
         private static int _Counter;
-        private Color _BackgroundColor;
-        private Font _AlarmTitleFont;
-        private Color _AlarmTitleColor;
-        private Font _AlarmContentsFont;
-        private Color _AlarmContentsColor;
-        private Font _IndexFont;
-        private Color _IndexColor;
+        /// <summary>
+        /// 默认背景色
+        /// </summary>
+        private Color _DefaultBackgroundColor = Color.White;
+        /// <summary>
+        /// 字体样式
+        /// </summary>
+        private Font _Font;
+        /// <summary>
+        /// 字体颜色
+        /// </summary>
+        private Color _FontColor;
+        /// <summary>
+        /// 闹钟的ID值
+        /// </summary>
+        private int _AlarmID;
+        /// <summary>
+        /// 高亮背景色，鼠标经过时的背景色
+        /// </summary>
+        private Color _HighlightBackgroundColor = Color.FromArgb(255,230,230,255);
+        /// <summary>
+        /// 选中状态下的背景色
+        /// </summary>
+        private Color _CheckedBackgroundColor = Color.FromArgb(255,200,200,255);
+        /// <summary>
+        /// 鼠标经过选中状态时的背景色
+        /// </summary>
+        private Color _HighlightBackgroundColor_Checked = Color.FromArgb(255,170,170,255);
+        /// <summary>
+        /// 该控件是否被选中
+        /// </summary>
+        private bool _Checked; 
         #endregion
 
         #region 公共属性
+        /// <summary>
+        /// 获取或设置当前控件的选中状态
+        /// </summary>
+        public bool Checked
+        {
+            get
+            {
+                return _Checked;
+            }
+            set
+            {
+                _Checked = value;
+            }
+        }
+        /// <summary>
+        /// 默认背景色
+        /// </summary>
+        public Color DefaultBackgroundColor
+        {
+            get
+            {
+                return _DefaultBackgroundColor;
+            }
+            set
+            {
+                _DefaultBackgroundColor = value;
+            }
+        }
+        /// <summary>
+        /// 选中状态下的背景色
+        /// </summary>
+        public Color CheckedBackgroundColor
+        {
+            get
+            {
+                return _CheckedBackgroundColor;
+            }
+            set
+            {
+                _CheckedBackgroundColor = value;
+            }
+        }
+        /// <summary>
+        /// 鼠标经过时的高亮颜色
+        /// </summary>
+        public Color HighlightBackgroundColor
+        {
+            get
+            {
+                return _HighlightBackgroundColor;
+            }
+            set
+            {
+                _HighlightBackgroundColor = value;
+            }
+        }
         /// <summary>
         /// 闹钟的日期时间
         /// </summary>
@@ -48,6 +149,20 @@ namespace My_Alarm
             {
                 _AlarmDate = value;
                 Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy-MM-dd HH:mm:ss");
+            }
+        }
+        /// <summary>
+        /// 闹钟的ID值
+        /// </summary>
+        public int AlarmID
+        {
+            get
+            {
+                return _AlarmID;
+            }
+            set
+            {
+                _AlarmID = value;
             }
         }
         /// <summary>
@@ -97,44 +212,26 @@ namespace My_Alarm
             }
         }
         /// <summary>
-        /// 备注字体
+        /// 字体样式
         /// </summary>
-        public Font AlarmContentsFont
+        public new Font Font
         {
-            get => _AlarmContentsFont;
-            set => _AlarmContentsFont = value;
+            get
+            {
+                return _Font;
+            }
+            set
+            {
+                _Font = value;
+            }
         }
         /// <summary>
-        /// 背景颜色
+        /// 字体颜色
         /// </summary>
-        public Color BackgroundColor
+        public Color FontColor
         {
-            get => _BackgroundColor;
-            set => _BackgroundColor = value;
-        }
-        /// <summary>
-        /// 标题字体
-        /// </summary>
-        public Font AlarmTitleFont
-        {
-            get => _AlarmTitleFont;
-            set => _AlarmTitleFont = value;
-        }
-        /// <summary>
-        /// 序号字体
-        /// </summary>
-        public Font IndexFont
-        {
-            get => _IndexFont;
-            set => _IndexFont = value;
-        }
-        /// <summary>
-        /// 序号颜色
-        /// </summary>
-        public Color IndexColor
-        {
-            get => _IndexColor;
-            set => _IndexColor = value;
+            get => _FontColor;
+            set => _FontColor = value;
         }
 
 
@@ -149,6 +246,55 @@ namespace My_Alarm
         public void ResizeWidth()
         {
             this.Width = Parent.ClientRectangle.Width;
+        }
+        /// <summary>
+        /// 鼠标进入时的事件处理程序
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AlarmItem_MouseEnter(object sender, EventArgs e)
+        {
+
+            if(this.Checked)
+            {
+                this.BackColor = _HighlightBackgroundColor_Checked;
+            }
+            else
+            {
+                this.BackColor = _HighlightBackgroundColor;
+            }
+        }
+        /// <summary>
+        /// 鼠标离开时的事件处理程序
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AlarmItem_MouseLeave(object sender, EventArgs e)
+        {
+            //离开时未被选中，才将其设置位默认背景色
+            if(!this.Checked)
+            {
+                this.BackColor = _DefaultBackgroundColor;
+            }
+
+        }
+        /// <summary>
+        /// 鼠标单击时的事件处理程序
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AlarmItem_Click(object sender, EventArgs e)
+        {
+            if(this.Checked)
+            {
+                this.Checked = false;
+                this.BackColor = DefaultBackgroundColor;
+            }
+            else
+            {
+                this.Checked = true;
+                this.BackColor = CheckedBackgroundColor;
+            }
         }
     }
 }
