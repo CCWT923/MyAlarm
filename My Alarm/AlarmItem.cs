@@ -67,11 +67,11 @@ namespace My_Alarm
         /// <summary>
         /// 高亮背景色，鼠标经过时的背景色
         /// </summary>
-        private Color _HighlightBackgroundColor = Color.FromArgb(255,230,230,255);
+        private Color _HighlightBackgroundColor = Color.FromArgb(255,230,230,230);
         /// <summary>
         /// 选中状态下的背景色
         /// </summary>
-        private Color _CheckedBackgroundColor = Color.FromArgb(255,200,200,255);
+        private Color _CheckedBackgroundColor = Color.FromArgb(255,200,200,200);
         /// <summary>
         /// 鼠标经过选中状态时的背景色
         /// </summary>
@@ -254,14 +254,15 @@ namespace My_Alarm
         /// <param name="e"></param>
         private void AlarmItem_MouseEnter(object sender, EventArgs e)
         {
-
             if(this.Checked)
             {
-                this.BackColor = _HighlightBackgroundColor_Checked;
+                return;
+                //this.BackColor = _HighlightBackgroundColor_Checked;
             }
             else
             {
                 this.BackColor = _HighlightBackgroundColor;
+
             }
         }
         /// <summary>

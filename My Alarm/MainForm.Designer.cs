@@ -32,8 +32,8 @@
             this.Btn_AddAlarm = new System.Windows.Forms.Button();
             this.Btn_EditAlarm = new System.Windows.Forms.Button();
             this.Btn_DeleteAlarm = new System.Windows.Forms.Button();
-            this.LayoutPanel_AlarmItems = new System.Windows.Forms.FlowLayoutPanel();
             this.Lbl_Debug = new System.Windows.Forms.Label();
+            this.LayoutPanel_AlarmItems = new System.Windows.Forms.FlowLayoutPanel();
             this.FPanel_ToolBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +93,16 @@
             this.Btn_DeleteAlarm.TabIndex = 0;
             this.Btn_DeleteAlarm.Text = "删除";
             this.Btn_DeleteAlarm.UseVisualStyleBackColor = true;
+            this.Btn_DeleteAlarm.Click += new System.EventHandler(this.Btn_DeleteAlarm_Click);
+            // 
+            // Lbl_Debug
+            // 
+            this.Lbl_Debug.AutoSize = true;
+            this.Lbl_Debug.Location = new System.Drawing.Point(372, 0);
+            this.Lbl_Debug.Name = "Lbl_Debug";
+            this.Lbl_Debug.Size = new System.Drawing.Size(62, 17);
+            this.Lbl_Debug.TabIndex = 1;
+            this.Lbl_Debug.Text = "label1";
             // 
             // LayoutPanel_AlarmItems
             // 
@@ -104,15 +114,6 @@
             this.LayoutPanel_AlarmItems.Size = new System.Drawing.Size(684, 323);
             this.LayoutPanel_AlarmItems.TabIndex = 1;
             this.LayoutPanel_AlarmItems.WrapContents = false;
-            // 
-            // Lbl_Debug
-            // 
-            this.Lbl_Debug.AutoSize = true;
-            this.Lbl_Debug.Location = new System.Drawing.Point(372, 0);
-            this.Lbl_Debug.Name = "Lbl_Debug";
-            this.Lbl_Debug.Size = new System.Drawing.Size(62, 17);
-            this.Lbl_Debug.TabIndex = 1;
-            this.Lbl_Debug.Text = "label1";
             // 
             // MainForm
             // 

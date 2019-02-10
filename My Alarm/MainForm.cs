@@ -103,12 +103,37 @@ namespace My_Alarm
                 CreateAlarmItem(alarm,true);
             }
         }
-
+        
         private void MainForm_Resize(object sender, EventArgs e)
+        {
+            ResizeAlarmItems();
+        }
+        /// <summary>
+        /// 调整所有AlarmItems的尺寸，根据窗口大小
+        /// </summary>
+        private void ResizeAlarmItems()
         {
             foreach(var a in LayoutPanel_AlarmItems.Controls)
             {
                 ((AlarmItem)a).ResizeWidth();
+            }
+        }
+
+        private void Btn_DeleteAlarm_Click(object sender, EventArgs e)
+        {
+            DeleteCheckedAlarmItems();
+        }
+        /// <summary>
+        /// TODO:删除选中的AlarmItem
+        /// </summary>
+        private void DeleteCheckedAlarmItems()
+        {
+            for(int i = 0; i < LayoutPanel_AlarmItems.Controls.Count;i++)
+            {
+                if(((AlarmItem)LayoutPanel_AlarmItems.Controls[i]).Checked)
+                {
+                    LayoutPanel_AlarmItems.Controls.RemoveAt(i);
+                }
             }
         }
     }
