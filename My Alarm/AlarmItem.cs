@@ -79,8 +79,21 @@ namespace My_Alarm
         /// <summary>
         /// 该控件是否被选中
         /// </summary>
-        private bool _Checked; 
+        private bool _Checked;
+        /// <summary>
+        /// 最大允许选择的数量
+        /// </summary>
+        private const int _MaxSelectLimite = 1;
+        /// <summary>
+        /// 当前已经选择的数量
+        /// </summary>
+        private static int _CurrentSelectNumber = 0;
+        /// <summary>
+        /// 上一个被选择对象的引用
+        /// </summary>
+        private static AlarmItem _LastSelectItem = null;
         #endregion
+
 
         #region 公共属性
         /// <summary>
@@ -284,17 +297,37 @@ namespace My_Alarm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        /// <remarks>只允许选择单个项目：记录上一个选择的控件ID，
+        /// 通过一个变量来记录选择的数量如果超过最大选择数（这里设
+        /// 定为1），那么就将上一个取消选择。</remarks>
         private void AlarmItem_Click(object sender, EventArgs e)
         {
-            if(this.Checked)
+            if (this.Checked)
             {
                 this.Checked = false;
                 this.BackColor = DefaultBackgroundColor;
             }
             else
             {
-                this.Checked = true;
-                this.BackColor = CheckedBackgroundColor;
+                //如果当前选中的项目还未到限制数量，则选择
+                if (_CurrentSelectNumber < _MaxSelectLimite)
+                {
+                    this.Checked = true;
+                    this.BackColor = CheckedBackgroundColor;
+                    _LastSelectItem = this;
+                    ++_CurrentSelectNumber;
+                }
+                else
+                {
+                    --_CurrentSelectNumber;
+                    _LastSelectItem.Checked = false;
+                    _LastSelectItem.BackColor = DefaultBackgroundColor;
+                    this.Checked = true;
+                    this.BackColor = CheckedBackgroundColor;
+                    ++_CurrentSelectNumber;
+                    _LastSelectItem = this;
+                }
+                System.Diagnostics.Debug.WriteLine("Last Select Item = " + _LastSelectItem.GetHashCode() + ", Current Select Item = " + this.GetHashCode());
             }
         }
     }
