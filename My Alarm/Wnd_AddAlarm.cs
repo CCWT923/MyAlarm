@@ -15,9 +15,12 @@ namespace My_Alarm
         private string _DefaultAlarmName = "My Alarm";
         private void Wnd_AddAlarm_Load(object sender, EventArgs e)
         {
-            //DateTimePicker_AlarmDate.MinDate = DateTime.Now;
-            DateTimePicker_AlarmDate.CustomFormat = "yyyy/MM/dd HH:mm:ss";
-            DateTimePicker_AlarmDate.Value = DateTime.Now.AddMinutes(5.0); //当前时间增加5分钟
+            DateTimePicker_AlarmDate.CustomFormat = "yyyy/MM/dd";
+            DateTime t = DateTime.Now.AddMinutes(5.0);
+            DateTimePicker_AlarmDate.Value = t;
+            Combox_Hour.SelectedItem = t.Hour.ToString();
+            Combox_Minute.SelectedItem = t.Minute.ToString();            
+            
             RadBtn_RepeatOnce.Checked = true;
             RadBtn_RepeatMonthly.Checked = false;
             Combox_RepeatDayOfMonth.Enabled = false;
@@ -25,6 +28,7 @@ namespace My_Alarm
             Panel_RepeatWeekday.Enabled = false;
             Panel_Weekday.Enabled = false;
             Combox_RepeatDayOfMonth.SelectedIndex = 0;
+
         }
         /// <summary>
         /// 是否重复
@@ -92,7 +96,7 @@ namespace My_Alarm
             alarmInfo.CreateDate = DateTime.Now;
             alarmInfo.AlarmSound = TextBox_AlarmSound.Text;
             alarmInfo.AlarmName = TextBox_AlarmName.Text;
-            alarmInfo.AlarmContents = TextBox_AlarmContents.Text;
+            alarmInfo.AlarmContents = TextBox_AlarmContents.Text.Replace("\r\n"," ");
             if (RadBtn_RepeatOnce.Checked) //一次性，不重复
             {
                 repeatInterval.Once = true;

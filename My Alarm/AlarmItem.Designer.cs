@@ -30,9 +30,11 @@
         {
             this.Panel_Background = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Lbl_AlarmDate = new System.Windows.Forms.Label();
+            this.Lbl_AlarmContent = new System.Windows.Forms.Label();
             this.Lbl_AlarmTitle = new System.Windows.Forms.Label();
-            this.Lbl_Number = new System.Windows.Forms.Label();
+            this.Lbl_AlarmDate = new System.Windows.Forms.Label();
+            this.Lbl_RepeatInterval = new System.Windows.Forms.Label();
+            this.Lbl_AlarmID = new System.Windows.Forms.Label();
             this.Panel_Background.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -43,50 +45,56 @@
             this.Panel_Background.Controls.Add(this.tableLayoutPanel1);
             this.Panel_Background.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_Background.Location = new System.Drawing.Point(0, 0);
-            this.Panel_Background.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Panel_Background.Margin = new System.Windows.Forms.Padding(2);
             this.Panel_Background.Name = "Panel_Background";
-            this.Panel_Background.Size = new System.Drawing.Size(451, 41);
+            this.Panel_Background.Size = new System.Drawing.Size(385, 51);
             this.Panel_Background.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.Lbl_AlarmDate, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Lbl_AlarmTitle, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.Lbl_Number, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.83505F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.16495F));
+            this.tableLayoutPanel1.Controls.Add(this.Lbl_AlarmContent, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Lbl_AlarmTitle, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Lbl_AlarmDate, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.Lbl_RepeatInterval, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.Lbl_AlarmID, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(451, 41);
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(385, 51);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // Lbl_AlarmDate
+            // Lbl_AlarmContent
             // 
-            this.Lbl_AlarmDate.AutoSize = true;
-            this.Lbl_AlarmDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Lbl_AlarmDate.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Lbl_AlarmDate.Location = new System.Drawing.Point(248, 0);
-            this.Lbl_AlarmDate.Name = "Lbl_AlarmDate";
-            this.Lbl_AlarmDate.Size = new System.Drawing.Size(200, 41);
-            this.Lbl_AlarmDate.TabIndex = 1;
-            this.Lbl_AlarmDate.Text = "AlarmDate";
-            this.Lbl_AlarmDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Lbl_AlarmContent.AutoSize = true;
+            this.Lbl_AlarmContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lbl_AlarmContent.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lbl_AlarmContent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Lbl_AlarmContent.Location = new System.Drawing.Point(116, 25);
+            this.Lbl_AlarmContent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_AlarmContent.Name = "Lbl_AlarmContent";
+            this.Lbl_AlarmContent.Size = new System.Drawing.Size(267, 26);
+            this.Lbl_AlarmContent.TabIndex = 1;
+            this.Lbl_AlarmContent.Text = "AlarmContent";
+            this.Lbl_AlarmContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Lbl_AlarmTitle
             // 
             this.Lbl_AlarmTitle.AutoSize = true;
             this.Lbl_AlarmTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Lbl_AlarmTitle.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Lbl_AlarmTitle.Location = new System.Drawing.Point(43, 0);
+            this.Lbl_AlarmTitle.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lbl_AlarmTitle.Location = new System.Drawing.Point(116, 0);
+            this.Lbl_AlarmTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_AlarmTitle.Name = "Lbl_AlarmTitle";
-            this.Lbl_AlarmTitle.Size = new System.Drawing.Size(199, 41);
+            this.Lbl_AlarmTitle.Size = new System.Drawing.Size(267, 25);
             this.Lbl_AlarmTitle.TabIndex = 0;
             this.Lbl_AlarmTitle.Text = "AlarmTitle";
             this.Lbl_AlarmTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,28 +102,49 @@
             this.Lbl_AlarmTitle.MouseEnter += new System.EventHandler(this.AlarmItem_MouseEnter);
             this.Lbl_AlarmTitle.MouseLeave += new System.EventHandler(this.AlarmItem_MouseLeave);
             // 
-            // Lbl_Number
+            // Lbl_AlarmDate
             // 
-            this.Lbl_Number.AutoSize = true;
-            this.Lbl_Number.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Lbl_Number.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Lbl_Number.Location = new System.Drawing.Point(3, 0);
-            this.Lbl_Number.Name = "Lbl_Number";
-            this.Lbl_Number.Size = new System.Drawing.Size(34, 41);
-            this.Lbl_Number.TabIndex = 2;
-            this.Lbl_Number.Text = "0";
-            this.Lbl_Number.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Lbl_AlarmDate.AutoSize = true;
+            this.Lbl_AlarmDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lbl_AlarmDate.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lbl_AlarmDate.Location = new System.Drawing.Point(13, 0);
+            this.Lbl_AlarmDate.Name = "Lbl_AlarmDate";
+            this.Lbl_AlarmDate.Size = new System.Drawing.Size(98, 25);
+            this.Lbl_AlarmDate.TabIndex = 2;
+            this.Lbl_AlarmDate.Text = "Alarm Date";
+            this.Lbl_AlarmDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Lbl_RepeatInterval
+            // 
+            this.Lbl_RepeatInterval.AutoSize = true;
+            this.Lbl_RepeatInterval.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lbl_RepeatInterval.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lbl_RepeatInterval.Location = new System.Drawing.Point(13, 25);
+            this.Lbl_RepeatInterval.Name = "Lbl_RepeatInterval";
+            this.Lbl_RepeatInterval.Size = new System.Drawing.Size(98, 26);
+            this.Lbl_RepeatInterval.TabIndex = 3;
+            this.Lbl_RepeatInterval.Text = "RepeatInterval";
+            this.Lbl_RepeatInterval.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Lbl_AlarmID
+            // 
+            this.Lbl_AlarmID.AutoSize = true;
+            this.Lbl_AlarmID.Location = new System.Drawing.Point(3, 0);
+            this.Lbl_AlarmID.Name = "Lbl_AlarmID";
+            this.Lbl_AlarmID.Size = new System.Drawing.Size(0, 12);
+            this.Lbl_AlarmID.TabIndex = 4;
+            this.Lbl_AlarmID.Visible = false;
             // 
             // AlarmItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.Panel_Background);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "AlarmItem";
-            this.Size = new System.Drawing.Size(451, 41);
+            this.Size = new System.Drawing.Size(385, 51);
             this.Load += new System.EventHandler(this.AlarmItem_Load);
             this.Panel_Background.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -129,7 +158,9 @@
         private System.Windows.Forms.Panel Panel_Background;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label Lbl_AlarmTitle;
+        private System.Windows.Forms.Label Lbl_AlarmContent;
         private System.Windows.Forms.Label Lbl_AlarmDate;
-        private System.Windows.Forms.Label Lbl_Number;
+        private System.Windows.Forms.Label Lbl_RepeatInterval;
+        private System.Windows.Forms.Label Lbl_AlarmID;
     }
 }

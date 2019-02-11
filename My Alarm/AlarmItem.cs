@@ -12,15 +12,18 @@ namespace My_Alarm
 {
     public partial class AlarmItem : UserControl
     {
-        public AlarmItem(string AlarmTitle, DateTime AlarmDate)
+        public AlarmItem(ref Util.ALARMINFO alarmInfo)
         {
             InitializeComponent();
             ++_Counter;
-            this.AlarmDate = AlarmDate;
-            this.AlarmTitle = AlarmTitle;
-            this.ItemNumber = _Counter;
+            this.AlarmDate = alarmInfo.AlarmDate;
+            this.AlarmTitle = alarmInfo.AlarmName;
+            this.AlarmRepeatInterval = alarmInfo.RepeatInterval;
+            this.AlarmContents = alarmInfo.AlarmContents;
+            //this.ItemNumber = _Counter;
             this.BackColor = _DefaultBackgroundColor;
             this.Checked = false;
+            this.AlarmID = alarmInfo.AlarmID;
         }
 
         #region 私有字段
@@ -44,6 +47,10 @@ namespace My_Alarm
         /// 闹钟序号
         /// </summary>
         private int _ItemNumber;
+        /// <summary>
+        /// 闹钟的重复周期
+        /// </summary>
+        private Util.REPEATINTERVAL _AlarmRepeatInterval;
         /// <summary>
         /// 计数器
         /// </summary>
@@ -161,7 +168,15 @@ namespace My_Alarm
             set
             {
                 _AlarmDate = value;
-                Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy-MM-dd HH:mm:ss");
+                //是今天的日期，就只显示时间，否则，显示日期和时间
+                if(_AlarmDate.Day == DateTime.Now.Day && _AlarmDate.Month == DateTime.Now.Month && _AlarmDate.Year == DateTime.Now.Year)
+                {
+                    Lbl_AlarmDate.Text = _AlarmDate.ToShortTimeString();
+                }
+                else
+                {
+                    Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy/MM/dd HH:mm");
+                }
             }
         }
         /// <summary>
@@ -176,10 +191,11 @@ namespace My_Alarm
             set
             {
                 _AlarmID = value;
+                Lbl_AlarmID.Text = _AlarmID.ToString();
             }
         }
         /// <summary>
-        /// 闹钟备注信息
+        /// 设置或获取闹钟备注信息
         /// </summary>
         public string AlarmContents
         {
@@ -187,8 +203,42 @@ namespace My_Alarm
             set
             {
                 _AlarmContents = value;
+                Lbl_AlarmContent.Text = _AlarmContents;
             }
         }
+        /// <summary>
+        /// 获取或设置闹钟的重复周期
+        /// </summary>
+        public Util.REPEATINTERVAL AlarmRepeatInterval
+        {
+            get
+            {
+                return _AlarmRepeatInterval;
+            }
+            set
+            {
+                _AlarmRepeatInterval = value;
+                string ri = "";
+                if(value.Daily)
+                {
+                    ri = "每天";
+                }
+                else if(value.Weekly)
+                {
+                    ri = "每周";
+                }
+                else if(value.Once)
+                {
+                    ri = "不重复";
+                }
+                else if(value.Monthly)
+                {
+                    ri = "每月";
+                }
+                Lbl_RepeatInterval.Text = ri;
+            }
+        }
+
         /// <summary>
         /// 闹钟标题
         /// </summary>
@@ -212,18 +262,20 @@ namespace My_Alarm
                 _AlarmSoundPath = value;
             }
         }
+
         /// <summary>
         /// 设置序号
         /// </summary>
-        public int ItemNumber
-        {
-            get { return _ItemNumber; }
-            set
-            {
-                _ItemNumber = value;
-                Lbl_Number.Text = _ItemNumber.ToString();
-            }
-        }
+        //public int ItemNumber
+        //{
+        //    get { return _ItemNumber; }
+        //    set
+        //    {
+        //        _ItemNumber = value;
+        //        Lbl_Number.Text = _ItemNumber.ToString();
+        //    }
+        //}
+
         /// <summary>
         /// 字体样式
         /// </summary>

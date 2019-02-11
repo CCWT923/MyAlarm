@@ -48,10 +48,11 @@ namespace My_Alarm
         /// <summary>
         /// 创建闹钟对象，并添加到数据库
         /// </summary>
-        /// <param name="alarmInfo"></param>
+        /// <param name="alarmInfo">一个存储闹钟信息的结构体变量</param>
+        /// <param name="readFlag">该标志指示是读取（true）或创建（false）</param>
         private void CreateAlarmItem(Util.ALARMINFO alarmInfo, bool readFlag)
         {
-            AlarmItem item = new AlarmItem(alarmInfo.AlarmName,alarmInfo.AlarmDate);
+            AlarmItem item = new AlarmItem(ref alarmInfo);
             item.AlarmID = alarmInfo.AlarmID;
             LayoutPanel_AlarmItems.Controls.Add(item);
             if(!readFlag)
@@ -132,7 +133,11 @@ namespace My_Alarm
             {
                 if(((AlarmItem)LayoutPanel_AlarmItems.Controls[i]).Checked)
                 {
+                    //从数据库中删除
+                    dbHelper.DeleteAlarmByID(((AlarmItem)LayoutPanel_AlarmItems.Controls[i]).AlarmID);
+                    //从窗口中移除
                     LayoutPanel_AlarmItems.Controls.RemoveAt(i);
+                    break;
                 }
             }
         }

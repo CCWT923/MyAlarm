@@ -54,7 +54,7 @@
             // 
             this.Btn_AddAlarm.FlatAppearance.BorderSize = 0;
             this.Btn_AddAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_AddAlarm.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Btn_AddAlarm.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Btn_AddAlarm.ForeColor = System.Drawing.Color.Green;
             this.Btn_AddAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_AddAlarm.Location = new System.Drawing.Point(0, 0);
@@ -70,7 +70,7 @@
             // 
             this.Btn_EditAlarm.FlatAppearance.BorderSize = 0;
             this.Btn_EditAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_EditAlarm.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Btn_EditAlarm.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Btn_EditAlarm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.Btn_EditAlarm.Location = new System.Drawing.Point(123, 0);
             this.Btn_EditAlarm.Margin = new System.Windows.Forms.Padding(0);
@@ -84,7 +84,7 @@
             // 
             this.Btn_DeleteAlarm.FlatAppearance.BorderSize = 0;
             this.Btn_DeleteAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_DeleteAlarm.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Btn_DeleteAlarm.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Btn_DeleteAlarm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.Btn_DeleteAlarm.Location = new System.Drawing.Point(246, 0);
             this.Btn_DeleteAlarm.Margin = new System.Windows.Forms.Padding(0);
@@ -100,7 +100,7 @@
             this.Lbl_Debug.AutoSize = true;
             this.Lbl_Debug.Location = new System.Drawing.Point(372, 0);
             this.Lbl_Debug.Name = "Lbl_Debug";
-            this.Lbl_Debug.Size = new System.Drawing.Size(62, 17);
+            this.Lbl_Debug.Size = new System.Drawing.Size(49, 14);
             this.Lbl_Debug.TabIndex = 1;
             this.Lbl_Debug.Text = "label1";
             // 
@@ -117,7 +117,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 372);

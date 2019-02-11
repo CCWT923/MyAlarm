@@ -116,6 +116,8 @@ namespace My_Alarm
             _Adapter = new SQLiteDataAdapter();
             _Dataset = new DataSet();
         }
+
+        #region 初始化数据库表
         /// <summary>
         /// 初始化表
         /// </summary>
@@ -130,6 +132,9 @@ namespace My_Alarm
                 _Command.ExecuteNonQuery();
             }
         }
+        #endregion
+
+        #region 向数据库中添加闹钟信息
         /// <summary>
         /// 向数据库中插入数据
         /// </summary>
@@ -171,6 +176,9 @@ namespace My_Alarm
                 throw new Exception("插入数据时发生错误：" + ex.Message);
             }
         }
+        #endregion
+
+        #region 获取数据库中有效的闹钟信息
         /// <summary>
         /// 从数据库中选择有效的Alarm记录
         /// </summary>
@@ -183,5 +191,16 @@ namespace My_Alarm
             _Adapter.Fill(_Dataset, "ValidAlarm");
             return _Dataset.Tables["ValidAlarm"];
         }
+        #endregion
+
+        #region 删除指定的闹钟信息
+        public void DeleteAlarmByID(int AlarmID)
+        {
+            string delCommand = "DELETE FROM AlarmList WHERE AlarmID = " + AlarmID;
+            _Command.CommandText = delCommand;
+            _Command.ExecuteNonQuery();
+        }
+        #endregion
+
     }
 }
