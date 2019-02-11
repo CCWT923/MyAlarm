@@ -515,7 +515,7 @@
             "21",
             "22",
             "23"});
-            this.Combox_Hour.Location = new System.Drawing.Point(301, 37);
+            this.Combox_Hour.Location = new System.Drawing.Point(296, 37);
             this.Combox_Hour.Name = "Combox_Hour";
             this.Combox_Hour.Size = new System.Drawing.Size(67, 28);
             this.Combox_Hour.TabIndex = 66;
@@ -608,7 +608,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.ForeColor = System.Drawing.Color.Crimson;
-            this.label6.Location = new System.Drawing.Point(374, 40);
+            this.label6.Location = new System.Drawing.Point(376, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 19);
             this.label6.TabIndex = 67;

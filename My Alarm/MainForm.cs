@@ -91,7 +91,7 @@ namespace My_Alarm
             else
             {
 #if DEBUG
-                Lbl_Debug.Text = "全局热键：" + "Alt+Ctrl+" + (char)vitualKey;
+                //Lbl_Debug.Text = "全局热键：" + "Alt+Ctrl+" + (char)vitualKey;
 #endif
             }
             dbHelper = new DBAssistant();

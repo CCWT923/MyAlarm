@@ -202,5 +202,7 @@ namespace My_Alarm
         }
         #endregion
 
+        //TODO：创建约束：同一时间不能同时有两个闹钟
+
     }
 }

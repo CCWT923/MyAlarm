@@ -32,7 +32,6 @@
             this.Btn_AddAlarm = new System.Windows.Forms.Button();
             this.Btn_EditAlarm = new System.Windows.Forms.Button();
             this.Btn_DeleteAlarm = new System.Windows.Forms.Button();
-            this.Lbl_Debug = new System.Windows.Forms.Label();
             this.LayoutPanel_AlarmItems = new System.Windows.Forms.FlowLayoutPanel();
             this.FPanel_ToolBox.SuspendLayout();
             this.SuspendLayout();
@@ -42,7 +41,6 @@
             this.FPanel_ToolBox.Controls.Add(this.Btn_AddAlarm);
             this.FPanel_ToolBox.Controls.Add(this.Btn_EditAlarm);
             this.FPanel_ToolBox.Controls.Add(this.Btn_DeleteAlarm);
-            this.FPanel_ToolBox.Controls.Add(this.Lbl_Debug);
             this.FPanel_ToolBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.FPanel_ToolBox.Location = new System.Drawing.Point(0, 0);
             this.FPanel_ToolBox.Margin = new System.Windows.Forms.Padding(0);
@@ -95,15 +93,6 @@
             this.Btn_DeleteAlarm.UseVisualStyleBackColor = true;
             this.Btn_DeleteAlarm.Click += new System.EventHandler(this.Btn_DeleteAlarm_Click);
             // 
-            // Lbl_Debug
-            // 
-            this.Lbl_Debug.AutoSize = true;
-            this.Lbl_Debug.Location = new System.Drawing.Point(372, 0);
-            this.Lbl_Debug.Name = "Lbl_Debug";
-            this.Lbl_Debug.Size = new System.Drawing.Size(49, 14);
-            this.Lbl_Debug.TabIndex = 1;
-            this.Lbl_Debug.Text = "label1";
-            // 
             // LayoutPanel_AlarmItems
             // 
             this.LayoutPanel_AlarmItems.AutoScroll = true;
@@ -130,7 +119,6 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.FPanel_ToolBox.ResumeLayout(false);
-            this.FPanel_ToolBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -142,7 +130,6 @@
         private System.Windows.Forms.Button Btn_EditAlarm;
         private System.Windows.Forms.Button Btn_DeleteAlarm;
         private System.Windows.Forms.FlowLayoutPanel LayoutPanel_AlarmItems;
-        private System.Windows.Forms.Label Lbl_Debug;
     }
 }
 

@@ -15,7 +15,7 @@ namespace My_Alarm
         private string _DefaultAlarmName = "My Alarm";
         private void Wnd_AddAlarm_Load(object sender, EventArgs e)
         {
-            DateTimePicker_AlarmDate.CustomFormat = "yyyy/MM/dd";
+            //DateTimePicker_AlarmDate.CustomFormat = "yyyy/MM/dd";
             DateTime t = DateTime.Now.AddMinutes(5.0);
             DateTimePicker_AlarmDate.Value = t;
             Combox_Hour.SelectedItem = t.Hour.ToString();
@@ -92,7 +92,15 @@ namespace My_Alarm
         {
             Util.ALARMINFO alarmInfo = new Util.ALARMINFO();
             Util.REPEATINTERVAL repeatInterval = new Util.REPEATINTERVAL();
-            alarmInfo.AlarmDate = DateTimePicker_AlarmDate.Value;
+            alarmInfo.AlarmDate = new DateTime
+                (
+                    DateTimePicker_AlarmDate.Value.Year,
+                    DateTimePicker_AlarmDate.Value.Month,
+                    DateTimePicker_AlarmDate.Value.Day,
+                    int.Parse(Combox_Hour.SelectedItem.ToString()),
+                    int.Parse(Combox_Minute.SelectedItem.ToString()),
+                    0
+                );
             alarmInfo.CreateDate = DateTime.Now;
             alarmInfo.AlarmSound = TextBox_AlarmSound.Text;
             alarmInfo.AlarmName = TextBox_AlarmName.Text;
