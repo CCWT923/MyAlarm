@@ -379,7 +379,6 @@ namespace My_Alarm
                     ++_CurrentSelectNumber;
                     _LastSelectItem = this;
                 }
-                System.Diagnostics.Debug.WriteLine("Last Select Item = " + _LastSelectItem.GetHashCode() + ", Current Select Item = " + this.GetHashCode());
             }
         }
     }

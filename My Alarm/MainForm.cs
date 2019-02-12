@@ -52,19 +52,24 @@ namespace My_Alarm
         /// <param name="readFlag">该标志指示是读取（true）或创建（false）</param>
         private void CreateAlarmItem(Util.ALARMINFO alarmInfo, bool readFlag)
         {
-            if(!readFlag)
+
+            if(!readFlag) //创建新的闹钟项目
             {
                 try
                 {
                     dbHelper.InsertData(dbHelper.MainTableName, Util.GetStringArrayFromAlarmInfo(alarmInfo));
                     AlarmItem item = new AlarmItem(ref alarmInfo);
-                    //item.AlarmID = alarmInfo.AlarmID;
                     LayoutPanel_AlarmItems.Controls.Add(item);
                 }
                 catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+            else //从数据库中读取，然后显示的项目
+            {
+                AlarmItem item = new AlarmItem(ref alarmInfo);
+                LayoutPanel_AlarmItems.Controls.Add(item);
             }
         }
 
