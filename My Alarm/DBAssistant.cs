@@ -126,7 +126,7 @@ namespace My_Alarm
             if(_Connection.State == System.Data.ConnectionState.Open)
             {
                 string table_AlarmList = "CREATE TABLE IF NOT EXISTS " + MainTableName + " (AlarmID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    "CreateTime TEXT, AlarmDate TEXT, IsExpired INTEGER, Recurrence TEXT, Title TEXT, Contents TEXT, Sound TEXT, " +
+                    "CreateTime TEXT, AlarmDate TEXT UNIQUE, IsExpired INTEGER, Recurrence TEXT, Title TEXT, Contents TEXT, Sound TEXT, " +
                     "DelayTime INTEGER, Enable INTEGER)";
                 _Command.CommandText = table_AlarmList;
                 _Command.ExecuteNonQuery();
@@ -171,9 +171,9 @@ namespace My_Alarm
                 System.Diagnostics.Debug.WriteLine(_Command.CommandText);
                 _Command.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (SQLiteException ex)
             {
-                throw new Exception("插入数据时发生错误：" + ex.Message);
+                throw ex;
             }
         }
         #endregion
