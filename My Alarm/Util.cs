@@ -146,20 +146,64 @@ namespace My_Alarm
         public static ALARMINFO ParseAlarmInfo(string str)
         {
             ALARMINFO info = new ALARMINFO();
-
-            ///TODO: 如何解析。
-            ///例如： add 10 min, add 10 hour, add 10 day
-            ///at 1/20 20:35， 每年的1月20日重复
-            ///at 20:35，每天的20:35分重复
             info.CreateDate = DateTime.Now;
-            info.AlarmDate = DateTime.Now.AddMinutes(5);
+            info.AlarmName = "Alarm";
             info.AlarmContents = "";
             info.Enable = true;
-            info.AlarmName = "Quick Add Alarm";
             info.RepeatInterval.Once = true;
             info.RepeatInterval.Daily = false;
             info.RepeatInterval.Monthly = false;
             info.RepeatInterval.Weekly = false;
+            /// TODO: 如何解析。
+            /// 这里只提供快速添加功能，所以不需要判断add之类的词
+            /// 例如： add 10 min, add 10 hour, add 10 day
+            /// at 1/20 20:35， 每年的1月20日重复
+            /// at 20:35，每天的20:35分重复
+            var t = str.Split(' ');
+            int value = 0;
+            if(int.TryParse(t[0],out value))
+            {
+                //时间无效
+                if(!(value > 0))
+                {
+                    info.Enable = false;
+                    return info;
+                }
+                DateTime now;
+                if(t[1].ToLower() == "min" || t[1].ToLower() == "m")
+                {
+                    now = DateTime.Now.AddMinutes(value);
+                    //分钟
+                    info.AlarmDate = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+                }
+                if(t[1].ToLower() == "hour" || t[1].ToLower() == "h")
+                {
+                    //小时
+                    now = DateTime.Now.AddHours(value);
+                    info.AlarmDate = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+                }
+                if(t[1].ToLower() == "day" || t[1].ToLower() == "d")
+                {
+                    //天
+                    now = DateTime.Now.AddDays(value);
+                    info.AlarmDate = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+                }
+                if(t.Length > 2)
+                {
+                    //有标题
+                    info.AlarmName = t[2];
+                    if(t.Length > 3)
+                    {
+                        //有备注
+                        info.AlarmContents = t[3];
+                    }
+                }
+            }
+            else
+            {
+                info.Enable = false;
+            }
+
             return info;
         }
         /// <summary>

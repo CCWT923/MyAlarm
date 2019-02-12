@@ -33,15 +33,14 @@
             // 
             // TextBox_QuickAlarmInfo
             // 
-            this.TextBox_QuickAlarmInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.TextBox_QuickAlarmInfo.BackColor = System.Drawing.Color.White;
             this.TextBox_QuickAlarmInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBox_QuickAlarmInfo.Font = new System.Drawing.Font("微软雅黑", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBox_QuickAlarmInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TextBox_QuickAlarmInfo.ForeColor = System.Drawing.Color.Black;
             this.TextBox_QuickAlarmInfo.Location = new System.Drawing.Point(12, 10);
             this.TextBox_QuickAlarmInfo.Name = "TextBox_QuickAlarmInfo";
             this.TextBox_QuickAlarmInfo.Size = new System.Drawing.Size(557, 29);
             this.TextBox_QuickAlarmInfo.TabIndex = 0;
-            this.TextBox_QuickAlarmInfo.Text = "add 10 m";
             this.TextBox_QuickAlarmInfo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_QuickAlarmInfo_KeyPress);
             this.TextBox_QuickAlarmInfo.LostFocus += new System.EventHandler(this.TextBox_QuickAlarmInfo_LostFocus);
             // 
@@ -49,7 +48,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(581, 49);
             this.Controls.Add(this.TextBox_QuickAlarmInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

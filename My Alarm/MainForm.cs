@@ -105,6 +105,9 @@ namespace My_Alarm
                 //Lbl_Debug.Text = "全局热键：" + "Alt+Ctrl+" + (char)vitualKey;
 #endif
             }
+
+            timer1.Enabled = true;
+
             dbHelper = new DBAssistant();
             //读取数据库中有效的闹钟
             util = new Util();
@@ -150,6 +153,47 @@ namespace My_Alarm
                     LayoutPanel_AlarmItems.Controls.RemoveAt(i);
                     break;
                 }
+            }
+        }
+
+        private void Btn_Minisize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            CheckAlarmItem();
+        }
+        /// <summary>
+        /// 检查每一个闹钟项目是否时间到达
+        /// </summary>
+        private void CheckAlarmItem()
+        {
+            foreach(AlarmItem item in LayoutPanel_AlarmItems.Controls)
+            {
+                if(item.Valid)
+                {
+                    if (DateTime.Now.Year == item.AlarmDate.Year && DateTime.Now.Month == item.AlarmDate.Month 
+                        && DateTime.Now.Day == item.AlarmDate.Day && DateTime.Now.Hour == item.AlarmDate.Hour 
+                        && DateTime.Now.Minute == item.AlarmDate.Minute)
+                    {
+                        //显示窗口，并且将当前闹钟设置为无效，如果窗口中点击了延迟功能，那么重新设置为有效
+                        item.Valid = false;
+                        RemindWindow remind = new RemindWindow(item.AlarmTitle, item.AlarmContents);
+                        remind.Show();
+                    }
+                    if (item.AlarmDate < DateTime.Now)
+                    {
+                        item.Valid = false;
+                    }
+                }
+
             }
         }
     }

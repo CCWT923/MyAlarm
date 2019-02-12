@@ -20,6 +20,8 @@ namespace My_Alarm
             this.AlarmTitle = alarmInfo.AlarmName;
             this.AlarmRepeatInterval = alarmInfo.RepeatInterval;
             this.AlarmContents = alarmInfo.AlarmContents;
+            this.AlarmSoundPath = alarmInfo.AlarmSound;
+            this.Valid = true;
             //this.ItemNumber = _Counter;
             this.BackColor = _DefaultBackgroundColor;
             this.Checked = false;
@@ -72,13 +74,17 @@ namespace My_Alarm
         /// </summary>
         private int _AlarmID;
         /// <summary>
+        /// 闹钟是否有效
+        /// </summary>
+        private bool _Valid;
+        /// <summary>
         /// 高亮背景色，鼠标经过时的背景色
         /// </summary>
         private Color _HighlightBackgroundColor = Color.FromArgb(255,230,230,230);
         /// <summary>
         /// 选中状态下的背景色
         /// </summary>
-        private Color _CheckedBackgroundColor = Color.FromArgb(255,200,200,200);
+        private Color _CheckedBackgroundColor = Color.FromArgb(255,210,210,210);
         /// <summary>
         /// 鼠标经过选中状态时的背景色
         /// </summary>
@@ -115,6 +121,26 @@ namespace My_Alarm
             set
             {
                 _Checked = value;
+            }
+        }
+        /// <summary>
+        /// 获取或设置当前闹钟是否有效
+        /// </summary>
+        public bool Valid
+        {
+            get
+            {
+                return _Valid;
+            }
+            set
+            {
+                _Valid = value;
+                if(value == false)
+                {
+                    this.Lbl_AlarmDate.ForeColor = Color.Gray;
+                    this.Lbl_AlarmTitle.ForeColor = Color.Gray;
+                    this.Lbl_RepeatInterval.Text = "已过期";
+                }
             }
         }
         /// <summary>
@@ -225,15 +251,43 @@ namespace My_Alarm
                 }
                 else if(value.Weekly)
                 {
-                    ri = "每周";
+                    ri = "每周: ";
+                    if (value.Monday)
+                    {
+                        ri += "一";
+                    }
+                    if (value.Tuesday)
+                    {
+                        ri += "二";
+                    }
+                    if (value.Wednesday)
+                    {
+                        ri += "三";
+                    }
+                    if (value.Thursday)
+                    {
+                        ri += "四";
+                    }
+                    if (value.Friday)
+                    {
+                        ri += "五";
+                    }
+                    if (value.Saturday)
+                    {
+                        ri += "六";
+                    }
+                    if (value.Sunday)
+                    {
+                        ri += "日";
+                    }
                 }
                 else if(value.Once)
                 {
-                    ri = "不重复";
+                    ri = "一次性";
                 }
                 else if(value.Monthly)
                 {
-                    ri = "每月";
+                    ri = "每月 " + value.DayOfMonth.ToString() + " 日";
                 }
                 Lbl_RepeatInterval.Text = ri;
             }
@@ -344,6 +398,7 @@ namespace My_Alarm
             }
 
         }
+        #region 每次只允许选择一个项目
         /// <summary>
         /// 鼠标单击时的事件处理程序
         /// </summary>
@@ -381,5 +436,7 @@ namespace My_Alarm
                 }
             }
         }
+        #endregion
+
     }
 }

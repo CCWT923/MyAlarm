@@ -22,8 +22,16 @@ namespace My_Alarm
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                this.DialogResult = DialogResult.OK;
-                Pub.QuickAlarmInfo = TextBox_QuickAlarmInfo.Text;
+                if(TextBox_QuickAlarmInfo.Text == string.Empty)
+                {
+                    this.DialogResult = DialogResult.Cancel;
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.OK;
+                    Pub.QuickAlarmInfo = TextBox_QuickAlarmInfo.Text;
+                }
+
             }
             else if(e.KeyChar == (char)Keys.Escape)
             {
