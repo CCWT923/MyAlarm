@@ -15,9 +15,9 @@ namespace My_Alarm
         SQLiteDataAdapter _Adapter;
         DataSet _Dataset;
 
-        private string _AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\WTstudio\MyAlarm";
+        private readonly string _AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\WTstudio\MyAlarm";
         private string _DBFile;
-        private string _MainTableName = "AlarmList";
+        private readonly string _MainTableName = "AlarmList";
 
         /// <summary>
         /// 构造函数
@@ -201,8 +201,6 @@ namespace My_Alarm
             _Command.ExecuteNonQuery();
         }
         #endregion
-
-        //TODO：创建约束：同一时间不能同时有两个闹钟
 
     }
 }

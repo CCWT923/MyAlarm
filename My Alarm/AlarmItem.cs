@@ -46,7 +46,7 @@ namespace My_Alarm
         /// <summary>
         /// 闹钟序号
         /// </summary>
-        private int _ItemNumber;
+        //private int _ItemNumber;
         /// <summary>
         /// 闹钟的重复周期
         /// </summary>

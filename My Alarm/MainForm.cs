@@ -83,7 +83,6 @@ namespace My_Alarm
                 WndQuickAddAlarm quickAddAlarm = new WndQuickAddAlarm();
                 if(quickAddAlarm.ShowDialog() == DialogResult.OK)
                 {
-                    //TODO: 快速添加闹钟
                     CreateAlarmItem(Util.ParseAlarmInfo(Pub.QuickAlarmInfo),false);
                 }
             }
@@ -137,7 +136,7 @@ namespace My_Alarm
             DeleteCheckedAlarmItems();
         }
         /// <summary>
-        /// TODO:删除选中的AlarmItem
+        /// 删除选中的AlarmItem
         /// </summary>
         private void DeleteCheckedAlarmItems()
         {
