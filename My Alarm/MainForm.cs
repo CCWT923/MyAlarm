@@ -185,7 +185,7 @@ namespace My_Alarm
                     {
                         //显示窗口，并且将当前闹钟设置为无效，如果窗口中点击了延迟功能，那么重新设置为有效
                         item.Valid = false;
-                        RemindWindow remind = new RemindWindow(item.AlarmTitle, item.AlarmContents);
+                        RemindWindow remind = new RemindWindow(item.AlarmTitle, item.AlarmContents,true);
                         remind.Show();
                     }
                     if (item.AlarmDate < DateTime.Now)
