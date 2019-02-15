@@ -170,23 +170,24 @@ namespace My_Alarm
                     return info;
                 }
                 DateTime now;
+                
                 if(t[1].ToLower() == "min" || t[1].ToLower() == "m")
                 {
                     now = DateTime.Now.AddMinutes(value);
                     //分钟
-                    info.AlarmDate = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+                    info.AlarmDate = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second);
                 }
                 if(t[1].ToLower() == "hour" || t[1].ToLower() == "h")
                 {
                     //小时
                     now = DateTime.Now.AddHours(value);
-                    info.AlarmDate = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+                    info.AlarmDate = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second);
                 }
                 if(t[1].ToLower() == "day" || t[1].ToLower() == "d")
                 {
                     //天
                     now = DateTime.Now.AddDays(value);
-                    info.AlarmDate = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+                    info.AlarmDate = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second);
                 }
                 if(t.Length > 2)
                 {
@@ -228,6 +229,24 @@ namespace My_Alarm
                 Alarms.Add(info);
             }
             return Alarms;
+        }
+        /// <summary>
+        /// 提醒窗口的显示模式
+        /// </summary>
+        public enum RemindWindowDisplayMode
+        {
+            /// <summary>
+            /// 右下角弹窗
+            /// </summary>
+            PopFromBottomRightCorner,
+            /// <summary>
+            /// 全屏
+            /// </summary>
+            Fullscreen,
+            /// <summary>
+            /// 屏幕中间弹窗
+            /// </summary>
+            CenterScreen
         }
     }
 }

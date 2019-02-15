@@ -99,7 +99,7 @@ namespace My_Alarm
                     DateTimePicker_AlarmDate.Value.Day,
                     int.Parse(Combox_Hour.SelectedItem.ToString()),
                     int.Parse(Combox_Minute.SelectedItem.ToString()),
-                    0
+                    DateTime.Now.Second
                 );
             alarmInfo.CreateDate = DateTime.Now;
             alarmInfo.AlarmSound = TextBox_AlarmSound.Text;

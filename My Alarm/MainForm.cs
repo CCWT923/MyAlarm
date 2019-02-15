@@ -181,11 +181,11 @@ namespace My_Alarm
                 {
                     if (DateTime.Now.Year == item.AlarmDate.Year && DateTime.Now.Month == item.AlarmDate.Month 
                         && DateTime.Now.Day == item.AlarmDate.Day && DateTime.Now.Hour == item.AlarmDate.Hour 
-                        && DateTime.Now.Minute == item.AlarmDate.Minute)
+                        && DateTime.Now.Minute == item.AlarmDate.Minute && DateTime.Now.Second == item.AlarmDate.Second)
                     {
                         //显示窗口，并且将当前闹钟设置为无效，如果窗口中点击了延迟功能，那么重新设置为有效
                         item.Valid = false;
-                        RemindWindow remind = new RemindWindow(item.AlarmTitle, item.AlarmContents,true);
+                        RemindWindow remind = new RemindWindow(item.AlarmTitle, item.AlarmContents, Util.RemindWindowDisplayMode.CenterScreen);
                         remind.Show();
                     }
                     if (item.AlarmDate < DateTime.Now)
