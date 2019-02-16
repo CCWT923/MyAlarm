@@ -22,17 +22,8 @@ namespace My_Alarm
             this.AlarmContents = alarmInfo.AlarmContents;
             this.AlarmSoundPath = alarmInfo.AlarmSound;
             this.BackColor = _DefaultBackgroundColor;
-            this.Checked = false;
             this.AlarmID = alarmInfo.AlarmID;
-           
-            if(alarmInfo.AlarmStatus)
-            {
-                this.ChkBox_AlarmEnableStatus.Checked = true;
-            }
-            else
-            {
-                this.ChkBox_AlarmEnableStatus.Checked = false;
-            }
+            this.AlarmStatus = alarmInfo.AlarmStatus;
         }
 
         #region 私有字段
@@ -145,7 +136,10 @@ namespace My_Alarm
                 if(value == false)
                 {
                     this.ChkBox_AlarmEnableStatus.Checked = false;
-                    this.Lbl_RepeatInterval.Text = "已过期";
+                }
+                else
+                {
+                    this.ChkBox_AlarmEnableStatus.Checked = true;
                 }
             }
         }

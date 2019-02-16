@@ -99,7 +99,7 @@ namespace My_Alarm
                     DateTimePicker_AlarmDate.Value.Day,
                     int.Parse(Combox_Hour.SelectedItem.ToString()),
                     int.Parse(Combox_Minute.SelectedItem.ToString()),
-                    DateTime.Now.Second
+                    0
                 );
             alarmInfo.CreateDate = DateTime.Now;
             alarmInfo.AlarmSound = TextBox_AlarmSound.Text;
@@ -143,7 +143,7 @@ namespace My_Alarm
             }
             else
             {
-                throw new Exception("选择错误？");
+                throw new Exception("Error Choice!");
             }
             alarmInfo.RepeatInterval = repeatInterval;
             alarmInfo.AlarmStatus = true;

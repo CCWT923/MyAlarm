@@ -112,7 +112,7 @@
             // 
             // Panel_TitleBar
             // 
-            this.Panel_TitleBar.BackColor = System.Drawing.Color.Crimson;
+            this.Panel_TitleBar.BackColor = System.Drawing.Color.DodgerBlue;
             this.Panel_TitleBar.Controls.Add(this.Btn_Minisize);
             this.Panel_TitleBar.Controls.Add(this.Btn_Close);
             this.Panel_TitleBar.Dock = System.Windows.Forms.DockStyle.Top;

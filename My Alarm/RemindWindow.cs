@@ -15,7 +15,7 @@ namespace My_Alarm
         private string _AlarmTitle;
         private string _AlarmContent;
 
-        public RemindWindow(string title, string content,  Util.RemindWindowDisplayMode displayMode)
+        public RemindWindow(string title, string content, Util.RemindWindowDisplayMode displayMode)
         {
             InitializeComponent();
             this._AlarmContent = content;
@@ -46,8 +46,9 @@ namespace My_Alarm
 
         private void RemindWindow_Load(object sender, EventArgs e)
         {
-            Lbl_AlarmContent.Text = _AlarmContent;
+            comboBox1.SelectedItem = "5";
             Lbl_AlarmTitle.Text = _AlarmTitle;
+            Btn_Snooze.Text = string.Format("推迟{0}分钟",comboBox1.SelectedItem.ToString());
         }
     }
 }

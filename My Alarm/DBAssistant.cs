@@ -178,14 +178,14 @@ namespace My_Alarm
         }
         #endregion
 
-        #region 获取数据库中有效的闹钟信息
+        #region 获取数据库中的闹钟信息
         /// <summary>
         /// 从数据库中选择有效的Alarm记录
         /// </summary>
         /// <returns>返回一个数据表</returns>
         public DataTable GetValidAlarmList()
         {
-            string validList = "SELECT * FROM AlarmList where IsExpired = 0";
+            string validList = "SELECT * FROM AlarmList";
             _Command.CommandText = validList;
             _Adapter.SelectCommand = _Command;
             _Adapter.Fill(_Dataset, "ValidAlarm");

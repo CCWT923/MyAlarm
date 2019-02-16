@@ -41,7 +41,7 @@ namespace My_Alarm
             Wnd_AddAlarm wnd_AddAlarm = new Wnd_AddAlarm();
             if(wnd_AddAlarm.ShowDialog() == DialogResult.OK)
             {
-                CreateAlarmItem(Pub.AlarmInfo,false);
+                CreateAlarmItem(Pub.AlarmInfo, readFlag:false);
             }
             
         }
@@ -106,7 +106,7 @@ namespace My_Alarm
 #endif
             }
 
-            timer1.Enabled = true;
+            //timer1.Enabled = true;
 
             dbHelper = new DBAssistant();
             //读取数据库中有效的闹钟
