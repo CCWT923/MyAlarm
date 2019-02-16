@@ -21,11 +21,18 @@ namespace My_Alarm
             this.AlarmRepeatInterval = alarmInfo.RepeatInterval;
             this.AlarmContents = alarmInfo.AlarmContents;
             this.AlarmSoundPath = alarmInfo.AlarmSound;
-            this.Valid = true;
-            //this.ItemNumber = _Counter;
             this.BackColor = _DefaultBackgroundColor;
             this.Checked = false;
             this.AlarmID = alarmInfo.AlarmID;
+           
+            if(alarmInfo.AlarmStatus)
+            {
+                this.ChkBox_AlarmEnableStatus.Checked = true;
+            }
+            else
+            {
+                this.ChkBox_AlarmEnableStatus.Checked = false;
+            }
         }
 
         #region 私有字段
@@ -74,9 +81,9 @@ namespace My_Alarm
         /// </summary>
         private int _AlarmID;
         /// <summary>
-        /// 闹钟是否有效
+        /// 闹钟当前的状态是否有效
         /// </summary>
-        private bool _Valid;
+        private bool _AlarmStatus;
         /// <summary>
         /// 高亮背景色，鼠标经过时的背景色
         /// </summary>
@@ -126,19 +133,18 @@ namespace My_Alarm
         /// <summary>
         /// 获取或设置当前闹钟是否有效
         /// </summary>
-        public bool Valid
+        public bool AlarmStatus
         {
             get
             {
-                return _Valid;
+                return _AlarmStatus;
             }
             set
             {
-                _Valid = value;
+                _AlarmStatus = value;
                 if(value == false)
                 {
-                    this.Lbl_AlarmDate.ForeColor = Color.Gray;
-                    this.Lbl_AlarmTitle.ForeColor = Color.Gray;
+                    this.ChkBox_AlarmEnableStatus.Checked = false;
                     this.Lbl_RepeatInterval.Text = "已过期";
                 }
             }
@@ -217,7 +223,6 @@ namespace My_Alarm
             set
             {
                 _AlarmID = value;
-                Lbl_AlarmID.Text = _AlarmID.ToString();
             }
         }
         /// <summary>

@@ -146,7 +146,7 @@ namespace My_Alarm
                 throw new Exception("选择错误？");
             }
             alarmInfo.RepeatInterval = repeatInterval;
-            alarmInfo.Enable = true;
+            alarmInfo.AlarmStatus = true;
             return alarmInfo;
         }
         /// <summary>

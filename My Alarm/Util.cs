@@ -25,7 +25,7 @@ namespace My_Alarm
             public string AlarmContents;
             public string AlarmSound;
             public REPEATINTERVAL RepeatInterval;
-            public bool Enable;
+            public bool AlarmStatus;
             public int AlarmID;
         }
         /// <summary>
@@ -149,7 +149,7 @@ namespace My_Alarm
             info.CreateDate = DateTime.Now;
             info.AlarmName = "Alarm";
             info.AlarmContents = "";
-            info.Enable = true;
+            info.AlarmStatus = true;
             info.RepeatInterval.Once = true;
             info.RepeatInterval.Daily = false;
             info.RepeatInterval.Monthly = false;
@@ -166,7 +166,7 @@ namespace My_Alarm
                 //时间无效
                 if(!(value > 0))
                 {
-                    info.Enable = false;
+                    info.AlarmStatus = false;
                     return info;
                 }
                 DateTime now;
@@ -202,7 +202,7 @@ namespace My_Alarm
             }
             else
             {
-                info.Enable = false;
+                info.AlarmStatus = false;
             }
 
             return info;
@@ -225,7 +225,7 @@ namespace My_Alarm
                 info.AlarmName = table.Rows[i]["Title"].ToString(); //标题
                 info.AlarmContents = table.Rows[i]["Contents"].ToString(); //备注
                 info.AlarmSound = table.Rows[i]["Sound"].ToString(); //声音路径
-                info.Enable = int.Parse(table.Rows[i]["Enable"].ToString()) == 1 ? true : false; //是否启用
+                info.AlarmStatus = int.Parse(table.Rows[i]["Enable"].ToString()) == 1 ? true : false; //是否启用
                 Alarms.Add(info);
             }
             return Alarms;
