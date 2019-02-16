@@ -197,11 +197,11 @@ namespace My_Alarm
                 //是今天的日期，就只显示时间，否则，显示日期和时间
                 if(_AlarmDate.Day == DateTime.Now.Day && _AlarmDate.Month == DateTime.Now.Month && _AlarmDate.Year == DateTime.Now.Year)
                 {
-                    Lbl_AlarmDate.Text = _AlarmDate.ToShortTimeString();
+                    Lbl_AlarmDate.Text = _AlarmDate.ToLongTimeString();
                 }
                 else
                 {
-                    Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy/MM/dd HH:mm");
+                    Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy/MM/dd HH:mm:ss");
                 }
             }
         }

@@ -106,7 +106,7 @@ namespace My_Alarm
 #endif
             }
 
-            //timer1.Enabled = true;
+            timer1.Enabled = true;
 
             dbHelper = new DBAssistant();
             //读取数据库中有效的闹钟
@@ -168,6 +168,7 @@ namespace My_Alarm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Lbl_TimeDislplay.Text = DateTime.Now.ToString("hh:mm:ss");
             CheckAlarmItem();
         }
         /// <summary>

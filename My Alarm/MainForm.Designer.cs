@@ -39,6 +39,8 @@
             this.Btn_Close = new System.Windows.Forms.Button();
             this.dragControl1 = new DragControl.DragControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.Lbl_TimeDislplay = new System.Windows.Forms.Label();
             this.FPanel_ToolBox.SuspendLayout();
             this.Panel_TitleBar.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +115,8 @@
             // Panel_TitleBar
             // 
             this.Panel_TitleBar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Panel_TitleBar.Controls.Add(this.Lbl_TimeDislplay);
+            this.Panel_TitleBar.Controls.Add(this.label1);
             this.Panel_TitleBar.Controls.Add(this.Btn_Minisize);
             this.Panel_TitleBar.Controls.Add(this.Btn_Close);
             this.Panel_TitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -160,6 +164,29 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Free Alarm";
+            // 
+            // Lbl_TimeDislplay
+            // 
+            this.Lbl_TimeDislplay.AutoSize = true;
+            this.Lbl_TimeDislplay.BackColor = System.Drawing.Color.White;
+            this.Lbl_TimeDislplay.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lbl_TimeDislplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.Lbl_TimeDislplay.Location = new System.Drawing.Point(280, 12);
+            this.Lbl_TimeDislplay.Name = "Lbl_TimeDislplay";
+            this.Lbl_TimeDislplay.Size = new System.Drawing.Size(71, 20);
+            this.Lbl_TimeDislplay.TabIndex = 1;
+            this.Lbl_TimeDislplay.Text = "00:00:00";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -178,6 +205,7 @@
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.FPanel_ToolBox.ResumeLayout(false);
             this.Panel_TitleBar.ResumeLayout(false);
+            this.Panel_TitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -194,6 +222,8 @@
         private DragControl.DragControl dragControl1;
         private System.Windows.Forms.Button Btn_Minisize;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label Lbl_TimeDislplay;
+        private System.Windows.Forms.Label label1;
     }
 }
 

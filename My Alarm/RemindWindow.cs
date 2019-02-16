@@ -41,6 +41,7 @@ namespace My_Alarm
 
         private void Btn_Close_Click(object sender, EventArgs e)
         {
+            timer1.Enabled = false;
             this.Close();
         }
 
@@ -48,6 +49,18 @@ namespace My_Alarm
         {
             comboBox1.SelectedItem = "5";
             Lbl_AlarmTitle.Text = _AlarmTitle;
+            Btn_Snooze.Text = string.Format("推迟{0}分钟",comboBox1.SelectedItem.ToString());
+            timer1.Interval = 1000;
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Lbl_CurrentTime.Text = DateTime.Now.ToString("hh:mm:ss");
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
             Btn_Snooze.Text = string.Format("推迟{0}分钟",comboBox1.SelectedItem.ToString());
         }
     }

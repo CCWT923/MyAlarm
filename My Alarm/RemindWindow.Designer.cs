@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dragControl1 = new DragControl.DragControl();
             this.Lbl_AlarmTitle = new System.Windows.Forms.Label();
             this.Btn_Close = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Lbl_CurrentTime = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.Panel_Title.SuspendLayout();
             this.SuspendLayout();
@@ -48,9 +50,10 @@
             // Lbl_AlarmTitle
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.Lbl_AlarmTitle, 2);
+            this.Lbl_AlarmTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Lbl_AlarmTitle.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Lbl_AlarmTitle.ForeColor = System.Drawing.Color.Black;
-            this.Lbl_AlarmTitle.Location = new System.Drawing.Point(3, 127);
+            this.Lbl_AlarmTitle.Location = new System.Drawing.Point(3, 113);
             this.Lbl_AlarmTitle.Name = "Lbl_AlarmTitle";
             this.Lbl_AlarmTitle.Size = new System.Drawing.Size(532, 85);
             this.Lbl_AlarmTitle.TabIndex = 0;
@@ -91,9 +94,9 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(538, 286);
             this.tableLayoutPanel1.TabIndex = 2;
@@ -140,13 +143,12 @@
             // 
             // Lbl_CurrentTime
             // 
-            this.Lbl_CurrentTime.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.Lbl_CurrentTime, 2);
             this.Lbl_CurrentTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Lbl_CurrentTime.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lbl_CurrentTime.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Lbl_CurrentTime.Location = new System.Drawing.Point(3, 42);
             this.Lbl_CurrentTime.Name = "Lbl_CurrentTime";
-            this.Lbl_CurrentTime.Size = new System.Drawing.Size(532, 85);
+            this.Lbl_CurrentTime.Size = new System.Drawing.Size(532, 71);
             this.Lbl_CurrentTime.TabIndex = 4;
             this.Lbl_CurrentTime.Text = "12:34:56";
             this.Lbl_CurrentTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,6 +157,7 @@
             // 
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "1",
@@ -187,10 +190,15 @@
             "28",
             "29",
             "30"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 215);
+            this.comboBox1.Location = new System.Drawing.Point(3, 201);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(263, 23);
+            this.comboBox1.Size = new System.Drawing.Size(263, 31);
             this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // RemindWindow
             // 
@@ -204,7 +212,6 @@
             this.Text = "RemindWindow";
             this.Load += new System.EventHandler(this.RemindWindow_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.Panel_Title.ResumeLayout(false);
             this.Panel_Title.PerformLayout();
             this.ResumeLayout(false);
@@ -222,5 +229,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Lbl_CurrentTime;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
