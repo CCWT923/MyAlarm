@@ -141,12 +141,6 @@
     <None Include="Source\Btn_Add.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Alarm_Normal.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Alarm_Stop.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\AlarmIcon.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -162,9 +156,6 @@
     <None Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Minimize.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AlarmIcon.ico" />
+    <None Include="Resources\Minimize1.png" />
+    <None Include="Resources\Alarm_Stop_32.ico" />
+    <None Include="Resources\Alarm_Normal_32.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

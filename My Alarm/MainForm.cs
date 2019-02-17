@@ -32,7 +32,7 @@ namespace My_Alarm
         /// <summary>
         /// 全局热键的虚拟键
         /// </summary>
-        uint vitualKey = (uint)Keys.I;
+        uint vitualKey = (uint)Keys.N;
         Util util;
         #endregion
 
@@ -92,30 +92,31 @@ namespace My_Alarm
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //全局快捷键的注册
-            thisWindow = this.FindForm().Handle;
-            successOfHotKey = WinAPI.RegisterHotKey(thisWindow, 0x3376, (uint)WinAPI.ModifierKeys.Alt | (uint)WinAPI.ModifierKeys.Control, vitualKey);
-            if(!successOfHotKey)
-            {
-                MessageBox.Show("注册全局热键失败！");
-            }
-            else
-            {
-#if DEBUG
-                //Lbl_Debug.Text = "全局热键：" + "Alt+Ctrl+" + (char)vitualKey;
-#endif
-            }
+            RegisterHotkey();
 
             timer1.Enabled = true;
 
             dbHelper = new DBAssistant();
-            //读取数据库中有效的闹钟
+            //读取数据库中的闹钟
             util = new Util();
             var table = dbHelper.GetValidAlarmList();
             var alarms = util.GetAlarmInfoFromTable(ref table);
             foreach(var alarm in alarms)
             {
                 CreateAlarmItem(alarm,true);
+            }
+        }
+        /// <summary>
+        /// 注册全局快捷键
+        /// </summary>
+        private void RegisterHotkey()
+        {
+            //全局快捷键的注册
+            thisWindow = this.FindForm().Handle;
+            successOfHotKey = WinAPI.RegisterHotKey(thisWindow, 0x3376, (uint)WinAPI.ModifierKeys.Alt | (uint)WinAPI.ModifierKeys.Control, vitualKey);
+            if(!successOfHotKey)
+            {
+                MessageBox.Show("注册全局热键失败！");
             }
         }
         
@@ -212,10 +213,11 @@ namespace My_Alarm
             if(this.WindowState == FormWindowState.Minimized)
             {
                 this.ShowInTaskbar = false;
-                NotifyIcon1.Icon = Properties.Resources.Alarm_Normal;
+                NotifyIcon1.Icon = Properties.Resources.Alarm_Normal_32;
                 NotifyIcon1.Visible = true;
                 //不在任务管理器的“应用程序”选项卡中显示
-                SetVisibleCore(false); 
+                //SetVisibleCore(false);
+                //RegisterHotkey();
             }
         }
 
@@ -223,11 +225,12 @@ namespace My_Alarm
         {
             if(this.WindowState == FormWindowState.Minimized)
             {
-                this.SetVisibleCore(true);
+                //this.SetVisibleCore(true);
                 this.WindowState = FormWindowState.Normal;
                 this.ShowInTaskbar = true;
                 this.NotifyIcon1.Visible = false;
                 this.Activate();
+                //RegisterHotkey();
             }
         }
     }

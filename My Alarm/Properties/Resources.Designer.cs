@@ -71,16 +71,6 @@ namespace My_Alarm.Properties {
         }
         
         /// <summary>
-        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Icon Alarm_Normal {
-            get {
-                object obj = ResourceManager.GetObject("Alarm_Normal", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Alarm_Normal_24px {
@@ -93,9 +83,19 @@ namespace My_Alarm.Properties {
         /// <summary>
         ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Icon Alarm_Stop {
+        internal static System.Drawing.Icon Alarm_Normal_32 {
             get {
-                object obj = ResourceManager.GetObject("Alarm_Stop", resourceCulture);
+                object obj = ResourceManager.GetObject("Alarm_Normal_32", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似于 (图标) 的 System.Drawing.Icon 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Icon Alarm_Stop_32 {
+            get {
+                object obj = ResourceManager.GetObject("Alarm_Stop_32", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace My_Alarm.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap Minimize {
+        internal static System.Drawing.Bitmap Minimize1 {
             get {
-                object obj = ResourceManager.GetObject("Minimize", resourceCulture);
+                object obj = ResourceManager.GetObject("Minimize1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
