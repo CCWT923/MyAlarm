@@ -163,12 +163,16 @@ namespace My_Alarm
 
         private void Btn_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(MessageBox.Show("确定要关闭 Free Alarm 吗？","关闭确认",buttons:MessageBoxButtons.OKCancel,icon:MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                dbHelper.Dispose();
+                this.Close();
+            } 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
-            Lbl_TimeDislplay.Text = DateTime.Now.ToString("hh:mm:ss");
+            Lbl_TimeDislplay.Text = DateTime.Now.ToString("HH:mm:ss");
             CheckAlarmItem();
         }
         /// <summary>
@@ -187,7 +191,12 @@ namespace My_Alarm
                         //显示窗口，并且将当前闹钟设置为无效，如果窗口中点击了延迟功能，那么重新设置为有效
                         item.AlarmStatus = false;
                         RemindWindow remind = new RemindWindow(item.AlarmTitle, item.AlarmContents, Util.RemindWindowDisplayMode.CenterScreen);
-                        remind.Show();
+                        //推迟
+                        if (remind.ShowDialog() == DialogResult.OK)
+                        {
+                            item.AlarmDate = DateTime.Now.AddMinutes(Pub.SnoozeValue);
+                            item.AlarmStatus = true;
+                        }
                     }
                     if (item.AlarmDate < DateTime.Now)
                     {
@@ -195,6 +204,30 @@ namespace My_Alarm
                     }
                 }
 
+            }
+        }
+
+        private void MainForm_SizeChanged(object sender, EventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Minimized)
+            {
+                this.ShowInTaskbar = false;
+                NotifyIcon1.Icon = Properties.Resources.Alarm_Normal;
+                NotifyIcon1.Visible = true;
+                //不在任务管理器的“应用程序”选项卡中显示
+                SetVisibleCore(false); 
+            }
+        }
+
+        private void NotifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Minimized)
+            {
+                this.SetVisibleCore(true);
+                this.WindowState = FormWindowState.Normal;
+                this.ShowInTaskbar = true;
+                this.NotifyIcon1.Visible = false;
+                this.Activate();
             }
         }
     }

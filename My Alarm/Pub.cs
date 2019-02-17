@@ -10,5 +10,6 @@ namespace My_Alarm
     {
         public static Util.ALARMINFO AlarmInfo;
         public static string QuickAlarmInfo;
+        public static int SnoozeValue;
     }
 }

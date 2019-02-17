@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AlarmIcon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -136,6 +139,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Source\Btn_Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm_Normal.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm_Stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlarmIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm_Normal_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm_Normal_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AlarmIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

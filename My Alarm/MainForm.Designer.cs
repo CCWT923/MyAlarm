@@ -29,20 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.FPanel_ToolBox = new System.Windows.Forms.FlowLayoutPanel();
             this.Btn_AddAlarm = new System.Windows.Forms.Button();
             this.Btn_EditAlarm = new System.Windows.Forms.Button();
             this.Btn_DeleteAlarm = new System.Windows.Forms.Button();
             this.LayoutPanel_AlarmItems = new System.Windows.Forms.FlowLayoutPanel();
             this.Panel_TitleBar = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Lbl_TimeDislplay = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Btn_Minisize = new System.Windows.Forms.Button();
             this.Btn_Close = new System.Windows.Forms.Button();
             this.dragControl1 = new DragControl.DragControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.Lbl_TimeDislplay = new System.Windows.Forms.Label();
+            this.NotifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.FPanel_ToolBox.SuspendLayout();
             this.Panel_TitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // FPanel_ToolBox
@@ -62,13 +66,15 @@
             this.Btn_AddAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_AddAlarm.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Btn_AddAlarm.ForeColor = System.Drawing.Color.Green;
+            this.Btn_AddAlarm.Image = global::My_Alarm.Properties.Resources.add;
             this.Btn_AddAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_AddAlarm.Location = new System.Drawing.Point(0, 0);
             this.Btn_AddAlarm.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_AddAlarm.Name = "Btn_AddAlarm";
-            this.Btn_AddAlarm.Size = new System.Drawing.Size(90, 35);
+            this.Btn_AddAlarm.Size = new System.Drawing.Size(80, 35);
             this.Btn_AddAlarm.TabIndex = 0;
             this.Btn_AddAlarm.Text = "添加";
+            this.Btn_AddAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_AddAlarm.UseVisualStyleBackColor = true;
             this.Btn_AddAlarm.Click += new System.EventHandler(this.Btn_AddAlarm_Click);
             // 
@@ -78,12 +84,15 @@
             this.Btn_EditAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_EditAlarm.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Btn_EditAlarm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.Btn_EditAlarm.Location = new System.Drawing.Point(90, 0);
+            this.Btn_EditAlarm.Image = ((System.Drawing.Image)(resources.GetObject("Btn_EditAlarm.Image")));
+            this.Btn_EditAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_EditAlarm.Location = new System.Drawing.Point(80, 0);
             this.Btn_EditAlarm.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_EditAlarm.Name = "Btn_EditAlarm";
-            this.Btn_EditAlarm.Size = new System.Drawing.Size(90, 35);
+            this.Btn_EditAlarm.Size = new System.Drawing.Size(80, 35);
             this.Btn_EditAlarm.TabIndex = 0;
             this.Btn_EditAlarm.Text = "编辑";
+            this.Btn_EditAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_EditAlarm.UseVisualStyleBackColor = true;
             // 
             // Btn_DeleteAlarm
@@ -92,12 +101,15 @@
             this.Btn_DeleteAlarm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_DeleteAlarm.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Btn_DeleteAlarm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Btn_DeleteAlarm.Location = new System.Drawing.Point(180, 0);
+            this.Btn_DeleteAlarm.Image = global::My_Alarm.Properties.Resources.delete;
+            this.Btn_DeleteAlarm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btn_DeleteAlarm.Location = new System.Drawing.Point(160, 0);
             this.Btn_DeleteAlarm.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_DeleteAlarm.Name = "Btn_DeleteAlarm";
-            this.Btn_DeleteAlarm.Size = new System.Drawing.Size(90, 35);
+            this.Btn_DeleteAlarm.Size = new System.Drawing.Size(80, 35);
             this.Btn_DeleteAlarm.TabIndex = 0;
             this.Btn_DeleteAlarm.Text = "删除";
+            this.Btn_DeleteAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_DeleteAlarm.UseVisualStyleBackColor = true;
             this.Btn_DeleteAlarm.Click += new System.EventHandler(this.Btn_DeleteAlarm_Click);
             // 
@@ -115,6 +127,7 @@
             // Panel_TitleBar
             // 
             this.Panel_TitleBar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Panel_TitleBar.Controls.Add(this.pictureBox1);
             this.Panel_TitleBar.Controls.Add(this.Lbl_TimeDislplay);
             this.Panel_TitleBar.Controls.Add(this.label1);
             this.Panel_TitleBar.Controls.Add(this.Btn_Minisize);
@@ -125,18 +138,52 @@
             this.Panel_TitleBar.Size = new System.Drawing.Size(684, 44);
             this.Panel_TitleBar.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::My_Alarm.Properties.Resources.clock_simple;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Lbl_TimeDislplay
+            // 
+            this.Lbl_TimeDislplay.AutoSize = true;
+            this.Lbl_TimeDislplay.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_TimeDislplay.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lbl_TimeDislplay.ForeColor = System.Drawing.Color.White;
+            this.Lbl_TimeDislplay.Location = new System.Drawing.Point(269, 12);
+            this.Lbl_TimeDislplay.Name = "Lbl_TimeDislplay";
+            this.Lbl_TimeDislplay.Size = new System.Drawing.Size(80, 24);
+            this.Lbl_TimeDislplay.TabIndex = 1;
+            this.Lbl_TimeDislplay.Text = "00:00:00";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(33, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Free Alarm";
+            // 
             // Btn_Minisize
             // 
             this.Btn_Minisize.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Btn_Minisize.FlatAppearance.BorderSize = 0;
+            this.Btn_Minisize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
             this.Btn_Minisize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Minisize.Font = new System.Drawing.Font("宋体", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Btn_Minisize.ForeColor = System.Drawing.Color.White;
-            this.Btn_Minisize.Location = new System.Drawing.Point(592, 3);
+            this.Btn_Minisize.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Minisize.Image")));
+            this.Btn_Minisize.Location = new System.Drawing.Point(593, 3);
             this.Btn_Minisize.Name = "Btn_Minisize";
             this.Btn_Minisize.Size = new System.Drawing.Size(37, 38);
             this.Btn_Minisize.TabIndex = 0;
-            this.Btn_Minisize.Text = "-";
             this.Btn_Minisize.UseVisualStyleBackColor = true;
             this.Btn_Minisize.Click += new System.EventHandler(this.Btn_Minisize_Click);
             // 
@@ -144,14 +191,15 @@
             // 
             this.Btn_Close.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Btn_Close.FlatAppearance.BorderSize = 0;
+            this.Btn_Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Crimson;
             this.Btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Close.Font = new System.Drawing.Font("宋体", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Btn_Close.ForeColor = System.Drawing.Color.White;
+            this.Btn_Close.Image = global::My_Alarm.Properties.Resources.close;
             this.Btn_Close.Location = new System.Drawing.Point(635, 3);
             this.Btn_Close.Name = "Btn_Close";
             this.Btn_Close.Size = new System.Drawing.Size(37, 38);
             this.Btn_Close.TabIndex = 0;
-            this.Btn_Close.Text = "×";
             this.Btn_Close.UseVisualStyleBackColor = true;
             this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
             // 
@@ -162,30 +210,13 @@
             // timer1
             // 
             this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // label1
+            // NotifyIcon1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Free Alarm";
-            // 
-            // Lbl_TimeDislplay
-            // 
-            this.Lbl_TimeDislplay.AutoSize = true;
-            this.Lbl_TimeDislplay.BackColor = System.Drawing.Color.White;
-            this.Lbl_TimeDislplay.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Lbl_TimeDislplay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Lbl_TimeDislplay.Location = new System.Drawing.Point(280, 12);
-            this.Lbl_TimeDislplay.Name = "Lbl_TimeDislplay";
-            this.Lbl_TimeDislplay.Size = new System.Drawing.Size(71, 20);
-            this.Lbl_TimeDislplay.TabIndex = 1;
-            this.Lbl_TimeDislplay.Text = "00:00:00";
+            this.NotifyIcon1.Text = "Free Alarm";
+            this.NotifyIcon1.Visible = true;
+            this.NotifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon1_MouseDoubleClick);
             // 
             // MainForm
             // 
@@ -202,10 +233,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Alarm";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.FPanel_ToolBox.ResumeLayout(false);
             this.Panel_TitleBar.ResumeLayout(false);
             this.Panel_TitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,6 +257,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label Lbl_TimeDislplay;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NotifyIcon NotifyIcon1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

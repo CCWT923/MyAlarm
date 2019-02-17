@@ -8,7 +8,7 @@ using System.Data;
 
 namespace My_Alarm
 {
-    class DBAssistant
+    class DBAssistant : IDisposable
     {
         SQLiteConnection _Connection = null;
         SQLiteCommand _Command = null;
@@ -16,7 +16,7 @@ namespace My_Alarm
         DataSet _Dataset;
 
         private readonly string _AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\WTstudio\MyAlarm";
-        private string _DBFile;
+        private readonly string _DBFile;
         private readonly string _MainTableName = "AlarmList";
 
         /// <summary>
@@ -86,9 +86,9 @@ namespace My_Alarm
             {
                 SQLiteConnection.CreateFile(dbName);
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                throw ex;
+                throw;
             }
         }
         /// <summary>
@@ -201,6 +201,14 @@ namespace My_Alarm
             _Command.ExecuteNonQuery();
         }
         #endregion
+
+        public void Dispose()
+        {
+            _Connection.Dispose();
+            _Dataset.Dispose();
+            _Command.Dispose();
+            _Adapter.Dispose();
+        }
 
     }
 }

@@ -54,14 +54,21 @@ namespace My_Alarm
             timer1.Enabled = true;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             Lbl_CurrentTime.Text = DateTime.Now.ToString("hh:mm:ss");
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Btn_Snooze.Text = string.Format("推迟{0}分钟",comboBox1.SelectedItem.ToString());
+        }
+
+        private void Btn_Snooze_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            Pub.SnoozeValue = int.Parse(comboBox1.SelectedItem.ToString());
+            this.Close();
         }
     }
 }
