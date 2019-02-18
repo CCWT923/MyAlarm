@@ -153,6 +153,7 @@
             this.ChkBox_AlarmEnableStatus.TabIndex = 4;
             this.ChkBox_AlarmEnableStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ChkBox_AlarmEnableStatus.UseVisualStyleBackColor = true;
+            this.ChkBox_AlarmEnableStatus.CheckedChanged += new System.EventHandler(this.ChkBox_AlarmEnableStatus_CheckedChanged);
             // 
             // AlarmItem
             // 

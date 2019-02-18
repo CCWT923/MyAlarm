@@ -18,10 +18,6 @@ namespace My_Alarm
 
         #region 全局变量
         /// <summary>
-        /// 数据库操作对象
-        /// </summary>
-        DBAssistant dbHelper;
-        /// <summary>
         /// 当前窗口句柄
         /// </summary>
         IntPtr thisWindow;
@@ -57,7 +53,7 @@ namespace My_Alarm
             {
                 try
                 {
-                    dbHelper.InsertData(dbHelper.MainTableName, Util.GetStringArrayFromAlarmInfo(alarmInfo));
+                    Pub.dbHelper.InsertData(Pub.dbHelper.MainTableName, Util.GetStringArrayFromAlarmInfo(alarmInfo));
                     AlarmItem item = new AlarmItem(ref alarmInfo);
                     LayoutPanel_AlarmItems.Controls.Add(item);
                 }
@@ -96,10 +92,10 @@ namespace My_Alarm
 
             timer1.Enabled = true;
 
-            dbHelper = new DBAssistant();
+            Pub.dbHelper = new DBAssistant();
             //读取数据库中的闹钟
             util = new Util();
-            var table = dbHelper.GetValidAlarmList();
+            var table = Pub.dbHelper.GetValidAlarmList();
             var alarms = util.GetAlarmInfoFromTable(ref table);
             foreach(var alarm in alarms)
             {
@@ -149,7 +145,7 @@ namespace My_Alarm
                 if(((AlarmItem)LayoutPanel_AlarmItems.Controls[i]).Checked)
                 {
                     //从数据库中删除
-                    dbHelper.DeleteAlarmByID(((AlarmItem)LayoutPanel_AlarmItems.Controls[i]).AlarmID);
+                    Pub.dbHelper.DeleteAlarmByID(((AlarmItem)LayoutPanel_AlarmItems.Controls[i]).AlarmID);
                     //从窗口中移除
                     LayoutPanel_AlarmItems.Controls.RemoveAt(i);
                     break;
@@ -166,7 +162,7 @@ namespace My_Alarm
         {
             if(MessageBox.Show("确定要关闭 Free Alarm 吗？","关闭确认",buttons:MessageBoxButtons.OKCancel,icon:MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                dbHelper.Dispose();
+                Pub.dbHelper.Dispose();
                 this.Close();
             } 
         }
@@ -189,7 +185,7 @@ namespace My_Alarm
                         && DateTime.Now.Day == item.AlarmDate.Day && DateTime.Now.Hour == item.AlarmDate.Hour 
                         && DateTime.Now.Minute == item.AlarmDate.Minute && DateTime.Now.Second == item.AlarmDate.Second)
                     {
-                        //显示窗口，并且将当前闹钟设置为无效，如果窗口中点击了延迟功能，那么重新设置为有效
+                        //显示提示窗口
                         item.AlarmStatus = false;
                         RemindWindow remind = new RemindWindow(item.AlarmTitle, item.AlarmContents, Util.RemindWindowDisplayMode.CenterScreen);
                         //推迟
@@ -198,10 +194,14 @@ namespace My_Alarm
                             item.AlarmDate = DateTime.Now.AddMinutes(Pub.SnoozeValue);
                             item.AlarmStatus = true;
                         }
-                    }
-                    if (item.AlarmDate < DateTime.Now)
-                    {
-                        item.AlarmStatus = false;
+                        else
+                        {
+                            //关闭了提醒窗口，处理当前闹钟信息
+                            if(item.AlarmRepeatInterval.Once)
+                            {
+                                item.AlarmStatus = false;
+                            }
+                        }
                     }
                 }
 
@@ -216,8 +216,8 @@ namespace My_Alarm
                 NotifyIcon1.Icon = Properties.Resources.Alarm_Normal_32;
                 NotifyIcon1.Visible = true;
                 //不在任务管理器的“应用程序”选项卡中显示
-                //SetVisibleCore(false);
-                //RegisterHotkey();
+                SetVisibleCore(false);
+                RegisterHotkey();
             }
         }
 
@@ -225,13 +225,29 @@ namespace My_Alarm
         {
             if(this.WindowState == FormWindowState.Minimized)
             {
-                //this.SetVisibleCore(true);
+                this.SetVisibleCore(true);
                 this.WindowState = FormWindowState.Normal;
                 this.ShowInTaskbar = true;
                 this.NotifyIcon1.Visible = false;
                 this.Activate();
-                //RegisterHotkey();
+                RegisterHotkey();
             }
+        }
+
+        private void Btn_EditAlarm_Click(object sender, EventArgs e)
+        {
+            if(Pub.CurrentSelectedItem != null)
+            {
+                EditCurrentItem();
+            }
+        }
+        /// <summary>
+        /// TODO：编辑当前选择的项目
+        /// </summary>
+        private void EditCurrentItem()
+        {
+            Wnd_AddAlarm addAlarm = new Wnd_AddAlarm(Pub.CurrentSelectedItem.AlarmInfo);
+            addAlarm.ShowDialog();
         }
     }
 }

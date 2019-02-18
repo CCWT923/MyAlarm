@@ -56,10 +56,10 @@
             this.FPanel_ToolBox.Controls.Add(this.Btn_AddAlarm);
             this.FPanel_ToolBox.Controls.Add(this.Btn_EditAlarm);
             this.FPanel_ToolBox.Controls.Add(this.Btn_DeleteAlarm);
-            this.FPanel_ToolBox.Location = new System.Drawing.Point(0, 50);
+            this.FPanel_ToolBox.Location = new System.Drawing.Point(9, 50);
             this.FPanel_ToolBox.Margin = new System.Windows.Forms.Padding(0);
             this.FPanel_ToolBox.Name = "FPanel_ToolBox";
-            this.FPanel_ToolBox.Size = new System.Drawing.Size(503, 42);
+            this.FPanel_ToolBox.Size = new System.Drawing.Size(389, 42);
             this.FPanel_ToolBox.TabIndex = 0;
             // 
             // Btn_AddAlarm
@@ -96,6 +96,7 @@
             this.Btn_EditAlarm.Text = "编辑";
             this.Btn_EditAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_EditAlarm.UseVisualStyleBackColor = true;
+            this.Btn_EditAlarm.Click += new System.EventHandler(this.Btn_EditAlarm_Click);
             // 
             // Btn_DeleteAlarm
             // 
@@ -120,9 +121,9 @@
             this.LayoutPanel_AlarmItems.AutoScroll = true;
             this.LayoutPanel_AlarmItems.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.LayoutPanel_AlarmItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.LayoutPanel_AlarmItems.Location = new System.Drawing.Point(0, 95);
+            this.LayoutPanel_AlarmItems.Location = new System.Drawing.Point(0, 88);
             this.LayoutPanel_AlarmItems.Name = "LayoutPanel_AlarmItems";
-            this.LayoutPanel_AlarmItems.Size = new System.Drawing.Size(495, 357);
+            this.LayoutPanel_AlarmItems.Size = new System.Drawing.Size(495, 364);
             this.LayoutPanel_AlarmItems.TabIndex = 1;
             this.LayoutPanel_AlarmItems.WrapContents = false;
             // 

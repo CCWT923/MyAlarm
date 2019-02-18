@@ -623,7 +623,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "添加闹钟";
-            this.Load += new System.EventHandler(this.Wnd_AddAlarm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.Panel_Background.ResumeLayout(false);

@@ -201,6 +201,16 @@ namespace My_Alarm
             _Command.ExecuteNonQuery();
         }
         #endregion
+        /// <summary>
+        /// 在数据库中禁用或启用指定的闹钟
+        /// </summary>
+        /// <param name="Status"></param>
+        /// <param name="AlarmID"></param>
+        public void SwitchAlarmStatus(bool Status, int AlarmID)
+        {
+            _Command.CommandText = "UPDATE AlarmList SET Enable = " + (Status ? "1" : "0") + " WHERE AlarmID = " + AlarmID;
+            _Command.ExecuteNonQuery();
+        }
 
         public void Dispose()
         {

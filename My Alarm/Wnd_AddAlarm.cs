@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
+
 namespace My_Alarm
 {
     public partial class Wnd_AddAlarm : Form
@@ -8,12 +9,80 @@ namespace My_Alarm
         public Wnd_AddAlarm()
         {
             InitializeComponent();
+            SetAlarmDefault();
         }
+        /// <summary>
+        /// 通过一个AlarmInfo来初始化窗口
+        /// </summary>
+        /// <param name="alarmInfo"></param>
+        public Wnd_AddAlarm(Util.ALARMINFO alarmInfo)
+        {
+            InitializeComponent();
+            this.Combox_Hour.SelectedItem = alarmInfo.AlarmDate.Hour.ToString();
+            this.Combox_Minute.SelectedItem = alarmInfo.AlarmDate.Minute.ToString();
+            this.DateTimePicker_AlarmDate.Value = alarmInfo.AlarmDate;
+            this.TextBox_AlarmContents.Text = alarmInfo.AlarmContents;
+            this.TextBox_AlarmName.Text = alarmInfo.AlarmName;
+            this.TextBox_AlarmSound.Text = alarmInfo.AlarmSound;
+            if(alarmInfo.RepeatInterval.Once)
+            {
+                this.RadBtn_RepeatOnce.Checked = true;
+                this.Panel_Weekday.Enabled = false;
+                this.Panel_RepeatWeekday.Enabled = false;
+            }
+            if(alarmInfo.RepeatInterval.Daily)
+            {
+                this.ChkBox_Daily.Checked = true;
+                RadBtn_Repeat.Checked = true;
+                Combox_RepeatDayOfMonth.Enabled = false;
+            }
+            if(alarmInfo.RepeatInterval.Monthly)
+            {
+                this.RadBtn_Repeat.Checked = true;
+                this.RadBtn_RepeatMonthly.Checked = true;
+                this.Combox_RepeatDayOfMonth.SelectedItem = alarmInfo.RepeatInterval.DayOfMonth.ToString();
+            }
+            if(alarmInfo.RepeatInterval.Weekly)
+            {
+                this.RadBtn_Repeat.Checked = true;
+                this.ChkBox_Daily.Checked = false;
+                if(alarmInfo.RepeatInterval.Monday)
+                {
+                    this.ChkBox_Monday.Checked = true;
+                }
+                if (alarmInfo.RepeatInterval.Tuesday)
+                {
+                    this.ChkBox_Tuesday.Checked = true;
+                }
+                if (alarmInfo.RepeatInterval.Wednesday)
+                {
+                    this.ChkBox_Wednesday.Checked = true;
+                }
+                if (alarmInfo.RepeatInterval.Thursday)
+                {
+                    this.ChkBox_Thursday.Checked = true;
+                }
+                if (alarmInfo.RepeatInterval.Friday)
+                {
+                    this.ChkBox_Friday.Checked = true;
+                }
+                if (alarmInfo.RepeatInterval.Saturday)
+                {
+                    this.ChkBox_Saturday.Checked = true;
+                }
+                if (alarmInfo.RepeatInterval.Sunday)
+                {
+                    this.ChkBox_Sunday.Checked = true;
+                }
+            }
+
+        }
+
         /// <summary>
         /// 默认闹钟名字
         /// </summary>
-        private string _DefaultAlarmName = "My Alarm";
-        private void Wnd_AddAlarm_Load(object sender, EventArgs e)
+        private string _DefaultAlarmName = "Alarm";
+        private void SetAlarmDefault()
         {
             //DateTimePicker_AlarmDate.CustomFormat = "yyyy/MM/dd";
             DateTime t = DateTime.Now.AddMinutes(5.0);
@@ -28,7 +97,6 @@ namespace My_Alarm
             Panel_RepeatWeekday.Enabled = false;
             Panel_Weekday.Enabled = false;
             Combox_RepeatDayOfMonth.SelectedIndex = 0;
-
         }
         /// <summary>
         /// 是否重复

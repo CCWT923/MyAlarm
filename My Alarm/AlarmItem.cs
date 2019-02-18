@@ -24,6 +24,7 @@ namespace My_Alarm
             this.BackColor = _DefaultBackgroundColor;
             this.AlarmID = alarmInfo.AlarmID;
             this.AlarmStatus = alarmInfo.AlarmStatus;
+            this.CreateDate = DateTime.Now;
         }
 
         #region 私有字段
@@ -31,6 +32,10 @@ namespace My_Alarm
         /// 闹钟日期
         /// </summary>
         private DateTime _AlarmDate;
+        /// <summary>
+        /// 闹钟的创建日期
+        /// </summary>
+        private DateTime _CreateDate;
         /// <summary>
         /// 闹钟标题
         /// </summary>
@@ -82,7 +87,7 @@ namespace My_Alarm
         /// <summary>
         /// 选中状态下的背景色
         /// </summary>
-        private Color _CheckedBackgroundColor = Color.FromArgb(255,210,210,210);
+        private Color _CheckedBackgroundColor = Color.FromArgb(255, 201, 227, 252);
         /// <summary>
         /// 鼠标经过选中状态时的背景色
         /// </summary>
@@ -103,6 +108,10 @@ namespace My_Alarm
         /// 上一个被选择对象的引用
         /// </summary>
         private static AlarmItem _LastSelectItem = null;
+        /// <summary>
+        /// 当前Item的AlarmInfo
+        /// </summary>
+        private Util.ALARMINFO _AlarmInfo;
         #endregion
 
 
@@ -122,6 +131,42 @@ namespace My_Alarm
             }
         }
         /// <summary>
+        /// 获取或设置闹钟的创建日期
+        /// </summary>
+        public DateTime CreateDate
+        {
+            get
+            {
+                return _CreateDate;
+            }
+            set
+            {
+                _CreateDate = value;
+            }
+        }
+        /// <summary>
+        /// 获取或设置当前AlarmItem的AlarmInfo
+        /// </summary>
+        public Util.ALARMINFO AlarmInfo
+        {
+            get
+            {
+                _AlarmInfo.RepeatInterval = this._AlarmRepeatInterval;
+                _AlarmInfo.AlarmContents = _AlarmContents;
+                _AlarmInfo.AlarmDate = _AlarmDate;
+                _AlarmInfo.AlarmID = _AlarmID;
+                _AlarmInfo.AlarmSound = _AlarmSoundPath;
+                _AlarmInfo.CreateDate = _CreateDate;
+                _AlarmInfo.AlarmStatus = _AlarmStatus;
+                _AlarmInfo.AlarmName = _AlarmTitle;
+                return _AlarmInfo;
+            }
+            set
+            {
+                _AlarmInfo = value;
+            }
+        }
+        /// <summary>
         /// 获取或设置当前闹钟是否有效
         /// </summary>
         public bool AlarmStatus
@@ -136,10 +181,12 @@ namespace My_Alarm
                 if(value == false)
                 {
                     this.ChkBox_AlarmEnableStatus.Checked = false;
+                    Pub.dbHelper.SwitchAlarmStatus(false, this.AlarmID);
                 }
                 else
                 {
                     this.ChkBox_AlarmEnableStatus.Checked = true;
+                    Pub.dbHelper.SwitchAlarmStatus(true, this.AlarmID);
                 }
             }
         }
@@ -412,6 +459,7 @@ namespace My_Alarm
             {
                 this.Checked = false;
                 this.BackColor = DefaultBackgroundColor;
+                Pub.CurrentSelectedItem = null;
             }
             else
             {
@@ -422,8 +470,9 @@ namespace My_Alarm
                     this.BackColor = CheckedBackgroundColor;
                     _LastSelectItem = this;
                     ++_CurrentSelectNumber;
+                    Pub.CurrentSelectedItem = this;
                 }
-                else
+                else //取消选择当前的，选择另一个
                 {
                     --_CurrentSelectNumber;
                     _LastSelectItem.Checked = false;
@@ -432,10 +481,21 @@ namespace My_Alarm
                     this.BackColor = CheckedBackgroundColor;
                     ++_CurrentSelectNumber;
                     _LastSelectItem = this;
+                    Pub.CurrentSelectedItem = this;
                 }
             }
         }
         #endregion
+
+        /// <summary>
+        /// 手动更改复选框的状态，要关联到此Item的状态上。
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ChkBox_AlarmEnableStatus_CheckedChanged(object sender, EventArgs e)
+        {
+            this.AlarmStatus = this.ChkBox_AlarmEnableStatus.Checked;
+        }
 
     }
 }
