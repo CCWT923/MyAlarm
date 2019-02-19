@@ -16,7 +16,7 @@ namespace My_Alarm
         {
             InitializeComponent();
             ++_Counter;
-            this.AlarmDate = alarmInfo.AlarmDate;
+
             this.AlarmTitle = alarmInfo.AlarmName;
             this.AlarmRepeatInterval = alarmInfo.RepeatInterval;
             this.AlarmContents = alarmInfo.AlarmContents;
@@ -25,6 +25,7 @@ namespace My_Alarm
             this.AlarmID = alarmInfo.AlarmID;
             this.AlarmStatus = alarmInfo.AlarmStatus;
             this.CreateDate = DateTime.Now;
+            this.AlarmDate = alarmInfo.AlarmDate;
         }
 
         #region 私有字段
@@ -241,14 +242,30 @@ namespace My_Alarm
             set
             {
                 _AlarmDate = value;
-                //是今天的日期，就只显示时间，否则，显示日期和时间
-                if(_AlarmDate.Day == DateTime.Now.Day && _AlarmDate.Month == DateTime.Now.Month && _AlarmDate.Year == DateTime.Now.Year)
+                //每天重复的，只显示时间
+                if(this.AlarmRepeatInterval.Daily)
                 {
                     Lbl_AlarmDate.Text = _AlarmDate.ToLongTimeString();
                 }
+                //TODO：每周重复的
+                else if(this.AlarmRepeatInterval.Weekly)
+                {
+                    Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy/MM/dd HH:mm");
+                }
+                //每月重复的
+                else if(this.AlarmRepeatInterval.Monthly)
+                {
+                    Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy/MM/dd HH:mm");
+                }
+                //一次性的
+                else if(this.AlarmRepeatInterval.Once)
+                {
+                    Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy/MM/dd HH:mm");
+                }
                 else
                 {
-                    Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy/MM/dd HH:mm:ss");
+                    //throw new Exception();
+                    Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy/MM/dd HH:mm");
                 }
             }
         }

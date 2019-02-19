@@ -102,6 +102,9 @@
     <EmbeddedResource Include="AlarmItem.resx">
       <DependentUpon>AlarmItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.en.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +118,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RemindWindow.en.resx">
+      <DependentUpon>RemindWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RemindWindow.resx">
       <DependentUpon>RemindWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WndQuickAddAlarm.resx">
       <DependentUpon>WndQuickAddAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wnd_AddAlarm.en.resx">
+      <DependentUpon>Wnd_AddAlarm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Wnd_AddAlarm.resx">
       <DependentUpon>Wnd_AddAlarm.cs</DependentUpon>

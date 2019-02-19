@@ -172,7 +172,7 @@ namespace My_Alarm
             alarmInfo.CreateDate = DateTime.Now;
             alarmInfo.AlarmSound = TextBox_AlarmSound.Text;
             alarmInfo.AlarmName = TextBox_AlarmName.Text;
-            alarmInfo.AlarmContents = TextBox_AlarmContents.Text.Replace("\r\n"," ");
+            alarmInfo.AlarmContents = TextBox_AlarmContents.Text;
             if (RadBtn_RepeatOnce.Checked) //一次性，不重复
             {
                 repeatInterval.Once = true;

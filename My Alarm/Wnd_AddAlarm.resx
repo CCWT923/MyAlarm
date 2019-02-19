@@ -117,4 +117,1408 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;ChkBox_Wednesday.Parent" xml:space="preserve">
+    <value>Panel_Weekday</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Btn_Cancel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Daily.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items1" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ChkBox_Daily.Text" xml:space="preserve">
+    <value>每天</value>
+  </data>
+  <data name="ChkBox_Friday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;Panel_Background.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Saturday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ChkBox_Saturday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="TextBox_AlarmName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="Btn_Cancel.Text" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>729, 512</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Monday.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ChkBox_Daily.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 15</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items20" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="RadBtn_RepeatMonthly.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="Btn_SelectSound.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 462</value>
+  </data>
+  <data name="&gt;&gt;Btn_SaveAlarm.Name" xml:space="preserve">
+    <value>Btn_SaveAlarm</value>
+  </data>
+  <data name="Combox_Hour.Items2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmName.Name" xml:space="preserve">
+    <value>TextBox_AlarmName</value>
+  </data>
+  <data name="DateTimePicker_AlarmDate.CustomFormat" xml:space="preserve">
+    <value>yyyy/MM/dd</value>
+  </data>
+  <data name="Lbl_AlarmContents.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 26</value>
+  </data>
+  <data name="Combox_Minute.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Lbl_AlarmContents.Text" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items2" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Combox_Minute.Items18" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmContents.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="ChkBox_Thursday.Text" xml:space="preserve">
+    <value>星期四</value>
+  </data>
+  <data name="&gt;&gt;Combox_RepeatDayOfMonth.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Btn_SaveAlarm" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Btn_Cancel" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100,Absolute,48" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="Lbl_AlarmContents.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkBox_Thursday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="Combox_Hour.Items4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Combox_Hour.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Combox_Minute.Items59" xml:space="preserve">
+    <value>59</value>
+  </data>
+  <data name="Combox_Minute.Items58" xml:space="preserve">
+    <value>58</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 267</value>
+  </data>
+  <data name="Combox_Minute.Items56" xml:space="preserve">
+    <value>56</value>
+  </data>
+  <data name="Combox_Minute.Items55" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="ChkBox_Daily.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Combox_Minute.Items53" xml:space="preserve">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Sunday.Parent" xml:space="preserve">
+    <value>Panel_Weekday</value>
+  </data>
+  <data name="Combox_Minute.Items51" xml:space="preserve">
+    <value>51</value>
+  </data>
+  <data name="ChkBox_Monday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkBox_Thursday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Panel_Background.Size" type="System.Drawing.Size, System.Drawing">
+    <value>723, 456</value>
+  </data>
+  <data name="Combox_Hour.Items18" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items16" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="&gt;&gt;Panel_Weekday.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="Combox_Hour.Items10" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>501, 50</value>
+  </data>
+  <data name="Lbl_AlarmContents.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 178</value>
+  </data>
+  <data name="Combox_Hour.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items7" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="Combox_Minute.Items47" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="Combox_Minute.Items46" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="Combox_Minute.Items45" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="Combox_Minute.Items44" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="Combox_Minute.Items43" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="Combox_Minute.Items42" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="Combox_Minute.Items41" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="Combox_Minute.Items40" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>添加闹钟</value>
+  </data>
+  <data name="TextBox_AlarmContents.Size" type="System.Drawing.Size, System.Drawing">
+    <value>614, 32</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Tuesday.Parent" xml:space="preserve">
+    <value>Panel_Weekday</value>
+  </data>
+  <data name="DateTimePicker_AlarmDate.CalendarFont" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="DateTimePicker_AlarmDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>320, 32</value>
+  </data>
+  <data name="Combox_Minute.Items2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Panel_RepeatWeekday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 470</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;Panel_RepeatWeekday.Name" xml:space="preserve">
+    <value>Panel_RepeatWeekday</value>
+  </data>
+  <data name="&gt;&gt;Combox_RepeatDayOfMonth.Name" xml:space="preserve">
+    <value>Combox_RepeatDayOfMonth</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_Repeat.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="ChkBox_Friday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 139</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items9" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>重复周期</value>
+  </data>
+  <data name="Combox_Hour.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="ChkBox_Monday.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="Btn_SelectSound.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items26" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="Combox_Minute.Items1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Panel_Background" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,90,Percent,10" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="RadBtn_RepeatMonthly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 29</value>
+  </data>
+  <data name="ChkBox_Wednesday.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items8" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_RepeatOnce.Name" xml:space="preserve">
+    <value>RadBtn_RepeatOnce</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Monday.Parent" xml:space="preserve">
+    <value>Panel_Weekday</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Combox_Minute.Items57" xml:space="preserve">
+    <value>57</value>
+  </data>
+  <data name="ChkBox_Friday.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_AlarmDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 26</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Thursday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="TextBox_AlarmName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Combox_Hour.Items17" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="Combox_Hour.Items5" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="TextBox_AlarmSound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>538, 32</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 15</value>
+  </data>
+  <data name="TextBox_AlarmSound.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="RadBtn_Repeat.Text" xml:space="preserve">
+    <value>重复</value>
+  </data>
+  <data name="ChkBox_Wednesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 72</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Daily.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Tuesday.Name" xml:space="preserve">
+    <value>ChkBox_Tuesday</value>
+  </data>
+  <data name="&gt;&gt;Combox_Hour.Name" xml:space="preserve">
+    <value>Combox_Hour</value>
+  </data>
+  <data name="Combox_Minute.Items25" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items12" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;Btn_SaveAlarm.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="ChkBox_Sunday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 205</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmName.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="Combox_Minute.Items7" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="ChkBox_Friday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 29</value>
+  </data>
+  <data name="&gt;&gt;Combox_Minute.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Combox_Minute.Items49" xml:space="preserve">
+    <value>49</value>
+  </data>
+  <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;Lbl_AlarmContents.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="Combox_Hour.Items19" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items17" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Btn_SelectSound.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="TextBox_AlarmContents.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 95</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_AlarmDate.Name" xml:space="preserve">
+    <value>DateTimePicker_AlarmDate</value>
+  </data>
+  <data name="RadBtn_RepeatOnce.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 394</value>
+  </data>
+  <data name="Combox_Hour.Items7" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 26</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Thursday.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt, style=Bold</value>
+  </data>
+  <data name="Combox_Minute.Items6" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ChkBox_Thursday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 29</value>
+  </data>
+  <data name="&gt;&gt;Btn_SelectSound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Combox_Hour.Items6" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ChkBox_Tuesday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_RepeatOnce.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RadBtn_Repeat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 433</value>
+  </data>
+  <data name="TextBox_AlarmName.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="RadBtn_Repeat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items22" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="DateTimePicker_AlarmDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Wednesday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextBox_AlarmContents.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmContents.Name" xml:space="preserve">
+    <value>TextBox_AlarmContents</value>
+  </data>
+  <data name="&gt;&gt;Panel_RepeatWeekday.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="RadBtn_Repeat.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Saturday.Parent" xml:space="preserve">
+    <value>Panel_Weekday</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items27" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="Btn_SaveAlarm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>355, 44</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmName.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="Btn_SelectSound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>560, 300</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_Repeat.Name" xml:space="preserve">
+    <value>RadBtn_Repeat</value>
+  </data>
+  <data name="Panel_Weekday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>619, 236</value>
+  </data>
+  <data name="TextBox_AlarmSound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 302</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Tuesday.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ChkBox_Tuesday.Text" xml:space="preserve">
+    <value>星期二</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmSound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Cancel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel2</value>
+  </data>
+  <data name="TextBox_AlarmSound.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="DateTimePicker_AlarmDate.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="Combox_Hour.Items3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmSound.Name" xml:space="preserve">
+    <value>TextBox_AlarmSound</value>
+  </data>
+  <data name="Btn_Cancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>364, 2</value>
+  </data>
+  <data name="Panel_RepeatWeekday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="&gt;&gt;Combox_RepeatDayOfMonth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Daily.Name" xml:space="preserve">
+    <value>ChkBox_Daily</value>
+  </data>
+  <data name="Combox_Minute.Items48" xml:space="preserve">
+    <value>48</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 26</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ChkBox_Sunday.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ChkBox_Monday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 8</value>
+  </data>
+  <data name="Btn_SelectSound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 34</value>
+  </data>
+  <data name="Combox_Hour.Items23" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="Btn_Cancel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="ChkBox_Monday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items3" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items13" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="ChkBox_Tuesday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;Panel_Background.Name" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="ChkBox_Saturday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;Panel_Weekday.Name" xml:space="preserve">
+    <value>Panel_Weekday</value>
+  </data>
+  <data name="ChkBox_Monday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 29</value>
+  </data>
+  <data name="ChkBox_Daily.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 29</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="Combox_Hour.Items11" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="RadBtn_RepeatMonthly.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkBox_Thursday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 106</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_AlarmDate.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_RepeatOnce.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Combox_Minute.Items31" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RadBtn_RepeatOnce.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="Combox_Hour.Items20" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="tableLayoutPanel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmContents.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 26</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_Repeat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Combox_Minute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>539, 46</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items4" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items23" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="RadBtn_RepeatOnce.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 29</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Friday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="Panel_Background.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Wednesday.Name" xml:space="preserve">
+    <value>ChkBox_Wednesday</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items24" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>时</value>
+  </data>
+  <data name="ChkBox_Tuesday.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RadBtn_RepeatMonthly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 14</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Thursday.Parent" xml:space="preserve">
+    <value>Panel_Weekday</value>
+  </data>
+  <data name="&gt;&gt;Combox_Minute.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="Combox_Hour.Items9" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="Combox_Hour.Items13" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="Panel_Weekday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 523</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 26</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>359, 50</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="Combox_Hour.Items14" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="Btn_SaveAlarm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_RepeatMonthly.Name" xml:space="preserve">
+    <value>RadBtn_RepeatMonthly</value>
+  </data>
+  <data name="&gt;&gt;Lbl_AlarmContents.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="&gt;&gt;Panel_Weekday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Combox_RepeatDayOfMonth.Parent" xml:space="preserve">
+    <value>Panel_RepeatWeekday</value>
+  </data>
+  <data name="Panel_RepeatWeekday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>619, 52</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Thursday.Name" xml:space="preserve">
+    <value>ChkBox_Thursday</value>
+  </data>
+  <data name="ChkBox_Wednesday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmSound.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items10" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>闹钟名称</value>
+  </data>
+  <data name="Btn_SelectSound.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;Btn_Cancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Combox_Hour.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkBox_Saturday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="Panel_Weekday.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_RepeatMonthly.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadBtn_Repeat.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="&gt;&gt;Btn_SaveAlarm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Panel_Background.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 2</value>
+  </data>
+  <data name="Btn_SaveAlarm.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="Combox_Minute.Items11" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="Combox_Hour.Items21" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="Combox_Minute.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items30" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;Panel_Background.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadBtn_Repeat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 29</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Friday.Parent" xml:space="preserve">
+    <value>Panel_Weekday</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_Repeat.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_SelectSound.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 26</value>
+  </data>
+  <data name="Btn_Cancel.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Sunday.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Btn_Cancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="Combox_Minute.Items3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Combox_Minute.Items9" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ChkBox_Daily.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ChkBox_Saturday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 172</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 18</value>
+  </data>
+  <data name="Panel_RepeatWeekday.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="Combox_Hour.Items15" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="Combox_Minute.Items5" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Saturday.Name" xml:space="preserve">
+    <value>ChkBox_Saturday</value>
+  </data>
+  <data name="TextBox_AlarmSound.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="ChkBox_Sunday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Btn_SelectSound.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items11" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="Combox_Hour.Items12" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="Combox_Minute.Items20" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="ChkBox_Monday.Text" xml:space="preserve">
+    <value>星期一</value>
+  </data>
+  <data name="Combox_Minute.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Btn_SaveAlarm.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Combox_Minute.Items4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Btn_SaveAlarm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 2</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Monday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Btn_Cancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Combox_Hour.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;DateTimePicker_AlarmDate.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="Combox_Minute.Items10" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="ChkBox_Daily.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Combox_Minute.Items21" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="ChkBox_Sunday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 29</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;Panel_RepeatWeekday.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ChkBox_Friday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Panel_Weekday.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RadBtn_RepeatMonthly.Text" xml:space="preserve">
+    <value>每月</value>
+  </data>
+  <data name="ChkBox_Friday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkBox_Saturday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 29</value>
+  </data>
+  <data name="TextBox_AlarmName.Text" xml:space="preserve">
+    <value>闹钟</value>
+  </data>
+  <data name="Combox_Hour.Items22" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="Panel_Background.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="TextBox_AlarmContents.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 210</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items15" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="Combox_Minute.Items13" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Combox_Minute.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="RadBtn_RepeatOnce.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ChkBox_Saturday.Text" xml:space="preserve">
+    <value>星期六</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items21" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="ChkBox_Wednesday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ChkBox_Sunday.Text" xml:space="preserve">
+    <value>星期日</value>
+  </data>
+  <data name="RadBtn_RepeatOnce.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="Combox_Hour.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 32</value>
+  </data>
+  <data name="&gt;&gt;Btn_SelectSound.Name" xml:space="preserve">
+    <value>Btn_SelectSound</value>
+  </data>
+  <data name="DateTimePicker_AlarmDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 48</value>
+  </data>
+  <data name="&gt;&gt;Lbl_AlarmContents.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>分</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Monday.Name" xml:space="preserve">
+    <value>ChkBox_Monday</value>
+  </data>
+  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>723, 48</value>
+  </data>
+  <data name="Btn_SaveAlarm.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Wnd_AddAlarm</value>
+  </data>
+  <data name="tableLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items5" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ChkBox_Tuesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 29</value>
+  </data>
+  <data name="Combox_Minute.Items52" xml:space="preserve">
+    <value>52</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Friday.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Combox_Minute.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Combox_Hour.Items16" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items18" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="Combox_Hour.Items8" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Tuesday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Panel_Background.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Panel_Weekday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;Panel_Background.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RadBtn_RepeatOnce.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="ChkBox_Tuesday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>提示音</value>
+  </data>
+  <data name="DateTimePicker_AlarmDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 357</value>
+  </data>
+  <data name="ChkBox_Sunday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Sunday.Name" xml:space="preserve">
+    <value>ChkBox_Sunday</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items6" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Wednesday.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ChkBox_Monday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_SaveAlarm.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items28" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;Combox_Hour.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadBtn_RepeatOnce.Text" xml:space="preserve">
+    <value>一次</value>
+  </data>
+  <data name="Combox_Minute.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="Combox_Minute.Items54" xml:space="preserve">
+    <value>54</value>
+  </data>
+  <data name="TextBox_AlarmName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>614, 32</value>
+  </data>
+  <data name="Lbl_AlarmContents.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt, style=Bold</value>
+  </data>
+  <data name="ChkBox_Wednesday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;Btn_Cancel.Name" xml:space="preserve">
+    <value>Btn_Cancel</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Sunday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Btn_SaveAlarm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="Btn_SaveAlarm.Text" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="&gt;&gt;Combox_Hour.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="Combox_Hour.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 46</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Daily.Parent" xml:space="preserve">
+    <value>Panel_RepeatWeekday</value>
+  </data>
+  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="ChkBox_Tuesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 40</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;Panel_RepeatWeekday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ChkBox_Thursday.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmSound.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="ChkBox_Wednesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 29</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_RepeatMonthly.Parent" xml:space="preserve">
+    <value>Panel_RepeatWeekday</value>
+  </data>
+  <data name="&gt;&gt;Combox_Minute.Name" xml:space="preserve">
+    <value>Combox_Minute</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_RepeatOnce.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="Panel_Background.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>提醒时间</value>
+  </data>
+  <data name="Combox_Minute.Items39" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="Combox_Minute.Items38" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="Combox_Minute.Items37" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="Combox_Minute.Items36" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="Combox_Minute.Items35" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="Combox_Minute.Items34" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="Combox_Minute.Items33" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="Combox_Minute.Items32" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items19" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="Combox_Minute.Items30" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="ChkBox_Thursday.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ChkBox_Wednesday.Text" xml:space="preserve">
+    <value>星期三</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 12</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items25" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;Btn_Cancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Btn_Cancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>356, 44</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Saturday.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Panel_RepeatWeekday.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Combox_Minute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 32</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TextBox_AlarmContents.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="Lbl_AlarmContents.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>729, 512</value>
+  </data>
+  <data name="Combox_Minute.Items29" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="Combox_Minute.Items28" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="Combox_Minute.Items27" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="Combox_Minute.Items26" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;RadBtn_RepeatMonthly.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Combox_Minute.Items24" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="Combox_Minute.Items23" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="Combox_Minute.Items22" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;ChkBox_Friday.Name" xml:space="preserve">
+    <value>ChkBox_Friday</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt, style=Bold</value>
+  </data>
+  <data name="TextBox_AlarmContents.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 32</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Combox_Minute.Items8" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TextBox_AlarmName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 128</value>
+  </data>
+  <data name="Combox_Hour.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="ChkBox_Sunday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="&gt;&gt;Lbl_AlarmContents.Name" xml:space="preserve">
+    <value>Lbl_AlarmContents</value>
+  </data>
+  <data name="ChkBox_Saturday.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Combox_Minute.Items19" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="Combox_Minute.Items17" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="Combox_Minute.Items16" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="Combox_Minute.Items15" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="Combox_Minute.Items14" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items29" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="Combox_Minute.Items12" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tableLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Combox_Hour.Items1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>Panel_Background</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="Combox_Minute.Items50" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="ChkBox_Friday.Text" xml:space="preserve">
+    <value>星期五</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="RadBtn_Repeat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 11pt</value>
+  </data>
+  <data name="RadBtn_RepeatMonthly.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Combox_RepeatDayOfMonth.Items14" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

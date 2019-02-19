@@ -117,7 +117,117 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;Btn_AddAlarm.Name" xml:space="preserve">
+    <value>Btn_AddAlarm</value>
+  </data>
+  <data name="&gt;&gt;Btn_AddAlarm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_AddAlarm.Parent" xml:space="preserve">
+    <value>FPanel_ToolBox</value>
+  </data>
+  <data name="&gt;&gt;Btn_AddAlarm.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Btn_EditAlarm.Name" xml:space="preserve">
+    <value>Btn_EditAlarm</value>
+  </data>
+  <data name="&gt;&gt;Btn_EditAlarm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_EditAlarm.Parent" xml:space="preserve">
+    <value>FPanel_ToolBox</value>
+  </data>
+  <data name="&gt;&gt;Btn_EditAlarm.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Btn_DeleteAlarm.Name" xml:space="preserve">
+    <value>Btn_DeleteAlarm</value>
+  </data>
+  <data name="&gt;&gt;Btn_DeleteAlarm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_DeleteAlarm.Parent" xml:space="preserve">
+    <value>FPanel_ToolBox</value>
+  </data>
+  <data name="&gt;&gt;Btn_DeleteAlarm.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FPanel_ToolBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="FPanel_ToolBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="FPanel_ToolBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="FPanel_ToolBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>697, 42</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FPanel_ToolBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FPanel_ToolBox.Name" xml:space="preserve">
+    <value>FPanel_ToolBox</value>
+  </data>
+  <data name="&gt;&gt;FPanel_ToolBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FPanel_ToolBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FPanel_ToolBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Btn_AddAlarm.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Btn_AddAlarm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
+  </data>
+  <data name="Btn_AddAlarm.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="Btn_AddAlarm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 0</value>
+  </data>
+  <data name="Btn_AddAlarm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 0, 0, 0</value>
+  </data>
+  <data name="Btn_AddAlarm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 42</value>
+  </data>
+  <data name="Btn_AddAlarm.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Btn_AddAlarm.Text" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Btn_AddAlarm.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;Btn_AddAlarm.Name" xml:space="preserve">
+    <value>Btn_AddAlarm</value>
+  </data>
+  <data name="&gt;&gt;Btn_AddAlarm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_AddAlarm.Parent" xml:space="preserve">
+    <value>FPanel_ToolBox</value>
+  </data>
+  <data name="&gt;&gt;Btn_AddAlarm.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Btn_EditAlarm.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Btn_EditAlarm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
+  </data>
   <data name="Btn_EditAlarm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAixJREFUSEvN
@@ -133,13 +243,329 @@
         vXyQh/8llPoFrIzaYGra8NgAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="dragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="Btn_EditAlarm.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="Btn_EditAlarm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 0</value>
+  </data>
+  <data name="Btn_EditAlarm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 0, 0, 0</value>
+  </data>
+  <data name="Btn_EditAlarm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 42</value>
+  </data>
+  <data name="Btn_EditAlarm.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Btn_EditAlarm.Text" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Btn_EditAlarm.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;Btn_EditAlarm.Name" xml:space="preserve">
+    <value>Btn_EditAlarm</value>
+  </data>
+  <data name="&gt;&gt;Btn_EditAlarm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_EditAlarm.Parent" xml:space="preserve">
+    <value>FPanel_ToolBox</value>
+  </data>
+  <data name="&gt;&gt;Btn_EditAlarm.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Btn_DeleteAlarm.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Btn_DeleteAlarm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
+  </data>
+  <data name="Btn_DeleteAlarm.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="Btn_DeleteAlarm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 0</value>
+  </data>
+  <data name="Btn_DeleteAlarm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>8, 0, 0, 0</value>
+  </data>
+  <data name="Btn_DeleteAlarm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 42</value>
+  </data>
+  <data name="Btn_DeleteAlarm.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Btn_DeleteAlarm.Text" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Btn_DeleteAlarm.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;Btn_DeleteAlarm.Name" xml:space="preserve">
+    <value>Btn_DeleteAlarm</value>
+  </data>
+  <data name="&gt;&gt;Btn_DeleteAlarm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_DeleteAlarm.Parent" xml:space="preserve">
+    <value>FPanel_ToolBox</value>
+  </data>
+  <data name="&gt;&gt;Btn_DeleteAlarm.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LayoutPanel_AlarmItems.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LayoutPanel_AlarmItems.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="LayoutPanel_AlarmItems.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
+  </data>
+  <data name="LayoutPanel_AlarmItems.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 70</value>
+  </data>
+  <data name="LayoutPanel_AlarmItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>697, 382</value>
+  </data>
+  <data name="LayoutPanel_AlarmItems.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="LayoutPanel_AlarmItems.WrapContents" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;LayoutPanel_AlarmItems.Name" xml:space="preserve">
+    <value>LayoutPanel_AlarmItems</value>
+  </data>
+  <data name="&gt;&gt;LayoutPanel_AlarmItems.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LayoutPanel_AlarmItems.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LayoutPanel_AlarmItems.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>168, 17</value>
+    <value>34, 20</value>
   </metadata>
   <metadata name="NotifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>273, 17</value>
+    <value>157, 18</value>
   </metadata>
+  <data name="NotifyIcon1.Text" xml:space="preserve">
+    <value>Free Alarm</value>
+  </data>
+  <data name="NotifyIcon1.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>300, 18</value>
+  </metadata>
+  <data name="闹钟AToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 24</value>
+  </data>
+  <data name="闹钟AToolStripMenuItem.Text" xml:space="preserve">
+    <value>闹钟(&amp;A)</value>
+  </data>
+  <data name="MenuItem_About.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="MenuItem_About.Text" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="帮助HToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 24</value>
+  </data>
+  <data name="帮助HToolStripMenuItem.Text" xml:space="preserve">
+    <value>帮助(&amp;H)</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>697, 28</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="MenuItem_AddAlarm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="MenuItem_AddAlarm.Text" xml:space="preserve">
+    <value>添加(&amp;N)</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 6</value>
+  </data>
+  <data name="MenuItem_Exit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="MenuItem_Exit.Text" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 17</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>697, 452</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAgBAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsbGwAbGxsAGxsbABsb
+        GwAbGxsAGxsbABsbGwAbGxsAGxsbABsbGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGxsbABsbGwAbGxsAGhoaAB4b
+        GgADEhkAAAUXAAAAFQsAABULAAIWBQAOGAAADxoAGRoaABoaGgAbGxsAGxsbAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsbGwAaGhoAHBsbABga
+        GgAUGBoxExgagRgaGrofHBvcJB4b7CUeG+whHRvkGhobxhUYGpUTGBpKFhkaBBsbGwAVGBkAGxsbABsb
+        GwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsbGwAbGxsAHhwbABka
+        GgAUGBpFGRoawCwhHP9CKR3/US8e/1kyH/9cNB//XDQf/1ozH/9UMB//Ryse/zMkHP8eHBrdFBgabRcZ
+        GgAcGxsAHhwbABsbGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbGxsAHxwbAB0c
+        GwAVGRoLFRgaoTIjHP9VMR//Yzcg/2M1Hf9dLRb/WCgR/1YmDv9WJg7/VycQ/1ssFP9hMxv/ZTcg/1wz
+        H/8+KB3/GxoazRQYGjEcGxsAChgaABsbGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAc
+        GwAfHBsAFBgaGhwbGtVMLR7/Zjgh/2AzHP9VJQ7/WS0X/21LOv+BaV3/jn10/5CAd/+GcGX/dFVF/140
+        H/9UJA3/XC8Y/2Y4If9ZMh//KR8b+REWGU8fGxsADhcbABsbGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAbGxsAGxwbABgXGRIgHBrdWDIf/2Y3IP9XKBH/Wy8Z/4l1av+4vL3/0eDn/9rt9f/c7/f/3O72/9zu
+        9v/U5e3/wcrN/5mMhv9lPyz/UyQN/2I1Hv9iNiD/MiMc/xIVGUgjHRsAFBgaAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAGxsbABIXGgAsHRoAHRsawVkyH/9kNh//UyQN/3JSQv+8wsT/3PD5/+Hx+P/j7/T/5vH1/9zn
+        6//V4OT/5/H1/+Tv9P/h8Pb/3vL7/8vY3f+Ic2j/VCYP/14yG/9jNiD/MCMc9hkVFx8cHBsAGxsbAAAA
+        AAAAAAAAAAAAAAAAAAAWGRoAOCccABMVGWxPLx7/ZDcg/1MkDf+AZ1v/0uPq/+Dx+f/k7vL/6PH1/+fx
+        9f/n8fX/3ejs/9bh5f/n8fX/5/H0/+jx9f/l7/P/4O/1/9vw+f+dk47/VigR/18yHP9dNB//Ix4bv0Io
+        GwAXGRoAGxsbAAAAAAAAAAAAGxsbABkaGgAwIBgNPigd72M3IP9VJg//eFtM/9Tm7v/f7vT/5/D0/+fw
+        9P/m7/T/5e/z/+bw9P/l7/P/5e/z/+bw9P/m8PT/5e/z/+bw9P/n8fX/4e3y/93y/P+XioT/UyQM/2M2
+        H/9OLh7/EhQYSCcgHAAfHBsAAAAAAAAAAAAMFRoAOycdABsZGmxYMh//XS8Y/2A4JP/F0NT/4PD3/+fw
+        9P/m8PT/5e/z/+bw9P/m8PT/5e/z/+bw9P/m8PT/5e/z/+bw9P/m8PT/5e/z/+bv9P/n8fX/4e3y/9fq
+        8/96XlD/VicP/2A1IP85Jh3AZDUcABgaGgAAAAAAAAAAABoaGgCCRB8ARCodymA1IP9TJAz/mo6I/97y
+        +//l7/P/5vD0/+Xv8//m8PT/5vD0/+bw9P/m8PT/5vD0/+bw9P/m8PT/5vD0/+bw9P/m8PT/5vD0/+bv
+        8//n8PT/4PH4/7q/wf9ZLRf/YDMc/1AuHv4RERYdJx8bAAAAAAAAAAAALiIcABASFhZTMB75XTAZ/2I7
+        J//I1Nn/4e/1/+fx9f/l7/P/5vD0/+bw9P/m8PT/5e/z/+fx9f/w+///7/r+/+bw9P/l7/P/5vD0/+bw
+        9P/m8PT/5fD0/+bw9P/j7vL/2ez0/31jVv9XKBD/WjMf/zIkHVxEKh4AGxsbAAAAAABHKx4ANCUdQFoy
+        H/9WJxD/gWld/9rt9f/k7/P/5vD0/+bw9P/m8PT/5vD0/+Xv8//o8vb/7vj8/7fAw/+9xsn/9P////f/
+        ///1////9f////f////w+v7/5O7z/+fw9P/g8fn/pJ6b/1QmDv9eNB//SSwekFszHwAJFBgAAAAAAFMw
+        HwBLLR5dXTQf/1QlDv+ckoz/3/H5/+fx9f/m8PT/5e/z/+bw9P/m8PT/5vH1/+/5+v92e3z/QUBA/0RD
+        Q/90eXz/qbO2/6Gssf+hrLD/nKar/7nDx//q9Pf/6PL2/+Lx9/+8wsT/XDAb/10xHP9TMB+vbDogABgZ
+        GgAAAAAAXDQfAFcxH2leNB//VScR/6uopv/g8fj/5O7y/+Tu8v/m8PT/5vD0/+bw9P/r9fn/zdfa/5yd
+        nf///////////3Vxb/8bBwD/KxcO/ysYDv8cBgD/d3Jw//L9///k7vL/4e70/8jT2P9kPSr/Wi4Y/1oz
+        H7loOB8AQSkeAAAAAABfNSAAXzUgaF4zHv9XKRP/sbGw/9rq8f/Q297/2ePn/+fw9P/m8PT/5e/z/+bw
+        9P/r9/3/////////////////6eDc/1MhCP9XJQz/WikQ/08ZAP+PdGf/6Pf7/9Db3//W4+j/y9fc/2ZA
+        Lf9ZLRf/XzUguV00HwBjNiAAAAAAAF81IABfNR9cXTMe/1YoEf+rqKf/4fH4/+bw9P/l7/P/5vD0/+Xv
+        8//n8fb/8f///6WXkP/Owbv////+///////t7ez/ta6q/7iwrP+4sa3/tq6p/9TX2P/o9Pf/5vD0/+Lw
+        9v/F0NT/Yjom/1svGf9fNSCuXjUgAF81IAAAAAAAXzUgAF81IEBeNB//VCUO/5qPif/f8fn/5/H0/+bw
+        9P/l7/P/5/H2//T///+rn5n/RRIA/2lCMP/u8fH/9fr7/+jz9//w/v//8f////D////x////6/f8/+Xv
+        8//n8fX/4vH3/7i8vv9aLhj/XTId/181IJFfNSAAXzUgAAAAAABfNSAAXzUgFl81IPpWKBH/fmRX/9nr
+        8//k7/P/5vDz/+bx9f/z////q5+Z/0sZAP9aLxn/w8G//+r3+//k7/P/5e/z/+bw9P/m8PT/5vD0/+bw
+        9P/m8PT/5e/z/+bw9P/f8fn/npWQ/1QlDf9eNB//XzUgXV81IABfNSAAAAAAAF81IABfNSAAXzUgylsw
+        Gv9fNiH/xM/T/+Hw9v/o8vX/7fr8/6mclf9JFgD/WS0Y/8nJx//z////5e/z/+Xv8//m8PT/5vD0/+bw
+        9P/m8PT/5vD0/+Xv8//n8PT/4+7z/9fp8f93WUr/VykS/181IP5fNSAdXzUgAAAAAAAAAAAAXzUgAF81
+        IABfNSBsXzUg/1MkDP+Sg3v/3fL7/+bx9f/q9fj/Zj8s/1MlDv/IyMb/8////+Xv8//l7/P/5vD0/+bw
+        9P/m8PT/5vD0/+bw9P/l7/T/5vD0/+fw9P/g8vn/s7S0/1cpEv9dMx3/XzUgwF81IABfNSAAAAAAAAAA
+        AABfNSAAXzUgAF81Hw1fNSDwWzAa/1wxG/+9xMf/3/H5/+nz9v/P0ND/0dTV/+/9///l7/P/5e/z/+bw
+        9P/m8PT/5e/z/+bw9P/m8PT/5e/z/+bw9P/n8fT/4O7z/9Lj6/9xUED/VykS/181IP9fNSBJXzUgAF81
+        IAAAAAAAAAAAAAAAAABfNSAAXzUfAF81IGxfNSD/VikS/29NPP/O3uT/3+/2/+z4/f/u+v//5e/z/+Xv
+        8//m8PT/5e/z/+Tu8v/m8PT/5e/z/+bv9P/m8PT/5/H0/+Dt8//b8Pr/i3hu/1MkDP9fNSD/XzUgv181
+        IABfNSAAXzUgAAAAAAAAAAAAAAAAAF81IABfNSAAXzUgAF81IMFfNSD/VSYP/3RVRv/J1dr/4PL7/+Lu
+        8v/n8fT/5/H1/+jx9f/c5+v/1eDk/+fx9f/n8fX/5/H1/+Tu8v/g8Pf/1unx/458c/9UJQ7/XTMe/181
+        IPZfNSAeXzUgAF81IAAAAAAAAAAAAAAAAAAAAAAAAAAAAF81IABfNSAAXzUgEl81IN1fNSD/VSYP/2ZA
+        Lf+uraz/2Ovz/+Dx+f/i8PX/5vH1/9zn6//V4OX/5vH1/+Pv9f/h8fj/3PD5/8DIy/95XU//UyQM/10z
+        Hv9fNSD/XzUgSF81IABfNSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF81IABfNSAAXzUgGl81
+        INRfNSH/WSwV/1YnEP96XlH/qaWj/8fR1v/U5Ov/2Ory/9nq8v/W5+7/zNnf/7S2tv+JdWz/XDId/1Un
+        D/9fNSD/XzUg+V81IE5fNSAAXzUgAF81IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXzUgAF81
+        IABfNSAAXzUgCl81H6BfNSD/XjMe/1YoEf9VJw//Yzsn/3NURf9/Zln/gWld/3dbTP9oQzH/WCsU/1Um
+        Dv9cMRv/XzUg/181IM5fNSAvXzUgAF81IABfNSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAXzUgAF81IABfNSAAXzUfAF81IEZfNSDAXzUg/140H/9bLxn/WCsU/1YoEf9WKBH/VyoT/1ot
+        F/9eMx7/XzUg/181IN1fNSBtXzUgAV81IABfNSAAXzUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAF81IABfNR8AXzUgAF81IABfNSA0XzUggV81IL5fNSDiXzUg8V81
+        IPRfNSDoXzUfzF81IJdfNR9MXzUgBV81IABfNSAAXzUgAF81IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF81IABfNSAAXzUgAF81IABfNSAAXzUgAF81
+        IANfNSAQXzUgE181IAdfNSAAXzUgAF81IABfNSAAXzUgAF81IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXzUgAF81
+        IABfNSAAXzUgAF81IABfNSAAXzUgAF81IABfNSAAXzUgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA////////////8A///8AB//8AAP/+AAB//AAAP/gAAB/wAAAP8AAAD+AA
+        AAfgAAAH4AAAA+AAAAPAAAADwAAAA8AAAAPAAAAD4AAAA+AAAAPgAAAH4AAAB/AAAA/wAAAP+AAAH/wA
+        AD/+AAB//wAA///AAf//8A////////////8=
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>闹钟</value>
+  </data>
+  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
+    <value>timer1</value>
+  </data>
+  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NotifyIcon1.Name" xml:space="preserve">
+    <value>NotifyIcon1</value>
+  </data>
+  <data name="&gt;&gt;NotifyIcon1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;闹钟AToolStripMenuItem.Name" xml:space="preserve">
+    <value>闹钟AToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;闹钟AToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem_AddAlarm.Name" xml:space="preserve">
+    <value>MenuItem_AddAlarm</value>
+  </data>
+  <data name="&gt;&gt;MenuItem_AddAlarm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem_Exit.Name" xml:space="preserve">
+    <value>MenuItem_Exit</value>
+  </data>
+  <data name="&gt;&gt;MenuItem_Exit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;帮助HToolStripMenuItem.Name" xml:space="preserve">
+    <value>帮助HToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;帮助HToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuItem_About.Name" xml:space="preserve">
+    <value>MenuItem_About</value>
+  </data>
+  <data name="&gt;&gt;MenuItem_About.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
