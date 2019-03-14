@@ -38,6 +38,12 @@
     <ApplicationIcon>AlarmIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\..\..\Development\UI\MaterialSkin-master\MaterialSkin\bin\Release\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="My Alarm">
+      <HintPath>obj\Release\My Alarm.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite">

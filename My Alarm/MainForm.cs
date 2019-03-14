@@ -77,6 +77,7 @@ namespace My_Alarm
             {
                 //TODO: 快速添加闹钟
                 WndQuickAddAlarm quickAddAlarm = new WndQuickAddAlarm();
+                quickAddAlarm.Focus();
                 if(quickAddAlarm.ShowDialog() == DialogResult.OK)
                 {
                     CreateAlarmItem(Util.ParseAlarmInfo(Pub.QuickAlarmInfo),false);

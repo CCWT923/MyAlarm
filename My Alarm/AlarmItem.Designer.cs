@@ -143,17 +143,12 @@
             // 
             this.ChkBox_AlarmEnableStatus.AutoSize = true;
             this.ChkBox_AlarmEnableStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChkBox_AlarmEnableStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ChkBox_AlarmEnableStatus.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ChkBox_AlarmEnableStatus.Location = new System.Drawing.Point(4, 4);
-            this.ChkBox_AlarmEnableStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.ChkBox_AlarmEnableStatus.Location = new System.Drawing.Point(3, 3);
             this.ChkBox_AlarmEnableStatus.Name = "ChkBox_AlarmEnableStatus";
             this.tableLayoutPanel1.SetRowSpan(this.ChkBox_AlarmEnableStatus, 2);
-            this.ChkBox_AlarmEnableStatus.Size = new System.Drawing.Size(22, 53);
+            this.ChkBox_AlarmEnableStatus.Size = new System.Drawing.Size(24, 55);
             this.ChkBox_AlarmEnableStatus.TabIndex = 4;
-            this.ChkBox_AlarmEnableStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ChkBox_AlarmEnableStatus.UseVisualStyleBackColor = true;
-            this.ChkBox_AlarmEnableStatus.CheckedChanged += new System.EventHandler(this.ChkBox_AlarmEnableStatus_CheckedChanged);
             // 
             // AlarmItem
             // 

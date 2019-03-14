@@ -117,75 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;Btn_AddAlarm.Name" xml:space="preserve">
-    <value>Btn_AddAlarm</value>
-  </data>
-  <data name="&gt;&gt;Btn_AddAlarm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Btn_AddAlarm.Parent" xml:space="preserve">
-    <value>FPanel_ToolBox</value>
-  </data>
-  <data name="&gt;&gt;Btn_AddAlarm.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Btn_EditAlarm.Name" xml:space="preserve">
-    <value>Btn_EditAlarm</value>
-  </data>
-  <data name="&gt;&gt;Btn_EditAlarm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Btn_EditAlarm.Parent" xml:space="preserve">
-    <value>FPanel_ToolBox</value>
-  </data>
-  <data name="&gt;&gt;Btn_EditAlarm.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Btn_DeleteAlarm.Name" xml:space="preserve">
-    <value>Btn_DeleteAlarm</value>
-  </data>
-  <data name="&gt;&gt;Btn_DeleteAlarm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Btn_DeleteAlarm.Parent" xml:space="preserve">
-    <value>FPanel_ToolBox</value>
-  </data>
-  <data name="&gt;&gt;Btn_DeleteAlarm.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FPanel_ToolBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="FPanel_ToolBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 28</value>
-  </data>
-  <data name="FPanel_ToolBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="FPanel_ToolBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>697, 42</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FPanel_ToolBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;FPanel_ToolBox.Name" xml:space="preserve">
-    <value>FPanel_ToolBox</value>
-  </data>
-  <data name="&gt;&gt;FPanel_ToolBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FPanel_ToolBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;FPanel_ToolBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="Btn_AddAlarm.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Btn_AddAlarm.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
   </data>
@@ -201,6 +137,7 @@
   <data name="Btn_AddAlarm.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 42</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Btn_AddAlarm.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -315,6 +252,33 @@
   <data name="&gt;&gt;Btn_DeleteAlarm.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="FPanel_ToolBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="FPanel_ToolBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 28</value>
+  </data>
+  <data name="FPanel_ToolBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="FPanel_ToolBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>697, 42</value>
+  </data>
+  <data name="FPanel_ToolBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FPanel_ToolBox.Name" xml:space="preserve">
+    <value>FPanel_ToolBox</value>
+  </data>
+  <data name="&gt;&gt;FPanel_ToolBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FPanel_ToolBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;FPanel_ToolBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="LayoutPanel_AlarmItems.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -363,24 +327,6 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>300, 18</value>
   </metadata>
-  <data name="闹钟AToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 24</value>
-  </data>
-  <data name="闹钟AToolStripMenuItem.Text" xml:space="preserve">
-    <value>闹钟(&amp;A)</value>
-  </data>
-  <data name="MenuItem_About.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 26</value>
-  </data>
-  <data name="MenuItem_About.Text" xml:space="preserve">
-    <value>关于</value>
-  </data>
-  <data name="帮助HToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 24</value>
-  </data>
-  <data name="帮助HToolStripMenuItem.Text" xml:space="preserve">
-    <value>帮助(&amp;H)</value>
-  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -405,20 +351,38 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="闹钟AToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 24</value>
+  </data>
+  <data name="闹钟AToolStripMenuItem.Text" xml:space="preserve">
+    <value>闹钟(&amp;A)</value>
+  </data>
   <data name="MenuItem_AddAlarm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 26</value>
+    <value>136, 26</value>
   </data>
   <data name="MenuItem_AddAlarm.Text" xml:space="preserve">
     <value>添加(&amp;N)</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 6</value>
+    <value>133, 6</value>
   </data>
   <data name="MenuItem_Exit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 26</value>
+    <value>136, 26</value>
   </data>
   <data name="MenuItem_Exit.Text" xml:space="preserve">
     <value>退出</value>
+  </data>
+  <data name="帮助HToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 24</value>
+  </data>
+  <data name="帮助HToolStripMenuItem.Text" xml:space="preserve">
+    <value>帮助(&amp;H)</value>
+  </data>
+  <data name="MenuItem_About.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 26</value>
+  </data>
+  <data name="MenuItem_About.Text" xml:space="preserve">
+    <value>关于</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

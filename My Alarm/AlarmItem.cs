@@ -264,7 +264,6 @@ namespace My_Alarm
                 }
                 else
                 {
-                    //throw new Exception();
                     Lbl_AlarmDate.Text = _AlarmDate.ToString("yyyy/MM/dd HH:mm");
                 }
             }
