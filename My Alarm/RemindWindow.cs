@@ -47,9 +47,7 @@ namespace My_Alarm
 
         private void RemindWindow_Load(object sender, EventArgs e)
         {
-            comboBox1.SelectedItem = "5";
             Lbl_AlarmTitle.Text = _AlarmTitle;
-            Btn_Snooze.Text = string.Format("推迟{0}分钟",comboBox1.SelectedItem.ToString());
             timer1.Interval = 1000;
             timer1.Enabled = true;
         }
@@ -59,15 +57,10 @@ namespace My_Alarm
             Lbl_CurrentTime.Text = DateTime.Now.ToString("hh:mm:ss");
         }
 
-        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Btn_Snooze.Text = string.Format("推迟{0}分钟",comboBox1.SelectedItem.ToString());
-        }
-
         private void Btn_Snooze_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            Pub.SnoozeValue = int.Parse(comboBox1.SelectedItem.ToString());
+            Pub.SnoozeValue = 5;
             this.Close();
         }
     }
