@@ -129,7 +129,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(723, 48);
             this.tableLayoutPanel2.TabIndex = 57;
             // 
@@ -253,7 +253,7 @@
             "58",
             "59"});
             this.Combox_Minute.Location = new System.Drawing.Point(539, 46);
-            this.Combox_Minute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Combox_Minute.Margin = new System.Windows.Forms.Padding(4);
             this.Combox_Minute.Name = "Combox_Minute";
             this.Combox_Minute.Size = new System.Drawing.Size(88, 32);
             this.Combox_Minute.TabIndex = 66;
@@ -290,7 +290,7 @@
             "22",
             "23"});
             this.Combox_Hour.Location = new System.Drawing.Point(395, 46);
-            this.Combox_Hour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Combox_Hour.Margin = new System.Windows.Forms.Padding(4);
             this.Combox_Hour.Name = "Combox_Hour";
             this.Combox_Hour.Size = new System.Drawing.Size(88, 32);
             this.Combox_Hour.TabIndex = 66;
@@ -515,7 +515,7 @@
             // Btn_SelectSound
             // 
             this.Btn_SelectSound.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.Btn_SelectSound.Location = new System.Drawing.Point(560, 300);
+            this.Btn_SelectSound.Location = new System.Drawing.Point(560, 301);
             this.Btn_SelectSound.Margin = new System.Windows.Forms.Padding(0);
             this.Btn_SelectSound.Name = "Btn_SelectSound";
             this.Btn_SelectSound.Size = new System.Drawing.Size(71, 34);

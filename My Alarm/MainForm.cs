@@ -7,6 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+///TODO：需要增加的东西
+///1. 增加设置选项，比如快速增加的快捷键定义
+///2. 闹钟添加页面设置闹钟的显示方式
+///3. 首次启动是否需要设置一个默认的闹钟？
+///4. 提示音
+///TODO：需要修复的问题
+///1. 已过期的闹钟不能自动取消（数据库）？
+///2. 是否可以通过每个闹钟增加一个Timer来控制其状态？
+
 namespace My_Alarm
 {
     public partial class MainForm : Form

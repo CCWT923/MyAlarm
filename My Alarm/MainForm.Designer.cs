@@ -35,7 +35,6 @@
             this.Btn_EditAlarm = new System.Windows.Forms.Button();
             this.Btn_DeleteAlarm = new System.Windows.Forms.Button();
             this.LayoutPanel_AlarmItems = new System.Windows.Forms.FlowLayoutPanel();
-            this.dragControl1 = new DragControl.DragControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NotifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.FPanel_ToolBox.SuspendLayout();
@@ -50,7 +49,7 @@
             this.FPanel_ToolBox.Location = new System.Drawing.Point(0, 0);
             this.FPanel_ToolBox.Margin = new System.Windows.Forms.Padding(0);
             this.FPanel_ToolBox.Name = "FPanel_ToolBox";
-            this.FPanel_ToolBox.Size = new System.Drawing.Size(495, 42);
+            this.FPanel_ToolBox.Size = new System.Drawing.Size(561, 42);
             this.FPanel_ToolBox.TabIndex = 0;
             // 
             // Btn_AddAlarm
@@ -112,9 +111,9 @@
             this.LayoutPanel_AlarmItems.AutoScroll = true;
             this.LayoutPanel_AlarmItems.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.LayoutPanel_AlarmItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.LayoutPanel_AlarmItems.Location = new System.Drawing.Point(0, 45);
+            this.LayoutPanel_AlarmItems.Location = new System.Drawing.Point(0, 40);
             this.LayoutPanel_AlarmItems.Name = "LayoutPanel_AlarmItems";
-            this.LayoutPanel_AlarmItems.Size = new System.Drawing.Size(495, 407);
+            this.LayoutPanel_AlarmItems.Size = new System.Drawing.Size(561, 319);
             this.LayoutPanel_AlarmItems.TabIndex = 1;
             this.LayoutPanel_AlarmItems.WrapContents = false;
             // 
@@ -134,7 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(495, 452);
+            this.ClientSize = new System.Drawing.Size(561, 359);
             this.Controls.Add(this.LayoutPanel_AlarmItems);
             this.Controls.Add(this.FPanel_ToolBox);
             this.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -157,7 +156,6 @@
         private System.Windows.Forms.Button Btn_EditAlarm;
         private System.Windows.Forms.Button Btn_DeleteAlarm;
         private System.Windows.Forms.FlowLayoutPanel LayoutPanel_AlarmItems;
-        private DragControl.DragControl dragControl1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.NotifyIcon NotifyIcon1;
     }
