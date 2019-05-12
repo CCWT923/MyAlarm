@@ -153,23 +153,8 @@ namespace My_Alarm
             }
         }
 
-        private void Btn_Minisize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void Btn_Close_Click(object sender, EventArgs e)
-        {
-            if(MessageBox.Show("确定要关闭 Free Alarm 吗？","关闭确认",buttons:MessageBoxButtons.OKCancel,icon:MessageBoxIcon.Warning) == DialogResult.OK)
-            {
-                Pub.dbHelper.Dispose();
-                this.Close();
-            } 
-        }
-
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            Lbl_TimeDislplay.Text = DateTime.Now.ToString("HH:mm:ss");
             CheckAlarmItem();
         }
         /// <summary>
@@ -204,7 +189,6 @@ namespace My_Alarm
                         }
                     }
                 }
-
             }
         }
 
@@ -248,6 +232,18 @@ namespace My_Alarm
         {
             Wnd_AddAlarm addAlarm = new Wnd_AddAlarm(Pub.CurrentSelectedItem.AlarmInfo);
             addAlarm.ShowDialog();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("确定要关闭 Free Alarm 吗？", "关闭确认", buttons: MessageBoxButtons.OKCancel, icon: MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                Pub.dbHelper.Dispose();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
