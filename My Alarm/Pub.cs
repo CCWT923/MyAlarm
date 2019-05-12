@@ -8,7 +8,7 @@ namespace My_Alarm
 {
     class Pub
     {
-        public static Util.ALARMINFO AlarmInfo;
+        public static AlarmUtil.ALARMINFO AlarmInfo;
         public static string QuickAlarmInfo;
         public static int SnoozeValue;
         /// <summary>

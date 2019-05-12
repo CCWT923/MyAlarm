@@ -15,25 +15,25 @@ namespace My_Alarm
         private string _AlarmTitle;
         private string _AlarmContent;
 
-        public RemindWindow(string title, string content, Util.RemindWindowDisplayMode displayMode)
+        public RemindWindow(string title, string content, AlarmUtil.RemindWindowDisplayMode displayMode)
         {
             InitializeComponent();
             this._AlarmContent = content;
             this._AlarmTitle = title;
             this.TopMost = true;
             //窗口的显示模式
-            if(displayMode == Util.RemindWindowDisplayMode.Fullscreen)
+            if(displayMode == AlarmUtil.RemindWindowDisplayMode.Fullscreen)
             {
                 Panel_Title.Visible = false;
                 this.WindowState = FormWindowState.Maximized;
             }
-            else if(displayMode == Util.RemindWindowDisplayMode.PopFromBottomRightCorner)
+            else if(displayMode == AlarmUtil.RemindWindowDisplayMode.PopFromBottomRightCorner)
             {
                 Point p = new Point(Screen.PrimaryScreen.WorkingArea.Width - this.Width, Screen.PrimaryScreen.WorkingArea.Height - this.Height);
                 this.PointToClient(p);
                 this.Location = p;
             }
-            else if(displayMode == Util.RemindWindowDisplayMode.CenterScreen)
+            else if(displayMode == AlarmUtil.RemindWindowDisplayMode.CenterScreen)
             {
                 this.StartPosition = FormStartPosition.CenterScreen;
             }

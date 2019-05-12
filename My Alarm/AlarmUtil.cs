@@ -12,7 +12,7 @@ namespace My_Alarm
     /// <summary>
     /// 定义的结构体和一些常用方法
     /// </summary>
-    public class Util
+    public class AlarmUtil
     {
         /// <summary>
         /// 存储闹钟信息的结构体

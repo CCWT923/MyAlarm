@@ -12,7 +12,7 @@ namespace My_Alarm
 {
     public partial class AlarmItem : UserControl
     {
-        public AlarmItem(ref Util.ALARMINFO alarmInfo)
+        public AlarmItem(ref AlarmUtil.ALARMINFO alarmInfo)
         {
             InitializeComponent();
             ++_Counter;
@@ -56,7 +56,7 @@ namespace My_Alarm
         /// <summary>
         /// 闹钟的重复周期
         /// </summary>
-        private Util.REPEATINTERVAL _AlarmRepeatInterval;
+        private AlarmUtil.REPEATINTERVAL _AlarmRepeatInterval;
         /// <summary>
         /// 计数器
         /// </summary>
@@ -112,7 +112,7 @@ namespace My_Alarm
         /// <summary>
         /// 当前Item的AlarmInfo
         /// </summary>
-        private Util.ALARMINFO _AlarmInfo;
+        private AlarmUtil.ALARMINFO _AlarmInfo;
         #endregion
 
 
@@ -148,7 +148,7 @@ namespace My_Alarm
         /// <summary>
         /// 获取或设置当前AlarmItem的AlarmInfo
         /// </summary>
-        public Util.ALARMINFO AlarmInfo
+        public AlarmUtil.ALARMINFO AlarmInfo
         {
             get
             {
@@ -297,7 +297,7 @@ namespace My_Alarm
         /// <summary>
         /// 获取或设置闹钟的重复周期
         /// </summary>
-        public Util.REPEATINTERVAL AlarmRepeatInterval
+        public AlarmUtil.REPEATINTERVAL AlarmRepeatInterval
         {
             get
             {

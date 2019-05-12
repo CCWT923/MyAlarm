@@ -15,7 +15,7 @@ namespace My_Alarm
         /// 通过一个AlarmInfo来初始化窗口
         /// </summary>
         /// <param name="alarmInfo"></param>
-        public Wnd_AddAlarm(Util.ALARMINFO alarmInfo)
+        public Wnd_AddAlarm(AlarmUtil.ALARMINFO alarmInfo)
         {
             InitializeComponent();
             this.Combox_Hour.SelectedItem = alarmInfo.AlarmDate.Hour.ToString();
@@ -156,10 +156,10 @@ namespace My_Alarm
         /// 根据用户的选择，获取该闹钟的详细信息
         /// </summary>
         /// <returns></returns>
-        private Util.ALARMINFO GetAlarmDetail()
+        private AlarmUtil.ALARMINFO GetAlarmDetail()
         {
-            Util.ALARMINFO alarmInfo = new Util.ALARMINFO();
-            Util.REPEATINTERVAL repeatInterval = new Util.REPEATINTERVAL();
+            AlarmUtil.ALARMINFO alarmInfo = new AlarmUtil.ALARMINFO();
+            AlarmUtil.REPEATINTERVAL repeatInterval = new AlarmUtil.REPEATINTERVAL();
             alarmInfo.AlarmDate = new DateTime
                 (
                     DateTimePicker_AlarmDate.Value.Year,

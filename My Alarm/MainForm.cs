@@ -29,7 +29,7 @@ namespace My_Alarm
         /// 全局热键的虚拟键
         /// </summary>
         uint vitualKey = (uint)Keys.N;
-        Util util;
+        AlarmUtil util;
         #endregion
 
         private void Btn_AddAlarm_Click(object sender, EventArgs e)
@@ -46,14 +46,14 @@ namespace My_Alarm
         /// </summary>
         /// <param name="alarmInfo">一个存储闹钟信息的结构体变量</param>
         /// <param name="readFlag">该标志指示是读取（true）或创建（false）</param>
-        private void CreateAlarmItem(Util.ALARMINFO alarmInfo, bool readFlag)
+        private void CreateAlarmItem(AlarmUtil.ALARMINFO alarmInfo, bool readFlag)
         {
 
             if(!readFlag) //创建新的闹钟项目
             {
                 try
                 {
-                    Pub.dbHelper.InsertData(Pub.dbHelper.MainTableName, Util.GetStringArrayFromAlarmInfo(alarmInfo));
+                    Pub.dbHelper.InsertData(Pub.dbHelper.MainTableName, AlarmUtil.GetStringArrayFromAlarmInfo(alarmInfo));
                     AlarmItem item = new AlarmItem(ref alarmInfo);
                     LayoutPanel_AlarmItems.Controls.Add(item);
                 }
@@ -80,7 +80,7 @@ namespace My_Alarm
                 quickAddAlarm.Focus();
                 if(quickAddAlarm.ShowDialog() == DialogResult.OK)
                 {
-                    CreateAlarmItem(Util.ParseAlarmInfo(Pub.QuickAlarmInfo),false);
+                    CreateAlarmItem(AlarmUtil.ParseAlarmInfo(Pub.QuickAlarmInfo),false);
                 }
             }
             base.WndProc(ref keyPressed);
@@ -95,7 +95,7 @@ namespace My_Alarm
 
             Pub.dbHelper = new DBAssistant();
             //读取数据库中的闹钟
-            util = new Util();
+            util = new AlarmUtil();
             var table = Pub.dbHelper.GetValidAlarmList();
             var alarms = util.GetAlarmInfoFromTable(ref table);
             foreach(var alarm in alarms)
@@ -173,7 +173,7 @@ namespace My_Alarm
                     {
                         //显示提示窗口
                         item.AlarmStatus = false;
-                        RemindWindow remind = new RemindWindow(item.AlarmTitle, item.AlarmContents, Util.RemindWindowDisplayMode.CenterScreen);
+                        RemindWindow remind = new RemindWindow(item.AlarmTitle, item.AlarmContents, AlarmUtil.RemindWindowDisplayMode.CenterScreen);
                         //推迟
                         if (remind.ShowDialog() == DialogResult.OK)
                         {
