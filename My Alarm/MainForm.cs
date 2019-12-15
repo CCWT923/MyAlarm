@@ -37,19 +37,10 @@ namespace My_Alarm
         /// <summary>
         /// 全局热键的虚拟键
         /// </summary>
-        uint vitualKey = (uint)Keys.N;
+        Keys vitualKey = Keys.N;
         Util util;
         #endregion
 
-        private void Btn_AddAlarm_Click(object sender, EventArgs e)
-        {
-            Wnd_AddAlarm wnd_AddAlarm = new Wnd_AddAlarm();
-            if(wnd_AddAlarm.ShowDialog() == DialogResult.OK)
-            {
-                CreateAlarmItem(Pub.AlarmInfo, readFlag:false);
-            }
-            
-        }
         /// <summary>
         /// 创建闹钟对象，并添加到数据库
         /// </summary>
@@ -98,6 +89,7 @@ namespace My_Alarm
         private void MainForm_Load(object sender, EventArgs e)
         {
             RegisterHotkey();
+            MenuItem_QuickAddAlarm.ShortcutKeys = Keys.Alt | Keys.Control | vitualKey;
 
             timer1.Enabled = true;
 
@@ -118,7 +110,7 @@ namespace My_Alarm
         {
             //全局快捷键的注册
             thisWindow = this.FindForm().Handle;
-            successOfHotKey = WinAPI.RegisterHotKey(thisWindow, 0x3376, (uint)WinAPI.ModifierKeys.Alt | (uint)WinAPI.ModifierKeys.Control, vitualKey);
+            successOfHotKey = WinAPI.RegisterHotKey(thisWindow, 0x3376, (uint)WinAPI.ModifierKeys.Alt | (uint)WinAPI.ModifierKeys.Control, (uint)vitualKey);
             if(!successOfHotKey)
             {
                 MessageBox.Show("注册全局热键失败！");
@@ -227,21 +219,6 @@ namespace My_Alarm
             }
         }
 
-        private void Btn_EditAlarm_Click(object sender, EventArgs e)
-        {
-            if(Pub.CurrentSelectedItem != null)
-            {
-                EditCurrentItem();
-            }
-        }
-        /// <summary>
-        /// TODO：编辑当前选择的项目
-        /// </summary>
-        private void EditCurrentItem()
-        {
-            Wnd_AddAlarm addAlarm = new Wnd_AddAlarm(Pub.CurrentSelectedItem.AlarmInfo);
-            addAlarm.ShowDialog();
-        }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -253,6 +230,40 @@ namespace My_Alarm
             {
                 e.Cancel = true;
             }
+        }
+
+        private void MenuItem_NewAlarm_Click(object sender, EventArgs e)
+        {
+            Wnd_AddAlarm wnd_AddAlarm = new Wnd_AddAlarm();
+            if (wnd_AddAlarm.ShowDialog() == DialogResult.OK)
+            {
+                CreateAlarmItem(Pub.AlarmInfo, readFlag: false);
+            }
+        }
+
+        private void MenuItem_EditAlarm_Click(object sender, EventArgs e)
+        {
+            Wnd_AddAlarm addAlarm = new Wnd_AddAlarm(Pub.CurrentSelectedItem.AlarmInfo);
+            addAlarm.ShowDialog();
+        }
+
+        private void MenuItem_DeleteAlarm_Click(object sender, EventArgs e)
+        {
+            DeleteCheckedAlarmItems();
+        }
+
+        private void MenuItem_QuickAddAlarm_Click(object sender, EventArgs e)
+        {
+            WndQuickAddAlarm quickAddAlarm = new WndQuickAddAlarm();
+            if (quickAddAlarm.ShowDialog() == DialogResult.OK)
+            {
+                CreateAlarmItem(Util.ParseAlarmInfo(Pub.QuickAlarmInfo), false);
+            }
+        }
+
+        private void MenuItem_ExitApp_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

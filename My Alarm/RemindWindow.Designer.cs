@@ -33,11 +33,11 @@
             this.Btn_Close = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Btn_Snooze = new System.Windows.Forms.Button();
-            this.Panel_Title = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.Lbl_CurrentTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dragControl1 = new DragControl.DragControl();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Panel_Title = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.Panel_Title.SuspendLayout();
             this.SuspendLayout();
@@ -113,29 +113,6 @@
             this.Btn_Snooze.UseVisualStyleBackColor = false;
             this.Btn_Snooze.Click += new System.EventHandler(this.Btn_Snooze_Click);
             // 
-            // Panel_Title
-            // 
-            this.Panel_Title.BackColor = System.Drawing.Color.DodgerBlue;
-            this.tableLayoutPanel1.SetColumnSpan(this.Panel_Title, 2);
-            this.Panel_Title.Controls.Add(this.label1);
-            this.Panel_Title.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Title.Location = new System.Drawing.Point(0, 0);
-            this.Panel_Title.Margin = new System.Windows.Forms.Padding(0);
-            this.Panel_Title.Name = "Panel_Title";
-            this.Panel_Title.Size = new System.Drawing.Size(538, 50);
-            this.Panel_Title.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "提醒窗口";
-            // 
             // Lbl_CurrentTime
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.Lbl_CurrentTime, 2);
@@ -156,6 +133,29 @@
             // 
             this.dragControl1.SelectControl = this;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(8, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "提醒窗口";
+            // 
+            // Panel_Title
+            // 
+            this.Panel_Title.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tableLayoutPanel1.SetColumnSpan(this.Panel_Title, 2);
+            this.Panel_Title.Controls.Add(this.label1);
+            this.Panel_Title.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panel_Title.Location = new System.Drawing.Point(0, 0);
+            this.Panel_Title.Margin = new System.Windows.Forms.Padding(0);
+            this.Panel_Title.Name = "Panel_Title";
+            this.Panel_Title.Size = new System.Drawing.Size(538, 50);
+            this.Panel_Title.TabIndex = 3;
+            // 
             // RemindWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -166,6 +166,7 @@
             this.Name = "RemindWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RemindWindow";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.RemindWindow_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.Panel_Title.ResumeLayout(false);
@@ -181,9 +182,9 @@
         private System.Windows.Forms.Label Lbl_AlarmTitle;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button Btn_Snooze;
-        private System.Windows.Forms.Panel Panel_Title;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Lbl_CurrentTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel Panel_Title;
+        private System.Windows.Forms.Label label1;
     }
 }

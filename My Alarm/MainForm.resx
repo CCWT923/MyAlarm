@@ -117,26 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Btn_EditAlarm.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAixJREFUSEvN
-        Vb9rFEEYHS3u9ocogiKSxkIRsbQQQVFEJJ2IbJE4M5dUIhZiY53Cws4yhZ1/hHozmyyJoCKIIim0EIIW
-        goWCIP6KnO/b+86bu3y3u9rog8fe7rz35uabb3fUf4H2rDsQW3cevBobfy3W/kLL+EM8/JeYK6LE+oXE
-        uLep9T2JGH+XGH9DmW7KrmZIOt0jVcHjpIki406yvRpUCoR/k4KqCM9Gqr3lGBnRXLEvse6zFNCENEnl
-        SrDUR5JxElH/9cj441Si4XP3XmVrLY4cgjojNNfSuA+YYJG8bV3sp+DBGKpwqQwNAcHKSEAFEfw6tktT
-        ifaXU+PvRNqfwvOPvzXGv+BYRuZ3lJsUhEyk8S/TmXwPOxXub0k6WhVLsLk2PyOJNtOtqZliF9tUqvNp
-        rOaHpKWSs4yE3kqiUSJ89sFOtnD45HbG2BWWlhPMS6IBsWnPwvDIdE9XhRPHJsinJRERJXiiLt7dztJ+
-        uHVfJW1ItO45ttDbuzQli9wbXHOVFdtI1+/5+nBiou/vLcMHwJIebxIadz023aNYxb20484ivNFbDv1T
-        jh0CYWZEZN1PNb+6W2UPY/y+HY7VM+9wbICF3lbMvB4IX+F+EddPwbNaohLPlept4dRRxDY/hs35Lhmb
-        EN4vrc7yYY6TERuX1bWgRHg2Ius0x1SjPHD6HSSGjZO+ppHOT7C9IWhzcRzin1UemSjrzT8+MschHfpt
-        vXyQh/8llPoFrIzaYGra8NgAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>168, 17</value>
   </metadata>
   <metadata name="NotifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>20, 27</value>
+  </metadata>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>273, 17</value>
   </metadata>
 </root>

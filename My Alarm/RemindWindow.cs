@@ -52,9 +52,11 @@ namespace My_Alarm
             timer1.Enabled = true;
         }
 
+        int expiredSeconds = 0;
+
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            Lbl_CurrentTime.Text = DateTime.Now.ToString("hh:mm:ss");
+            Lbl_CurrentTime.Text = "已超时 " + (expiredSeconds++) + " 秒";
         }
 
         private void Btn_Snooze_Click(object sender, EventArgs e)
